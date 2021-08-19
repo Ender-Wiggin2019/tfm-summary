@@ -1,294 +1,298 @@
 ,user_id,first_corp,first_rank,first_time,create_no,total_games,favorite_corp,fa_corp_times,fa_corp_rank,most_freq_play_time,avg_rank,avg_gens,highest_corp,highest_score,highest_gens,played_day,most_date,most_date_times
-0,boxness,Tharsis Republic,3,2021-06-20 23:15:05,404.0,2,Teractor,1,2.0,22,2.5,9.0,Teractor and ,94,10,2,2021-06-20 00:00:00,1
-1,deng,Teractor,3,2020-12-05 23:59:27,398.0,2,Arcadian Communities,1,2.0,23,2.5,10.5,Teractor,102,12,1,2020-12-05 00:00:00,2
-2,blake,Teractor (breakthrough),4,2020-12-09 20:19:41,84.0,2,Recyclon (breakthrough),1,4.0,13,4.0,7.5,Recyclon (breakthrough),50,7,2,2020-12-09 00:00:00,1
-3,tm-tour-101,Vitor,3,2021-02-02 21:27:23,148.0,2,Utopia Invest,1,2.0,20,2.5,8.0,Vitor,69,9,2,2021-02-02 00:00:00,1
-4,laola,Valley Trust,4,2021-05-01 20:52:13,361.0,2,Valley Trust,1,4.0,20,2.5,8.0,Viron,86,9,2,2021-05-01 00:00:00,1
-5,ss,Mining guild (breakthrough),1,2020-12-17 22:33:11,94.0,2,Celestic (breakthrough),1,1.0,13,1.0,9.0,Mining guild (breakthrough),103,9,2,2020-12-17 00:00:00,1
-6,g.c,Saturn Systems,1,2021-02-21 16:25:08,97.0,2,Celestic (breakthrough),1,2.0,14,1.5,8.5,Saturn Systems,141,9,2,2021-02-21 00:00:00,1
-7,hong,Junk Ventures,2,2021-03-19 03:08:02,420.0,2,Junk Ventures,1,2.0,3,2.5,8.5,Junk Ventures,78,9,2,2021-03-19 00:00:00,1
-8,lala,Mining Guild,2,2021-03-27 12:52:23,471.0,2,Mining Guild,1,2.0,12,3.0,8.5,Pharmacy Union,69,9,1,2021-03-27 00:00:00,2
-9,mocca,Point Luna,4,2021-07-15 23:23:33,1078.0,2,EcoLine,1,4.0,1,4.0,11.0,EcoLine and ,87,12,2,2021-07-15 00:00:00,1
-10,tm-tour-822,Viron (breakthrough),2,2021-02-02 21:27:23,147.0,2,Inventrix (breakthrough),1,1.0,21,1.5,8.5,Viron (breakthrough),95,9,2,2021-02-02 00:00:00,1
-11,1012k,Point Luna,2,2021-08-04 21:21:00,283.0,2,Aphrodite (breakthrough),1,2.0,16,2.0,7.5,Point Luna and UNMI (breakthrough),91,8,2,2021-08-04 00:00:00,1
-12,lxlx,PhoboLog,1,2021-06-20 00:55:34,1014.0,2,Cheung Shing MARS,1,3.0,0,2.0,7.5,PhoboLog and ,64,8,1,2021-06-20 00:00:00,2
-13,tour-111,Helion (breakthrough),2,2021-02-18 21:56:14,235.0,2,Helion (breakthrough),1,2.0,15,2.0,7.0,Teractor (breakthrough),78,8,2,2021-02-18 00:00:00,1
-14,tour-413,Point Luna,4,2021-02-18 21:56:14,236.0,2,Pobolog (breakthrough),1,1.0,20,2.5,6.5,Pobolog (breakthrough),92,7,2,2021-02-18 00:00:00,1
-15,tour-148,Factorum (breakthrough),2,2021-02-20 20:23:40,237.0,2,Factorum (breakthrough),1,2.0,15,1.5,9.0,Polyphemos (breakthrough),104,8,2,2021-02-20 00:00:00,1
-16,tour-533,Celestic (breakthrough),2,2021-02-17 21:44:31,238.0,2,Celestic (breakthrough),1,2.0,17,3.0,7.5,Celestic (breakthrough),77,8,2,2021-02-17 00:00:00,1
-17,tour-904,Celestic (breakthrough),3,2021-02-20 20:23:40,239.0,2,Celestic (breakthrough),1,3.0,20,3.0,8.5,Celestic (breakthrough),94,10,2,2021-02-20 00:00:00,1
-18,tour-969,Inventrix (breakthrough),1,2021-02-20 20:23:40,240.0,2,Arklight (breakthrough),1,2.0,20,1.5,9.0,Inventrix (breakthrough),105,10,2,2021-02-20 00:00:00,1
-19,4tharticle,Mining Guild,4,2021-07-29 00:48:18,1258.0,2,Arklight,1,4.0,0,4.0,9.5,Arklight and ,61,9,2,2021-07-29 00:00:00,1
-20,tour-624,Terralabs Research (breakthrough),3,2021-02-18 21:56:14,242.0,2,Cheung Shing MARS,1,4.0,21,3.5,6.5,Cheung Shing MARS,64,7,2,2021-02-18 00:00:00,1
-21,有没有可能是你们菜呢,PhoboLog,1,2021-07-23 23:48:14,1069.0,2,PhoboLog,1,1.0,1,2.5,8.5,Tharsis Republic and ,79,10,2,2021-07-23 00:00:00,1
-22,尼禄,CrediCor,1,2021-07-01 18:33:07,123.0,2,CrediCor,1,1.0,18,1.0,7.0,Splice (breakthrough) and Pobolog (breakthrough),76,7,2,2021-07-01 00:00:00,1
-23,tour-469,Aridor,1,2021-05-15 22:02:04,247.0,2,Aridor,1,1.0,22,2.5,8.5,Aridor,110,8,2,2021-05-15 00:00:00,1
-24,tour-356,Lakefront Resorts,2,2021-03-01 22:50:45,252.0,2,Lakefront Resorts,1,2.0,14,1.5,7.0,Manutech,95,8,2,2021-03-01 00:00:00,1
-25,ccl,Point Luna,2,2021-03-23 21:37:29,259.0,2,Point Luna,1,2.0,21,3.0,8.0,Point Luna,78,8,2,2021-03-23 00:00:00,1
-26,xq,Vitor,4,2021-06-30 15:35:45,1076.0,2,Saturn Systems,1,2.0,15,3.0,9.5,Saturn Systems and ,77,10,2,2021-06-30 00:00:00,1
-27,tour-688,Vitor,4,2021-02-20 20:23:40,243.0,2,Inventrix (breakthrough),1,2.0,19,3.0,9.0,Vitor,90,10,2,2021-02-20 00:00:00,1
+0,tour-413,Point Luna,4,2021-02-18 21:56:14,236.0,2,Pobolog (breakthrough),1,1.0,20,2.5,6.5,Pobolog (breakthrough),92,7,2,2021-02-18 00:00:00,1
+1,tour-175,Terralabs Research (breakthrough),3,2021-02-18 09:20:56,232.0,2,Terralabs Research (breakthrough),1,3.0,9,3.5,8.0,Terralabs Research (breakthrough),79,8,2,2021-02-18 00:00:00,1
+2,tour-533,Celestic (breakthrough),2,2021-02-17 21:44:31,238.0,2,Celestic (breakthrough),1,2.0,17,3.0,7.5,Celestic (breakthrough),77,8,2,2021-02-17 00:00:00,1
+3,tour-111,Helion (breakthrough),2,2021-02-18 21:56:14,235.0,2,Helion (breakthrough),1,2.0,15,2.0,7.0,Teractor (breakthrough),78,8,2,2021-02-18 00:00:00,1
+4,tour-267,Septem Tribus,4,2021-02-18 09:20:56,234.0,2,Septem Tribus,1,4.0,9,4.0,8.0,Septem Tribus,76,8,2,2021-02-18 00:00:00,1
+5,tour-962,Teractor (breakthrough),3,2021-02-17 21:44:31,233.0,2,Manutech,1,3.0,21,3.0,8.0,Manutech,82,8,2,2021-02-17 00:00:00,1
+6,tour-148,Factorum (breakthrough),2,2021-02-20 20:23:40,237.0,2,Factorum (breakthrough),1,2.0,15,1.5,9.0,Polyphemos (breakthrough),104,8,2,2021-02-20 00:00:00,1
+7,flagalac,Robinson Industries,4,2021-07-15 00:57:01,1121.0,2,Poseidon,1,4.0,0,4.0,10.0,Poseidon and ,54,10,1,2021-07-15 00:00:00,2
+8,laola,Valley Trust,4,2021-05-01 20:52:13,361.0,2,Valley Trust,1,4.0,20,2.5,8.0,Viron,86,9,2,2021-05-01 00:00:00,1
+9,tour-715,Lakefront Resorts,1,2021-02-17 21:44:31,230.0,2,Helion (breakthrough),1,4.0,16,2.5,6.0,Lakefront Resorts,87,8,2,2021-02-17 00:00:00,1
+10,ernest,PhoboLog,1,2021-02-08 00:01:33,226.0,2,PhoboLog,1,1.0,0,2.5,9.0,PhoboLog,101,10,2,2021-02-08 00:00:00,1
+11,tour-904,Celestic (breakthrough),3,2021-02-20 20:23:40,239.0,2,Celestic (breakthrough),1,3.0,20,3.0,8.5,Celestic (breakthrough),94,10,2,2021-02-20 00:00:00,1
+12,yk,Vitor,2,2021-05-17 22:10:44,792.0,2,Valley Trust,1,1.0,22,1.5,9.5,Valley Trust,88,10,2,2021-05-17 00:00:00,1
+13,ss,Mining guild (breakthrough),1,2020-12-17 22:33:11,94.0,2,Celestic (breakthrough),1,1.0,13,1.0,9.0,Mining guild (breakthrough),103,9,2,2020-12-17 00:00:00,1
+14,shishen,Astrodrill,3,2021-05-13 23:22:58,800.0,2,Astrodrill,1,3.0,0,2.5,9.0,Astrodrill,78,9,2,2021-05-13 00:00:00,1
+15,tour-640,Terralabs Research (breakthrough),2,2021-02-05 23:13:17,214.0,2,Inventrix (breakthrough),1,3.0,22,2.5,8.5,Terralabs Research (breakthrough),87,8,2,2021-02-05 00:00:00,1
+16,tour-440,Inventrix (breakthrough),4,2021-02-15 13:14:11,213.0,2,Inventrix (breakthrough),1,4.0,13,3.0,7.5,Poseidon,64,7,2,2021-02-15 00:00:00,1
+17,tour-617,StormCraft Incorporated (breakthrough),1,2021-02-15 13:14:11,212.0,2,Aphrodite (breakthrough),1,2.0,13,1.5,7.5,StormCraft Incorporated (breakthrough),79,8,2,2021-02-15 00:00:00,1
+18,tour-555,UNMI (breakthrough),4,2021-02-17 21:44:31,231.0,2,Pobolog (breakthrough),1,3.0,17,3.5,7.5,Pobolog (breakthrough),67,7,2,2021-02-17 00:00:00,1
+19,tour-969,Inventrix (breakthrough),1,2021-02-20 20:23:40,240.0,2,Arklight (breakthrough),1,2.0,20,1.5,9.0,Inventrix (breakthrough),105,10,2,2021-02-20 00:00:00,1
+20,tour-688,Vitor,4,2021-02-20 20:23:40,243.0,2,Inventrix (breakthrough),1,2.0,19,3.0,9.0,Vitor,90,10,2,2021-02-20 00:00:00,1
+21,tour-624,Terralabs Research (breakthrough),3,2021-02-18 21:56:14,242.0,2,Cheung Shing MARS,1,4.0,21,3.5,6.5,Cheung Shing MARS,64,7,2,2021-02-18 00:00:00,1
+22,eie,Viron,2,2021-05-10 01:23:45,766.0,2,Valley Trust (breakthrough),1,4.0,1,3.0,9.0,Viron,71,9,2,2021-05-10 00:00:00,1
+23,lala,Mining Guild,2,2021-03-27 12:52:23,471.0,2,Mining Guild,1,2.0,12,3.0,8.5,Pharmacy Union,69,9,1,2021-03-27 00:00:00,2
+24,零点,EcoLine,2,2021-07-15 01:00:26,1122.0,2,EcoLine,1,2.0,0,2.0,9.5,Vitor and ,94,9,2,2021-07-15 00:00:00,1
+25,wapian,Arklight (breakthrough),4,2021-06-23 19:11:21,1019.0,2,Arklight (breakthrough),1,4.0,19,3.0,5.5,Manutech and Curiosity II,46,6,1,2021-06-23 00:00:00,2
+26,lxlx,PhoboLog,1,2021-06-20 00:55:34,1014.0,2,Cheung Shing MARS,1,3.0,0,2.0,7.5,PhoboLog and ,64,8,1,2021-06-20 00:00:00,2
+27,crlr,Mons Insurance,4,2021-05-10 01:23:45,774.0,2,Astrodrill,1,3.0,1,3.5,9.0,Astrodrill,71,9,2,2021-05-10 00:00:00,1
 28,xiaomo,United Nations Mars Initiative,4,2021-06-20 02:13:47,1012.0,2,EcoLine,1,1.0,2,2.5,7.5,EcoLine and ,68,8,2,2021-06-20 00:00:00,1
-29,暗翼,Poseidon,1,2021-05-16 04:24:46,581.0,2,Aridor,1,2.0,3,1.5,9.5,Poseidon,130,9,2,2021-05-16 00:00:00,1
-30,dr,Tharsis Republic,3,2021-03-26 20:50:53,498.0,2,Tharsis Republic,2,3.0,20,3.0,10.5,Tharsis Republic,74,11,2,2021-03-26 00:00:00,1
-31,kk,Teractor,2,2021-04-10 19:13:58,934.0,2,Poseidon,1,2.0,13,2.0,9.5,Poseidon,109,9,2,2021-04-10 00:00:00,1
-32,小智,Curiosity II,3,2021-06-17 15:34:08,924.0,2,Curiosity II,1,3.0,0,3.5,9.5,Curiosity II and ,82,10,2,2021-06-17 00:00:00,1
-33,安逸,Saturn Systems,1,2021-03-31 17:46:15,1233.0,2,Inventrix,1,1.0,1,1.0,9.0,Inventrix,99,9,2,2021-03-31 00:00:00,1
-34,zxapdh,Saturn Systems,4,2020-12-05 23:59:26,8.0,2,Philares,1,1.0,0,2.5,9.0,Philares,95,9,2,2020-12-05 00:00:00,1
-35,包子,Point Luna,2,2021-04-11 01:16:19,854.0,2,Point Luna,1,2.0,1,2.5,9.0,Point Luna,86,10,2,2021-04-11 00:00:00,1
-36,友人,Vitor,4,2020-12-05 23:59:27,11.0,2,Manutech,1,2.0,23,3.0,9.0,Manutech,104,10,1,2020-12-05 00:00:00,2
-37,yuexing,Point Luna,3,2020-09-06 16:47:35,823.0,64,Tharsis Republic,5,2.0,20,2.65625,8.8125,CrediCor,131,10,54,2020-09-22 00:00:00,2
-38,鯊魚,Saturn Systems,1,2021-05-17 05:27:56,820.0,2,Robinson Industries,1,4.0,5,2.5,9.5,Saturn Systems,75,10,2,2021-05-17 00:00:00,1
-39,维尼熊,Factorum (breakthrough),4,2021-07-22 17:14:23,1211.0,2,Curiosity II,1,2.0,0,3.0,8.0,Curiosity II and Polyphemos (breakthrough),95,8,2,2021-07-22 00:00:00,1
-40,哈士奇,Robinson Industries,3,2021-07-26 16:33:43,1196.0,2,EcoLine,1,3.0,16,3.0,11.0,EcoLine and ,90,13,2,2021-07-26 00:00:00,1
-41,shishen,Astrodrill,3,2021-05-13 23:22:58,800.0,2,Astrodrill,1,3.0,0,2.5,9.0,Astrodrill,78,9,2,2021-05-13 00:00:00,1
-42,yk,Vitor,2,2021-05-17 22:10:44,792.0,2,Valley Trust,1,1.0,22,1.5,9.5,Valley Trust,88,10,2,2021-05-17 00:00:00,1
-43,kriko,PhoboLog,4,2021-07-26 16:33:43,1192.0,2,PhoboLog,1,4.0,16,3.0,11.0,Saturn Systems and ,112,13,2,2021-07-26 00:00:00,1
-44,万丈千明,Philares,1,2021-05-13 23:22:58,494.0,2,Philares,1,1.0,0,1.0,9.0,Philares,89,9,2,2021-05-13 00:00:00,1
-45,crlr,Mons Insurance,4,2021-05-10 01:23:45,774.0,2,Astrodrill,1,3.0,1,3.5,9.0,Astrodrill,71,9,2,2021-05-10 00:00:00,1
-46,769991388,EcoLine,2,2020-12-05 23:59:29,29.0,2,EcoLine,1,2.0,22,1.5,9.0,Viron,77,9,2,2020-12-05 00:00:00,1
-47,peace,Saturn Systems,3,2021-04-30 22:14:09,719.0,2,Saturn Systems,1,3.0,0,2.5,10.5,Saturn Systems,80,10,2,2021-04-30 00:00:00,1
-48,一刀一个牛头人,Tharsis Republic,2,2021-04-30 22:14:09,714.0,2,Helion,1,4.0,0,3.0,10.5,Tharsis Republic,80,10,2,2021-04-30 00:00:00,1
-49,francis,Celestic (breakthrough),3,2021-05-06 13:34:26,689.0,2,Aphrodite (breakthrough),1,3.0,13,3.0,8.0,Aphrodite (breakthrough),76,8,2,2021-05-06 00:00:00,1
-50,26,Tharsis_republic (breakthrough),4,2021-04-25 14:26:36,672.0,2,Teractor (breakthrough),1,4.0,2,4.0,8.5,Teractor (breakthrough),82,9,2,2021-04-25 00:00:00,1
-51,丝巾,Vitor,4,2020-10-20 23:52:59,51.0,2,Tharsis_republic (breakthrough),1,4.0,23,4.0,9.0,Vitor,66,10,2,2020-10-20 00:00:00,1
-52,罗成,StormCraft Incorporated (breakthrough),3,2021-02-16 00:56:25,52.0,2,StormCraft Incorporated (breakthrough),1,3.0,0,2.0,11.0,Tharsis Republic,120,13,2,2021-02-16 00:00:00,1
-53,零点,EcoLine,2,2021-07-15 01:00:26,1122.0,2,EcoLine,1,2.0,0,2.0,9.5,Vitor and ,94,9,2,2021-07-15 00:00:00,1
-54,zhangcheng,Point Luna,4,2021-04-30 13:15:23,633.0,2,Mining guild (breakthrough),1,4.0,3,4.0,6.5,Point Luna,67,8,2,2021-04-30 00:00:00,1
-55,flagalac,Robinson Industries,4,2021-07-15 00:57:01,1121.0,2,Poseidon,1,4.0,0,4.0,10.0,Poseidon and ,54,10,1,2021-07-15 00:00:00,2
-56,rohana,Septem Tribus,4,2021-05-05 21:08:40,597.0,2,Septem Tribus,1,4.0,13,3.0,7.5,Teractor (breakthrough),85,8,2,2021-05-05 00:00:00,1
-57,tour-267,Septem Tribus,4,2021-02-18 09:20:56,234.0,2,Septem Tribus,1,4.0,9,4.0,8.0,Septem Tribus,76,8,2,2021-02-18 00:00:00,1
-58,龙日天,Mining Guild,3,2021-05-13 00:22:56,527.0,2,Mining Guild,1,3.0,0,2.0,8.5,Tharsis Republic,75,8,2,2021-05-13 00:00:00,1
-59,eie,Viron,2,2021-05-10 01:23:45,766.0,2,Valley Trust (breakthrough),1,4.0,1,3.0,9.0,Viron,71,9,2,2021-05-10 00:00:00,1
-60,tour-962,Teractor (breakthrough),3,2021-02-17 21:44:31,233.0,2,Manutech,1,3.0,21,3.0,8.0,Manutech,82,8,2,2021-02-17 00:00:00,1
-61,wapian,Arklight (breakthrough),4,2021-06-23 19:11:21,1019.0,2,Arklight (breakthrough),1,4.0,19,3.0,5.5,Manutech and Curiosity II,46,6,1,2021-06-23 00:00:00,2
-62,tour-555,UNMI (breakthrough),4,2021-02-17 21:44:31,231.0,2,Pobolog (breakthrough),1,3.0,17,3.5,7.5,Pobolog (breakthrough),67,7,2,2021-02-17 00:00:00,1
-63,tour-63,Septem Tribus,1,2021-02-10 21:45:27,159.0,2,Septem Tribus,1,1.0,21,1.5,8.0,Tharsis_republic (breakthrough),112,9,2,2021-02-10 00:00:00,1
-64,tm-tour-688,Teractor (breakthrough),3,2021-02-03 20:46:00,158.0,2,Philares,1,2.0,20,2.5,7.5,Teractor (breakthrough),83,8,2,2021-02-03 00:00:00,1
-65,tour-960,Tharsis_republic (breakthrough),3,2021-02-04 20:54:24,187.0,2,Poseidon,1,2.0,20,2.5,7.5,Tharsis_republic (breakthrough),74,8,2,2021-02-04 00:00:00,1
-66,tour-7,Vitor,2,2021-02-05 14:03:36,189.0,2,Poseidon,1,2.0,14,2.0,6.0,Vitor,73,8,2,2021-02-05 00:00:00,1
-67,tour-513,Mining guild (breakthrough),3,2021-02-04 22:51:10,190.0,2,Mining guild (breakthrough),1,3.0,14,2.0,7.5,Poseidon,84,8,2,2021-02-04 00:00:00,1
-68,tour-642,Inventrix (breakthrough),2,2021-02-04 22:51:10,191.0,2,Inventrix (breakthrough),1,2.0,22,3.0,8.0,Point Luna,75,9,2,2021-02-04 00:00:00,1
-69,tm-tour-592,Factorum (breakthrough),3,2021-02-03 23:39:02,186.0,2,Factorum (breakthrough),1,3.0,21,2.5,8.0,Inventrix (breakthrough),88,9,2,2021-02-03 00:00:00,1
-70,tour-532,Thorgate (breakthrough),2,2021-02-23 23:30:18,165.0,2,Manutech,1,3.0,14,2.5,7.0,Manutech,70,8,2,2021-02-23 00:00:00,1
-71,tm-tour-91,Mining guild (breakthrough),1,2021-02-03 23:39:02,195.0,2,Mining guild (breakthrough),1,1.0,23,2.0,7.5,Mining guild (breakthrough),66,7,2,2021-02-03 00:00:00,1
-72,tm-tour-561,Pobolog (breakthrough),1,2021-02-05 11:16:21,141.0,2,Pobolog (breakthrough),1,1.0,11,2.5,8.0,Saturn Systems,80,9,2,2021-02-05 00:00:00,1
-73,tour-241,Pharmacy Union,4,2021-02-05 16:17:55,198.0,2,Pharmacy Union,1,4.0,16,4.0,7.5,Vitor,58,8,2,2021-02-05 00:00:00,1
-74,tour-307,Philares,2,2021-02-05 16:17:55,200.0,2,Philares,2,2.0,16,2.0,6.5,Philares,68,7,2,2021-02-05 00:00:00,1
-75,tm-tour-213,Vitor,1,2021-02-02 23:14:54,157.0,2,Factorum (breakthrough),1,3.0,21,2.0,7.0,Vitor,105,8,2,2021-02-02 00:00:00,1
+29,万丈千明,Philares,1,2021-05-13 23:22:58,494.0,2,Philares,1,1.0,0,1.0,9.0,Philares,89,9,2,2021-05-13 00:00:00,1
+30,有没有可能是你们菜呢,PhoboLog,1,2021-07-23 23:48:14,1069.0,2,PhoboLog,1,1.0,1,2.5,8.5,Tharsis Republic and ,79,10,2,2021-07-23 00:00:00,1
+31,dr,Tharsis Republic,3,2021-03-26 20:50:53,498.0,2,Tharsis Republic,2,3.0,20,3.0,10.5,Tharsis Republic,74,11,2,2021-03-26 00:00:00,1
+32,hong,Junk Ventures,2,2021-03-19 03:08:02,420.0,2,Junk Ventures,1,2.0,3,2.5,8.5,Junk Ventures,78,9,2,2021-03-19 00:00:00,1
+33,罗成,StormCraft Incorporated (breakthrough),3,2021-02-16 00:56:25,52.0,2,StormCraft Incorporated (breakthrough),1,3.0,0,2.0,11.0,Tharsis Republic,120,13,2,2021-02-16 00:00:00,1
+34,peace,Saturn Systems,3,2021-04-30 22:14:09,719.0,2,Saturn Systems,1,3.0,0,2.5,10.5,Saturn Systems,80,10,2,2021-04-30 00:00:00,1
+35,tour-222,Splice (breakthrough),1,2021-02-05 23:13:17,211.0,2,Splice (breakthrough),1,1.0,21,2.5,8.0,Splice (breakthrough),116,8,2,2021-02-05 00:00:00,1
+36,tour-356,Lakefront Resorts,2,2021-03-01 22:50:45,252.0,2,Lakefront Resorts,1,2.0,14,1.5,7.0,Manutech,95,8,2,2021-03-01 00:00:00,1
+37,blake,Teractor (breakthrough),4,2020-12-09 20:19:41,84.0,2,Recyclon (breakthrough),1,4.0,13,4.0,7.5,Recyclon (breakthrough),50,7,2,2020-12-09 00:00:00,1
+38,龙日天,Mining Guild,3,2021-05-13 00:22:56,527.0,2,Mining Guild,1,3.0,0,2.0,8.5,Tharsis Republic,75,8,2,2021-05-13 00:00:00,1
+39,一刀一个牛头人,Tharsis Republic,2,2021-04-30 22:14:09,714.0,2,Helion,1,4.0,0,3.0,10.5,Tharsis Republic,80,10,2,2021-04-30 00:00:00,1
+40,tour-469,Aridor,1,2021-05-15 22:02:04,247.0,2,Aridor,1,1.0,22,2.5,8.5,Aridor,110,8,2,2021-05-15 00:00:00,1
+41,丝巾,Vitor,4,2020-10-20 23:52:59,51.0,2,Tharsis_republic (breakthrough),1,4.0,23,4.0,9.0,Vitor,66,10,2,2020-10-20 00:00:00,1
+42,包子,Point Luna,2,2021-04-11 01:16:19,854.0,2,Point Luna,1,2.0,1,2.5,9.0,Point Luna,86,10,2,2021-04-11 00:00:00,1
+43,769991388,EcoLine,2,2020-12-05 23:59:29,29.0,2,EcoLine,1,2.0,22,1.5,9.0,Viron,77,9,2,2020-12-05 00:00:00,1
+44,ccl,Point Luna,2,2021-03-23 21:37:29,259.0,2,Point Luna,1,2.0,21,3.0,8.0,Point Luna,78,8,2,2021-03-23 00:00:00,1
+45,g.c,Saturn Systems,1,2021-02-21 16:25:08,97.0,2,Celestic (breakthrough),1,2.0,14,1.5,8.5,Saturn Systems,141,9,2,2021-02-21 00:00:00,1
+46,xq,Vitor,4,2021-06-30 15:35:45,1076.0,2,Saturn Systems,1,2.0,15,3.0,9.5,Saturn Systems and ,77,10,2,2021-06-30 00:00:00,1
+47,boxness,Tharsis Republic,3,2021-06-20 23:15:05,404.0,2,Teractor,1,2.0,22,2.5,9.0,Teractor and ,94,10,2,2021-06-20 00:00:00,1
+48,tour-21,Utopia Invest,4,2021-02-05 23:13:17,209.0,2,Tharsis_republic (breakthrough),1,1.0,21,2.5,8.0,Tharsis_republic (breakthrough),83,8,2,2021-02-05 00:00:00,1
+49,tour-661,Mining guild (breakthrough),4,2021-02-06 23:58:02,172.0,2,Mining guild (breakthrough),1,4.0,19,3.5,7.5,Point Luna,76,8,2,2021-02-06 00:00:00,1
+50,tour-626,Celestic (breakthrough),3,2021-02-16 11:47:15,171.0,2,Celestic (breakthrough),1,3.0,11,2.0,7.5,Factorum (breakthrough),114,9,2,2021-02-16 00:00:00,1
+51,tour-486,Mining guild (breakthrough),3,2021-02-10 21:45:27,170.0,2,Interplanetary Cinematics (breakthrough),1,4.0,21,3.5,7.5,Interplanetary Cinematics (breakthrough),71,8,2,2021-02-10 00:00:00,1
+52,tour-290,Poseidon,2,2021-02-16 11:47:15,169.0,2,Ecoline (breakthrough),1,3.0,11,2.5,7.0,Poseidon,61,6,2,2021-02-16 00:00:00,1
+53,zhangcheng,Point Luna,4,2021-04-30 13:15:23,633.0,2,Mining guild (breakthrough),1,4.0,3,4.0,6.5,Point Luna,67,8,2,2021-04-30 00:00:00,1
+54,tour-528,Arklight (breakthrough),1,2021-02-06 23:58:02,166.0,2,Arklight (breakthrough),1,1.0,14,2.5,7.5,Lakefront Resorts,68,8,2,2021-02-06 00:00:00,1
+55,tour-532,Thorgate (breakthrough),2,2021-02-23 23:30:18,165.0,2,Manutech,1,3.0,14,2.5,7.0,Manutech,70,8,2,2021-02-23 00:00:00,1
+56,tour-300,Manutech,4,2021-02-23 23:30:18,163.0,2,Lakefront Resorts,1,3.0,21,3.5,6.0,Lakefront Resorts,51,6,2,2021-02-23 00:00:00,1
+57,invokercat,Factorum,1,2021-07-26 16:33:43,668.0,2,Factorum,1,1.0,16,1.0,8.0,Factorum and ,92,9,2,2021-07-26 00:00:00,1
+58,tour-63,Septem Tribus,1,2021-02-10 21:45:27,159.0,2,Septem Tribus,1,1.0,21,1.5,8.0,Tharsis_republic (breakthrough),112,9,2,2021-02-10 00:00:00,1
+59,tm-tour-688,Teractor (breakthrough),3,2021-02-03 20:46:00,158.0,2,Philares,1,2.0,20,2.5,7.5,Teractor (breakthrough),83,8,2,2021-02-03 00:00:00,1
+60,tm-tour-213,Vitor,1,2021-02-02 23:14:54,157.0,2,Factorum (breakthrough),1,3.0,21,2.0,7.0,Vitor,105,8,2,2021-02-02 00:00:00,1
+61,tm-tour-515,UNMI (breakthrough),2,2021-02-02 23:14:54,156.0,2,Point Luna,1,4.0,22,3.0,7.5,UNMI (breakthrough),88,8,2,2021-02-02 00:00:00,1
+62,tm-tour-552,Manutech,3,2021-02-02 23:14:54,155.0,2,Manutech,1,3.0,21,2.0,8.5,Philares,88,9,2,2021-02-02 00:00:00,1
+63,tm-tour-136,Teractor (breakthrough),4,2021-02-02 23:14:54,154.0,2,Splice (breakthrough),1,3.0,20,3.5,7.5,Teractor (breakthrough),61,8,2,2021-02-02 00:00:00,1
+64,yuexing,Point Luna,3,2020-09-06 16:47:35,823.0,72,Aridor,6,2.8333333333333335,20,2.736111111111111,8.569444444444445,CrediCor,131,10,61,2020-10-07 00:00:00,2
+65,tm-tour-846,Inventrix (breakthrough),4,2021-02-02 21:51:20,152.0,2,Inventrix (breakthrough),1,4.0,21,4.0,8.0,Poseidon,65,8,2,2021-02-02 00:00:00,1
+66,tm-tour-583,Thorgate (breakthrough),2,2021-02-02 21:51:20,151.0,2,Cheung Shing MARS,1,3.0,21,2.5,8.5,Thorgate (breakthrough),85,8,2,2021-02-02 00:00:00,1
+67,鯊魚,Saturn Systems,1,2021-05-17 05:27:56,820.0,2,Robinson Industries,1,4.0,5,2.5,9.5,Saturn Systems,75,10,2,2021-05-17 00:00:00,1
+68,偉大空佬,Point Luna,4,2021-07-06 00:43:33,818.0,2,Point Luna,1,4.0,0,3.0,9.0,Poseidon and Junk Ventures,115,9,2,2021-07-06 00:00:00,1
+69,tm-tour-101,Vitor,3,2021-02-02 21:27:23,148.0,2,Utopia Invest,1,2.0,20,2.5,8.0,Vitor,69,9,2,2021-02-02 00:00:00,1
+70,tm-tour-822,Viron (breakthrough),2,2021-02-02 21:27:23,147.0,2,Inventrix (breakthrough),1,1.0,21,1.5,8.5,Viron (breakthrough),95,9,2,2021-02-02 00:00:00,1
+71,tm-tour-470,Interplanetary Cinematics (breakthrough),4,2021-02-02 21:27:23,146.0,2,Interplanetary Cinematics (breakthrough),1,4.0,21,3.5,8.0,Interplanetary Cinematics (breakthrough),61,9,2,2021-02-02 00:00:00,1
+72,tm-tour-187,Poseidon,1,2021-02-01 23:09:45,144.0,2,MorningStar Inc (breakthrough),1,4.0,20,2.5,7.5,Poseidon,73,8,2,2021-02-01 00:00:00,1
+73,tm-tour-670,Point Luna,2,2021-02-01 23:09:45,143.0,2,Point Luna,1,2.0,21,1.5,7.5,Teractor (breakthrough),79,7,2,2021-02-01 00:00:00,1
+74,mocca,Point Luna,4,2021-07-15 23:23:33,1078.0,2,EcoLine,1,4.0,1,4.0,11.0,EcoLine and ,87,12,2,2021-07-15 00:00:00,1
+75,tm-tour-561,Pobolog (breakthrough),1,2021-02-05 11:16:21,141.0,2,Pobolog (breakthrough),1,1.0,11,2.5,8.0,Saturn Systems,80,9,2,2021-02-05 00:00:00,1
 76,tm-tour-485,Teractor (breakthrough),2,2021-02-05 11:16:21,138.0,2,Teractor (breakthrough),1,2.0,11,1.5,7.0,Valley Trust (breakthrough),84,7,2,2021-02-05 00:00:00,1
-77,tour-279,UNMI (breakthrough),3,2021-02-05 22:43:07,193.0,2,UNMI (breakthrough),1,3.0,21,2.5,7.5,UNMI (breakthrough),63,7,2,2021-02-05 00:00:00,1
-78,tm-tour-187,Poseidon,1,2021-02-01 23:09:45,144.0,2,MorningStar Inc (breakthrough),1,4.0,20,2.5,7.5,Poseidon,73,8,2,2021-02-01 00:00:00,1
-79,tour-597,Thorgate (breakthrough),1,2021-02-04 20:54:24,185.0,2,Splice (breakthrough),1,1.0,20,1.0,7.5,Thorgate (breakthrough),88,8,2,2021-02-04 00:00:00,1
-80,tour-175,Terralabs Research (breakthrough),3,2021-02-18 09:20:56,232.0,2,Terralabs Research (breakthrough),1,3.0,9,3.5,8.0,Terralabs Research (breakthrough),79,8,2,2021-02-18 00:00:00,1
-81,tour-528,Arklight (breakthrough),1,2021-02-06 23:58:02,166.0,2,Arklight (breakthrough),1,1.0,14,2.5,7.5,Lakefront Resorts,68,8,2,2021-02-06 00:00:00,1
-82,tm-tour-670,Point Luna,2,2021-02-01 23:09:45,143.0,2,Point Luna,1,2.0,21,1.5,7.5,Teractor (breakthrough),79,7,2,2021-02-01 00:00:00,1
-83,tour-290,Poseidon,2,2021-02-16 11:47:15,169.0,2,Ecoline (breakthrough),1,3.0,11,2.5,7.0,Poseidon,61,6,2,2021-02-16 00:00:00,1
-84,tour-486,Mining guild (breakthrough),3,2021-02-10 21:45:27,170.0,2,Interplanetary Cinematics (breakthrough),1,4.0,21,3.5,7.5,Interplanetary Cinematics (breakthrough),71,8,2,2021-02-10 00:00:00,1
-85,tour-626,Celestic (breakthrough),3,2021-02-16 11:47:15,171.0,2,Celestic (breakthrough),1,3.0,11,2.0,7.5,Factorum (breakthrough),114,9,2,2021-02-16 00:00:00,1
-86,tour-661,Mining guild (breakthrough),4,2021-02-06 23:58:02,172.0,2,Mining guild (breakthrough),1,4.0,19,3.5,7.5,Point Luna,76,8,2,2021-02-06 00:00:00,1
-87,tour-978,Arcadian Communities (breakthrough),1,2021-02-23 23:30:18,174.0,2,Arcadian Communities (breakthrough),1,1.0,22,2.5,7.0,Arcadian Communities (breakthrough),62,6,2,2021-02-23 00:00:00,1
-88,tour-45,Mining guild (breakthrough),4,2021-02-05 22:43:07,175.0,2,Mining guild (breakthrough),1,4.0,20,2.5,7.0,Philares,68,7,2,2021-02-05 00:00:00,1
-89,tour-416,Ecoline (breakthrough),4,2021-02-16 11:47:15,176.0,2,Ecoline (breakthrough),1,4.0,11,3.5,6.5,Terralabs Research (breakthrough),60,7,2,2021-02-16 00:00:00,1
-90,tour-300,Manutech,4,2021-02-23 23:30:18,163.0,2,Lakefront Resorts,1,3.0,21,3.5,6.0,Lakefront Resorts,51,6,2,2021-02-23 00:00:00,1
-91,tm-tour-305,Vitor,2,2021-02-03 20:46:00,178.0,2,Poseidon,1,4.0,20,3.0,7.0,Vitor,84,8,2,2021-02-03 00:00:00,1
-92,tm-tour-163,Valley Trust (breakthrough),1,2021-02-03 20:46:00,179.0,2,Valley Trust (breakthrough),2,1.0,20,1.0,7.5,Valley Trust (breakthrough),90,8,2,2021-02-03 00:00:00,1
-93,tm-tour-398,Tharsis_republic (breakthrough),2,2021-02-03 23:39:02,180.0,2,Helion (breakthrough),1,1.0,21,1.5,6.5,Tharsis_republic (breakthrough),65,7,2,2021-02-03 00:00:00,1
-94,tm-tour-961,Inventrix (breakthrough),4,2021-02-03 23:39:02,181.0,2,Arcadian Communities (breakthrough),1,2.0,23,3.0,7.5,Arcadian Communities (breakthrough),70,8,2,2021-02-03 00:00:00,1
-95,tour-701,MorningStar Inc (breakthrough),4,2021-02-04 20:54:24,184.0,2,MorningStar Inc (breakthrough),1,4.0,16,3.5,6.0,MorningStar Inc (breakthrough),74,8,2,2021-02-04 00:00:00,1
-96,tour-518,MorningStar Inc (breakthrough),3,2021-02-09 00:08:15,205.0,2,MorningStar Inc (breakthrough),1,3.0,0,2.5,8.0,Tharsis_republic (breakthrough),79,8,2,2021-02-09 00:00:00,1
-97,tour-234,Philares,1,2021-02-18 09:20:56,206.0,2,Factorum (breakthrough),1,3.0,9,2.0,8.0,Philares,95,8,2,2021-02-18 00:00:00,1
-98,tour-496,Factorum (breakthrough),1,2021-02-04 22:51:10,192.0,2,Cheung Shing MARS,1,2.0,22,1.5,7.5,Factorum (breakthrough),85,7,2,2021-02-04 00:00:00,1
-99,tm-tour-515,UNMI (breakthrough),2,2021-02-02 23:14:54,156.0,2,Point Luna,1,4.0,22,3.0,7.5,UNMI (breakthrough),88,8,2,2021-02-02 00:00:00,1
-100,tour-222,Splice (breakthrough),1,2021-02-05 23:13:17,211.0,2,Splice (breakthrough),1,1.0,21,2.5,8.0,Splice (breakthrough),116,8,2,2021-02-05 00:00:00,1
-101,tour-617,StormCraft Incorporated (breakthrough),1,2021-02-15 13:14:11,212.0,2,Aphrodite (breakthrough),1,2.0,13,1.5,7.5,StormCraft Incorporated (breakthrough),79,8,2,2021-02-15 00:00:00,1
-102,tm-tour-846,Inventrix (breakthrough),4,2021-02-02 21:51:20,152.0,2,Inventrix (breakthrough),1,4.0,21,4.0,8.0,Poseidon,65,8,2,2021-02-02 00:00:00,1
-103,tour-440,Inventrix (breakthrough),4,2021-02-15 13:14:11,213.0,2,Inventrix (breakthrough),1,4.0,13,3.0,7.5,Poseidon,64,7,2,2021-02-15 00:00:00,1
-104,tour-21,Utopia Invest,4,2021-02-05 23:13:17,209.0,2,Tharsis_republic (breakthrough),1,1.0,21,2.5,8.0,Tharsis_republic (breakthrough),83,8,2,2021-02-05 00:00:00,1
-105,tm-tour-136,Teractor (breakthrough),4,2021-02-02 23:14:54,154.0,2,Splice (breakthrough),1,3.0,20,3.5,7.5,Teractor (breakthrough),61,8,2,2021-02-02 00:00:00,1
-106,tm-tour-583,Thorgate (breakthrough),2,2021-02-02 21:51:20,151.0,2,Cheung Shing MARS,1,3.0,21,2.5,8.5,Thorgate (breakthrough),85,8,2,2021-02-02 00:00:00,1
-107,tour-640,Terralabs Research (breakthrough),2,2021-02-05 23:13:17,214.0,2,Inventrix (breakthrough),1,3.0,22,2.5,8.5,Terralabs Research (breakthrough),87,8,2,2021-02-05 00:00:00,1
-108,ernest,PhoboLog,1,2021-02-08 00:01:33,226.0,2,PhoboLog,1,1.0,0,2.5,9.0,PhoboLog,101,10,2,2021-02-08 00:00:00,1
-109,tm-tour-552,Manutech,3,2021-02-02 23:14:54,155.0,2,Manutech,1,3.0,21,2.0,8.5,Philares,88,9,2,2021-02-02 00:00:00,1
-110,tour-715,Lakefront Resorts,1,2021-02-17 21:44:31,230.0,2,Helion (breakthrough),1,4.0,16,2.5,6.0,Lakefront Resorts,87,8,2,2021-02-17 00:00:00,1
-111,tm-tour-470,Interplanetary Cinematics (breakthrough),4,2021-02-02 21:27:23,146.0,2,Interplanetary Cinematics (breakthrough),1,4.0,21,3.5,8.0,Interplanetary Cinematics (breakthrough),61,9,2,2021-02-02 00:00:00,1
-112,紫苑寺无良,Cheung Shing MARS,1,2021-05-10 01:23:45,756.0,3,Cheung Shing MARS,1,1.0,1,1.6666666666666667,8.333333333333334,Cheung Shing MARS,94,9,3,2021-05-10 00:00:00,1
-113,xu,Point Luna,2,2020-12-17 22:33:11,1099.0,3,Point Luna,2,1.5,13,1.6666666666666667,9.0,Point Luna,172,9,3,2020-12-17 00:00:00,1
-114,tour-252,Celestic (breakthrough),4,2021-03-01 22:50:45,254.0,3,Aphrodite (breakthrough),1,2.0,20,2.3333333333333335,7.0,Splice (breakthrough),102,8,3,2021-03-01 00:00:00,1
-115,franklinchan,Septem Tribus,1,2020-08-31 15:05:21,5.0,307,Manutech,23,2.347826086956522,23,2.270358306188925,7.762214983713355,Id Front,144,9,174,2021-07-17 00:00:00,4
-116,hehe,Vitor,1,2021-05-03 13:31:41,923.0,3,Poseidon,1,1.0,13,1.6666666666666667,9.0,Vitor,114,9,3,2021-05-03 00:00:00,1
-117,starry,Poseidon,2,2021-05-02 17:59:02,69.0,3,CrediCor,1,4.0,15,2.6666666666666665,7.666666666666667,CrediCor,71,8,3,2021-05-02 00:00:00,1
-118,tour-367,Vitor,2,2021-02-23 20:40:43,250.0,3,Aphrodite (breakthrough),1,3.0,14,3.0,7.333333333333333,Aphrodite (breakthrough),79,8,3,2021-02-23 00:00:00,1
-119,tour-238,Arklight (breakthrough),2,2021-02-10 21:45:27,161.0,3,Arklight (breakthrough),1,2.0,21,2.6666666666666665,7.333333333333333,Arklight (breakthrough),71,7,3,2021-02-10 00:00:00,1
-120,tour-670,Teractor (breakthrough),3,2021-02-23 20:40:43,249.0,3,Splice (breakthrough),1,2.0,19,2.0,7.333333333333333,Vitor,92,8,3,2021-02-23 00:00:00,1
-121,tour-554,Celestic (breakthrough),2,2021-02-04 20:54:24,183.0,3,Lakefront Resorts,2,2.5,17,2.3333333333333335,8.0,Lakefront Resorts,86,9,3,2021-02-04 00:00:00,1
-122,tour-345,MorningStar Inc (breakthrough),2,2021-02-06 23:58:02,162.0,3,MorningStar Inc (breakthrough),1,2.0,14,2.6666666666666665,7.666666666666667,Philares,81,8,2,2021-05-10 00:00:00,2
-123,flyingfish,Pobolog (breakthrough),2,2021-04-21 19:34:38,654.0,3,Mining guild (breakthrough),1,2.0,1,1.6666666666666667,9.0,Saturn Systems,92,10,3,2021-04-21 00:00:00,1
-124,yddyqjd,Point Luna,3,2020-11-03 22:09:17,50.0,3,Cheung Shing MARS,1,2.0,22,2.6666666666666665,8.0,Philares,66,8,3,2020-11-03 00:00:00,1
-125,tour-975,Point Luna,4,2021-02-10 21:45:27,168.0,3,Point Luna,2,2.5,20,3.0,7.333333333333333,Point Luna,93,8,3,2021-02-10 00:00:00,1
-126,tour-418,Inventrix (breakthrough),2,2021-02-05 22:43:07,177.0,3,Helion (breakthrough),1,4.0,0,3.0,7.0,Inventrix (breakthrough),64,7,3,2021-02-05 00:00:00,1
-127,徽少,Mining Guild,1,2020-10-20 23:52:59,48.0,3,Mining Guild,1,1.0,22,2.3333333333333335,8.666666666666666,Mining Guild,94,10,3,2020-10-20 00:00:00,1
-128,howard514,Thorgate,1,2021-06-15 21:53:08,228.0,3,Saturn Systems,2,2.5,21,2.0,8.333333333333334,Saturn Systems and ,93,9,3,2021-06-15 00:00:00,1
-129,封云台,Thorgate,4,2021-04-30 22:14:09,718.0,3,PhoboLog,1,1.0,0,2.0,10.666666666666666,Septem Tribus,100,11,3,2021-04-30 00:00:00,1
-130,虎虎虎,Factorum (breakthrough),4,2020-11-01 22:54:10,43.0,3,Aphrodite (breakthrough),1,3.0,0,3.3333333333333335,8.333333333333334,Aphrodite (breakthrough),71,9,3,2020-11-01 00:00:00,1
-131,胡宇彬,Mining Guild,4,2021-06-14 16:35:14,983.0,3,Mining Guild,1,4.0,23,3.3333333333333335,8.666666666666666,Thorgate and ,53,9,2,2021-06-14 00:00:00,2
-132,tour-561,Poseidon,1,2021-02-23 20:40:43,241.0,3,Philares,1,3.0,17,1.6666666666666667,7.0,Poseidon,84,8,3,2021-02-23 00:00:00,1
-133,请叫我堇老师,Saturn Systems,1,2021-05-06 23:57:00,745.0,3,Point Luna,1,1.0,1,1.3333333333333333,8.666666666666666,Saturn Systems,87,8,3,2021-05-06 00:00:00,1
-134,183454241,Inventrix,2,2021-05-06 23:57:00,750.0,3,Inventrix,1,2.0,1,2.6666666666666665,8.666666666666666,Robinson Industries,80,9,3,2021-05-06 00:00:00,1
-135,tour-204,Splice (breakthrough),1,2021-02-16 11:47:15,173.0,3,Splice (breakthrough),2,1.0,21,1.3333333333333333,7.0,Splice (breakthrough),81,7,3,2021-02-16 00:00:00,1
-136,steamriki,Mining Guild,4,2021-05-06 23:57:00,754.0,3,Celestic,1,1.0,1,2.6666666666666665,8.666666666666666,Celestic,85,9,3,2021-05-06 00:00:00,1
-137,black_uuz,United Nations Mission One,2,2021-05-01 22:27:26,229.0,3,Point Luna,1,1.0,22,1.6666666666666667,7.333333333333333,Point Luna,70,7,3,2021-05-01 00:00:00,1
-138,猫猫,Point Luna,2,2021-05-05 01:33:53,1006.0,3,Aridor,1,4.0,0,3.3333333333333335,9.333333333333334,Point Luna,84,9,3,2021-05-05 00:00:00,1
-139,小企鹅,MorningStar Inc (breakthrough),1,2021-07-05 20:40:56,66.0,3,CrediCor,2,2.0,0,1.6666666666666667,7.666666666666667,CrediCor and Chaos,106,9,3,2021-07-05 00:00:00,1
-140,tour-509,Helion (breakthrough),3,2021-02-23 23:30:18,164.0,3,Helion (breakthrough),1,3.0,23,2.6666666666666665,7.666666666666667,Valley Trust (breakthrough),102,9,3,2021-02-23 00:00:00,1
-141,ldxbr,Celestic (breakthrough),1,2021-05-10 00:22:16,452.0,3,Celestic (breakthrough),1,1.0,0,1.6666666666666667,8.0,Polyphemos (breakthrough),98,8,3,2021-05-10 00:00:00,1
-142,psycho,Mining Guild,3,2021-06-29 21:07:30,1080.0,3,Mining Guild,1,3.0,1,1.6666666666666667,10.666666666666666,Teractor and ,127,12,3,2021-06-29 00:00:00,1
-143,tour-3,Saturn Systems,1,2021-02-05 22:43:07,194.0,3,Aphrodite (breakthrough),1,1.0,19,1.0,7.0,Vitor,93,8,3,2021-02-05 00:00:00,1
-144,michaelis200,MorningStar Inc (breakthrough),2,2021-06-11 01:16:58,899.0,3,MorningStar Inc (breakthrough),1,2.0,0,2.3333333333333335,8.333333333333334,MorningStar Inc (breakthrough) and ,105,9,3,2021-06-11 00:00:00,1
-145,tour-123,Thorgate (breakthrough),3,2021-02-05 14:03:36,196.0,3,Mining guild (breakthrough),1,3.0,14,3.3333333333333335,7.666666666666667,Mining guild (breakthrough),72,8,3,2021-02-05 00:00:00,1
-146,r6y1717,Poseidon,1,2021-05-17 02:44:30,827.0,3,Celestic,1,4.0,2,3.0,10.0,Poseidon,119,10,3,2021-05-17 00:00:00,1
-147,tour-428,Tharsis_republic (breakthrough),4,2021-02-09 00:08:15,202.0,3,Arklight (breakthrough),1,4.0,0,3.0,8.0,Manutech,132,9,3,2021-02-09 00:00:00,1
-148,tour-449,Arklight (breakthrough),2,2021-02-15 13:14:11,208.0,3,Arklight (breakthrough),1,2.0,13,2.3333333333333335,7.333333333333333,Arklight (breakthrough),75,8,3,2021-02-15 00:00:00,1
-149,牧殇,MorningStar Inc (breakthrough),4,2021-04-30 23:30:29,297.0,3,Id Front,1,4.0,16,3.0,8.333333333333334,Id Front,88,8,3,2021-04-30 00:00:00,1
-150,tm-tour-19,Philares,3,2021-02-05 11:16:21,140.0,3,Aphrodite (breakthrough),1,2.0,11,2.3333333333333335,7.0,Factorum (breakthrough),80,8,3,2021-02-05 00:00:00,1
-151,tm-tour-426,Point Luna,4,2021-02-05 11:16:21,139.0,3,Point Luna,2,2.5,22,2.3333333333333335,7.0,Point Luna,122,7,3,2021-02-05 00:00:00,1
-152,1962142767,Point Luna,4,2021-07-08 18:47:59,1132.0,4,Incite Ender,1,4.0,14,4.0,7.0,Pobolog (breakthrough) and Curiosity II,75,7,4,2021-07-08 00:00:00,1
-153,jd,Tharsis Republic,2,2020-11-29 23:54:23,85.0,4,Inventrix (breakthrough),1,3.0,23,2.5,9.75,Thorgate (breakthrough),114,10,4,2020-11-29 00:00:00,1
-154,bulez00,Helion,2,2021-06-29 21:07:30,1079.0,4,Helion,2,2.5,1,2.0,10.5,Helion and ,87,12,4,2021-06-29 00:00:00,1
-155,naixin,Teractor,4,2021-03-27 12:52:23,41.0,4,Factorum,1,2.0,20,2.5,8.25,Factorum,80,9,3,2021-03-27 00:00:00,2
-156,biaodi,Factorum,3,2021-03-27 12:52:23,421.0,4,Tharsis Republic,2,2.0,20,2.5,8.25,Saturn Systems,70,9,3,2021-03-27 00:00:00,2
-157,ddd,Vitor,3,2020-12-05 23:59:27,37.0,4,Inventrix,1,2.0,23,2.75,9.25,Teractor,81,10,3,2020-12-05 00:00:00,2
-158,cloream,Saturn Systems,2,2020-10-20 23:52:59,47.0,4,Factorum,1,4.0,22,2.5,8.5,Saturn Systems,78,10,4,2020-10-20 00:00:00,1
-159,sanduo,Saturn Systems,1,2021-03-27 12:52:23,360.0,4,Pharmacy Union,1,2.0,20,2.25,8.25,Valley Trust,71,9,3,2021-03-27 00:00:00,2
-160,1609884203,Aristarchus,2,2021-06-11 18:23:24,811.0,4,Aristarchus,1,2.0,18,2.0,7.5,UNMI (breakthrough) and Ecoline (breakthrough),75,7,4,2021-06-11 00:00:00,1
-161,柴郡猫,Mining guild (breakthrough),1,2021-06-17 22:09:19,964.0,4,Mining guild (breakthrough),2,2.5,1,2.75,6.0,Mining guild (breakthrough) and Tharsis_republic (breakthrough),65,6,4,2021-06-17 00:00:00,1
-162,tm-tour-694,StormCraft Incorporated (breakthrough),3,2021-02-01 23:09:45,145.0,4,Curiosity II,1,1.0,18,2.75,7.25,Curiosity II,71,8,4,2021-02-01 00:00:00,1
-163,tour-710,Thorgate (breakthrough),1,2021-02-09 00:08:15,203.0,4,Aphrodite (breakthrough),1,1.0,0,1.75,6.5,Lakefront Resorts,79,7,4,2021-02-09 00:00:00,1
-164,无名的鸽子,Philares,4,2021-02-18 20:04:04,273.0,4,Lakefront Resorts,1,2.0,16,3.5,9.0,Terralabs Research (breakthrough),82,10,3,2021-02-21 00:00:00,2
-165,van,Interplanetary Cinematics,4,2020-10-30 00:19:47,80.0,4,Factorum,1,4.0,23,3.5,9.25,Point Luna,92,10,4,2020-10-30 00:00:00,1
-166,silkroad,Saturn Systems,4,2021-06-13 20:14:57,963.0,5,Aridor,2,2.5,0,2.8,8.4,Aridor and MorningStar Inc (breakthrough),130,10,5,2021-06-13 00:00:00,1
-167,不泯理念,Celestic (breakthrough),4,2021-01-01 21:37:01,112.0,5,Celestic (breakthrough),1,4.0,1,3.2,7.6,Saturn Systems,89,8,5,2021-01-01 00:00:00,1
-168,wu,United Nations Mars Initiative,3,2021-02-25 22:11:09,975.0,5,United Nations Mars Initiative,2,2.5,22,1.6,10.0,Valley Trust,96,10,5,2021-02-25 00:00:00,1
+77,tour-978,Arcadian Communities (breakthrough),1,2021-02-23 23:30:18,174.0,2,Arcadian Communities (breakthrough),1,1.0,22,2.5,7.0,Arcadian Communities (breakthrough),62,6,2,2021-02-23 00:00:00,1
+78,tour-45,Mining guild (breakthrough),4,2021-02-05 22:43:07,175.0,2,Mining guild (breakthrough),1,4.0,20,2.5,7.0,Philares,68,7,2,2021-02-05 00:00:00,1
+79,26,Tharsis_republic (breakthrough),4,2021-04-25 14:26:36,672.0,2,Teractor (breakthrough),1,4.0,2,4.0,8.5,Teractor (breakthrough),82,9,2,2021-04-25 00:00:00,1
+80,tour-416,Ecoline (breakthrough),4,2021-02-16 11:47:15,176.0,2,Ecoline (breakthrough),1,4.0,11,3.5,6.5,Terralabs Research (breakthrough),60,7,2,2021-02-16 00:00:00,1
+81,tour-234,Philares,1,2021-02-18 09:20:56,206.0,2,Factorum (breakthrough),1,3.0,9,2.0,8.0,Philares,95,8,2,2021-02-18 00:00:00,1
+82,tour-518,MorningStar Inc (breakthrough),3,2021-02-09 00:08:15,205.0,2,MorningStar Inc (breakthrough),1,3.0,0,2.5,8.0,Tharsis_republic (breakthrough),79,8,2,2021-02-09 00:00:00,1
+83,安逸,Saturn Systems,1,2021-03-31 17:46:15,1233.0,2,Inventrix,1,1.0,1,1.0,9.0,Inventrix,99,9,2,2021-03-31 00:00:00,1
+84,tour-307,Philares,2,2021-02-05 16:17:55,200.0,2,Philares,2,2.0,16,2.0,6.5,Philares,68,7,2,2021-02-05 00:00:00,1
+85,rohana,Septem Tribus,4,2021-05-05 21:08:40,597.0,2,Septem Tribus,1,4.0,13,3.0,7.5,Teractor (breakthrough),85,8,2,2021-05-05 00:00:00,1
+86,tour-241,Pharmacy Union,4,2021-02-05 16:17:55,198.0,2,Pharmacy Union,1,4.0,16,4.0,7.5,Vitor,58,8,2,2021-02-05 00:00:00,1
+87,小智,Curiosity II,3,2021-06-17 15:34:08,924.0,2,Curiosity II,1,3.0,0,3.5,9.5,Curiosity II and ,82,10,2,2021-06-17 00:00:00,1
+88,友人,Vitor,4,2020-12-05 23:59:27,11.0,2,Manutech,1,2.0,23,3.0,9.0,Manutech,104,10,1,2020-12-05 00:00:00,2
+89,tm-tour-91,Mining guild (breakthrough),1,2021-02-03 23:39:02,195.0,2,Mining guild (breakthrough),1,1.0,23,2.0,7.5,Mining guild (breakthrough),66,7,2,2021-02-03 00:00:00,1
+90,tour-279,UNMI (breakthrough),3,2021-02-05 22:43:07,193.0,2,UNMI (breakthrough),1,3.0,21,2.5,7.5,UNMI (breakthrough),63,7,2,2021-02-05 00:00:00,1
+91,tour-496,Factorum (breakthrough),1,2021-02-04 22:51:10,192.0,2,Cheung Shing MARS,1,2.0,22,1.5,7.5,Factorum (breakthrough),85,7,2,2021-02-04 00:00:00,1
+92,tour-513,Mining guild (breakthrough),3,2021-02-04 22:51:10,190.0,2,Mining guild (breakthrough),1,3.0,14,2.0,7.5,Poseidon,84,8,2,2021-02-04 00:00:00,1
+93,tour-7,Vitor,2,2021-02-05 14:03:36,189.0,2,Poseidon,1,2.0,14,2.0,6.0,Vitor,73,8,2,2021-02-05 00:00:00,1
+94,tour-642,Inventrix (breakthrough),2,2021-02-04 22:51:10,191.0,2,Inventrix (breakthrough),1,2.0,22,3.0,8.0,Point Luna,75,9,2,2021-02-04 00:00:00,1
+95,tour-960,Tharsis_republic (breakthrough),3,2021-02-04 20:54:24,187.0,2,Poseidon,1,2.0,20,2.5,7.5,Tharsis_republic (breakthrough),74,8,2,2021-02-04 00:00:00,1
+96,tm-tour-305,Vitor,2,2021-02-03 20:46:00,178.0,2,Poseidon,1,4.0,20,3.0,7.0,Vitor,84,8,2,2021-02-03 00:00:00,1
+97,tm-tour-163,Valley Trust (breakthrough),1,2021-02-03 20:46:00,179.0,2,Valley Trust (breakthrough),2,1.0,20,1.0,7.5,Valley Trust (breakthrough),90,8,2,2021-02-03 00:00:00,1
+98,tm-tour-398,Tharsis_republic (breakthrough),2,2021-02-03 23:39:02,180.0,2,Helion (breakthrough),1,1.0,21,1.5,6.5,Tharsis_republic (breakthrough),65,7,2,2021-02-03 00:00:00,1
+99,tm-tour-961,Inventrix (breakthrough),4,2021-02-03 23:39:02,181.0,2,Arcadian Communities (breakthrough),1,2.0,23,3.0,7.5,Arcadian Communities (breakthrough),70,8,2,2021-02-03 00:00:00,1
+100,kk,Teractor,2,2021-04-10 19:13:58,934.0,2,Poseidon,1,2.0,13,2.0,9.5,Poseidon,109,9,2,2021-04-10 00:00:00,1
+101,francis,Celestic (breakthrough),3,2021-05-06 13:34:26,689.0,2,Aphrodite (breakthrough),1,3.0,13,3.0,8.0,Aphrodite (breakthrough),76,8,2,2021-05-06 00:00:00,1
+102,tour-701,MorningStar Inc (breakthrough),4,2021-02-04 20:54:24,184.0,2,MorningStar Inc (breakthrough),1,4.0,16,3.5,6.0,MorningStar Inc (breakthrough),74,8,2,2021-02-04 00:00:00,1
+103,tour-597,Thorgate (breakthrough),1,2021-02-04 20:54:24,185.0,2,Splice (breakthrough),1,1.0,20,1.0,7.5,Thorgate (breakthrough),88,8,2,2021-02-04 00:00:00,1
+104,tm-tour-592,Factorum (breakthrough),3,2021-02-03 23:39:02,186.0,2,Factorum (breakthrough),1,3.0,21,2.5,8.0,Inventrix (breakthrough),88,9,2,2021-02-03 00:00:00,1
+105,zxapdh,Saturn Systems,4,2020-12-05 23:59:26,8.0,2,Philares,1,1.0,0,2.5,9.0,Philares,95,9,2,2020-12-05 00:00:00,1
+106,deng,Teractor,3,2020-12-05 23:59:27,398.0,2,Arcadian Communities,1,2.0,23,2.5,10.5,Teractor,102,12,1,2020-12-05 00:00:00,2
+107,ldxbr,Celestic (breakthrough),1,2021-05-10 00:22:16,452.0,3,Celestic (breakthrough),1,1.0,0,1.6666666666666667,8.0,Polyphemos (breakthrough),98,8,3,2021-05-10 00:00:00,1
+108,哈士奇,Robinson Industries,3,2021-07-26 16:33:43,1196.0,3,EcoLine,1,3.0,16,2.3333333333333335,11.666666666666666,Point Luna and ,143,13,3,2021-07-26 00:00:00,1
+109,维尼熊,Factorum (breakthrough),4,2021-07-22 17:14:23,1211.0,3,Curiosity II,1,2.0,0,3.3333333333333335,8.333333333333334,Lakefront Resorts and Polyphemos (breakthrough),107,9,3,2021-07-22 00:00:00,1
+110,猫猫,Point Luna,2,2021-05-05 01:33:53,1006.0,3,Aridor,1,4.0,0,3.3333333333333335,9.333333333333334,Point Luna,84,9,3,2021-05-05 00:00:00,1
+111,封云台,Thorgate,4,2021-04-30 22:14:09,718.0,3,PhoboLog,1,1.0,0,2.0,10.666666666666666,Septem Tribus,100,11,3,2021-04-30 00:00:00,1
+112,暗翼,Poseidon,1,2021-05-16 04:24:46,581.0,3,Poseidon,2,1.0,3,1.3333333333333333,9.0,Poseidon,130,9,3,2021-05-16 00:00:00,1
+113,虎虎虎,Factorum (breakthrough),4,2020-11-01 22:54:10,43.0,3,Aphrodite (breakthrough),1,3.0,0,3.3333333333333335,8.333333333333334,Aphrodite (breakthrough),71,9,3,2020-11-01 00:00:00,1
+114,hehe,Vitor,1,2021-05-03 13:31:41,923.0,3,Poseidon,1,1.0,13,1.6666666666666667,9.0,Vitor,114,9,3,2021-05-03 00:00:00,1
+115,4tharticle,Mining Guild,4,2021-07-29 00:48:18,1258.0,3,Arklight,1,4.0,23,3.0,10.333333333333334,Saturn Systems and ,133,12,3,2021-07-29 00:00:00,1
+116,tour-561,Poseidon,1,2021-02-23 20:40:43,241.0,3,Philares,1,3.0,17,1.6666666666666667,7.0,Poseidon,84,8,3,2021-02-23 00:00:00,1
+117,徽少,Mining Guild,1,2020-10-20 23:52:59,48.0,3,Mining Guild,1,1.0,22,2.3333333333333335,8.666666666666666,Mining Guild,94,10,3,2020-10-20 00:00:00,1
+118,tour-670,Teractor (breakthrough),3,2021-02-23 20:40:43,249.0,3,Splice (breakthrough),1,2.0,19,2.0,7.333333333333333,Vitor,92,8,3,2021-02-23 00:00:00,1
+119,black_uuz,United Nations Mission One,2,2021-05-01 22:27:26,229.0,3,Point Luna,1,1.0,22,1.6666666666666667,7.333333333333333,Point Luna,70,7,3,2021-05-01 00:00:00,1
+120,howard514,Thorgate,1,2021-06-15 21:53:08,228.0,3,Saturn Systems,2,2.5,21,2.0,8.333333333333334,Saturn Systems and ,93,9,3,2021-06-15 00:00:00,1
+121,tour-449,Arklight (breakthrough),2,2021-02-15 13:14:11,208.0,3,Arklight (breakthrough),1,2.0,13,2.3333333333333335,7.333333333333333,Arklight (breakthrough),75,8,3,2021-02-15 00:00:00,1
+122,psycho,Mining Guild,3,2021-06-29 21:07:30,1080.0,3,Mining Guild,1,3.0,1,1.6666666666666667,10.666666666666666,Teractor and ,127,12,3,2021-06-29 00:00:00,1
+123,tour-428,Tharsis_republic (breakthrough),4,2021-02-09 00:08:15,202.0,3,Arklight (breakthrough),1,4.0,0,3.0,8.0,Manutech,132,9,3,2021-02-09 00:00:00,1
+124,tour-123,Thorgate (breakthrough),3,2021-02-05 14:03:36,196.0,3,Mining guild (breakthrough),1,3.0,14,3.3333333333333335,7.666666666666667,Mining guild (breakthrough),72,8,3,2021-02-05 00:00:00,1
+125,tour-3,Saturn Systems,1,2021-02-05 22:43:07,194.0,3,Aphrodite (breakthrough),1,1.0,19,1.0,7.0,Vitor,93,8,3,2021-02-05 00:00:00,1
+126,tour-367,Vitor,2,2021-02-23 20:40:43,250.0,3,Aphrodite (breakthrough),1,3.0,14,3.0,7.333333333333333,Aphrodite (breakthrough),79,8,3,2021-02-23 00:00:00,1
+127,r6y1717,Poseidon,1,2021-05-17 02:44:30,827.0,3,Celestic,1,4.0,2,3.0,10.0,Poseidon,119,10,3,2021-05-17 00:00:00,1
+128,tour-418,Inventrix (breakthrough),2,2021-02-05 22:43:07,177.0,3,Helion (breakthrough),1,4.0,0,3.0,7.0,Inventrix (breakthrough),64,7,3,2021-02-05 00:00:00,1
+129,tour-204,Splice (breakthrough),1,2021-02-16 11:47:15,173.0,3,Splice (breakthrough),2,1.0,21,1.3333333333333333,7.0,Splice (breakthrough),81,7,3,2021-02-16 00:00:00,1
+130,tour-975,Point Luna,4,2021-02-10 21:45:27,168.0,3,Point Luna,2,2.5,20,3.0,7.333333333333333,Point Luna,93,8,3,2021-02-10 00:00:00,1
+131,tour-509,Helion (breakthrough),3,2021-02-23 23:30:18,164.0,3,Helion (breakthrough),1,3.0,23,2.6666666666666665,7.666666666666667,Valley Trust (breakthrough),102,9,3,2021-02-23 00:00:00,1
+132,tour-345,MorningStar Inc (breakthrough),2,2021-02-06 23:58:02,162.0,3,MorningStar Inc (breakthrough),1,2.0,14,2.6666666666666665,7.666666666666667,Philares,81,8,2,2021-05-10 00:00:00,2
+133,tour-238,Arklight (breakthrough),2,2021-02-10 21:45:27,161.0,3,Arklight (breakthrough),1,2.0,21,2.6666666666666665,7.333333333333333,Arklight (breakthrough),71,7,3,2021-02-10 00:00:00,1
+134,tm-tour-19,Philares,3,2021-02-05 11:16:21,140.0,3,Aphrodite (breakthrough),1,2.0,11,2.3333333333333335,7.0,Factorum (breakthrough),80,8,3,2021-02-05 00:00:00,1
+135,tm-tour-426,Point Luna,4,2021-02-05 11:16:21,139.0,3,Point Luna,2,2.5,22,2.3333333333333335,7.0,Point Luna,122,7,3,2021-02-05 00:00:00,1
+136,tour-554,Celestic (breakthrough),2,2021-02-04 20:54:24,183.0,3,Lakefront Resorts,2,2.5,17,2.3333333333333335,8.0,Lakefront Resorts,86,9,3,2021-02-04 00:00:00,1
+137,tour-252,Celestic (breakthrough),4,2021-03-01 22:50:45,254.0,3,Aphrodite (breakthrough),1,2.0,20,2.3333333333333335,7.0,Splice (breakthrough),102,8,3,2021-03-01 00:00:00,1
+138,flyingfish,Pobolog (breakthrough),2,2021-04-21 19:34:38,654.0,3,Mining guild (breakthrough),1,2.0,1,1.6666666666666667,9.0,Saturn Systems,92,10,3,2021-04-21 00:00:00,1
+139,紫苑寺无良,Cheung Shing MARS,1,2021-05-10 01:23:45,756.0,3,Cheung Shing MARS,1,1.0,1,1.6666666666666667,8.333333333333334,Cheung Shing MARS,94,9,3,2021-05-10 00:00:00,1
+140,yddyqjd,Point Luna,3,2020-11-03 22:09:17,50.0,3,Cheung Shing MARS,1,2.0,22,2.6666666666666665,8.0,Philares,66,8,3,2020-11-03 00:00:00,1
+141,michaelis200,MorningStar Inc (breakthrough),2,2021-06-11 01:16:58,899.0,3,MorningStar Inc (breakthrough),1,2.0,0,2.3333333333333335,8.333333333333334,MorningStar Inc (breakthrough) and ,105,9,3,2021-06-11 00:00:00,1
+142,1012k,Point Luna,2,2021-08-04 21:21:00,283.0,3,Aphrodite (breakthrough),1,2.0,0,2.3333333333333335,8.0,Id Front and UNMI (breakthrough),112,9,3,2021-08-04 00:00:00,1
+143,请叫我堇老师,Saturn Systems,1,2021-05-06 23:57:00,745.0,3,Point Luna,1,1.0,1,1.3333333333333333,8.666666666666666,Saturn Systems,87,8,3,2021-05-06 00:00:00,1
+144,胡宇彬,Mining Guild,4,2021-06-14 16:35:14,983.0,3,Mining Guild,1,4.0,23,3.3333333333333335,8.666666666666666,Thorgate and ,53,9,2,2021-06-14 00:00:00,2
+145,183454241,Inventrix,2,2021-05-06 23:57:00,750.0,3,Inventrix,1,2.0,1,2.6666666666666665,8.666666666666666,Robinson Industries,80,9,3,2021-05-06 00:00:00,1
+146,小企鹅,MorningStar Inc (breakthrough),1,2021-07-05 20:40:56,66.0,3,CrediCor,2,2.0,0,1.6666666666666667,7.666666666666667,CrediCor and Chaos,106,9,3,2021-07-05 00:00:00,1
+147,xu,Point Luna,2,2020-12-17 22:33:11,1099.0,3,Point Luna,2,1.5,13,1.6666666666666667,9.0,Point Luna,172,9,3,2020-12-17 00:00:00,1
+148,steamriki,Mining Guild,4,2021-05-06 23:57:00,754.0,3,Celestic,1,1.0,1,2.6666666666666665,8.666666666666666,Celestic,85,9,3,2021-05-06 00:00:00,1
+149,sanduo,Saturn Systems,1,2021-03-27 12:52:23,360.0,4,Pharmacy Union,1,2.0,20,2.25,8.25,Valley Trust,71,9,3,2021-03-27 00:00:00,2
+150,tm-tour-694,StormCraft Incorporated (breakthrough),3,2021-02-01 23:09:45,145.0,4,Curiosity II,1,1.0,18,2.75,7.25,Curiosity II,71,8,4,2021-02-01 00:00:00,1
+151,naixin,Teractor,4,2021-03-27 12:52:23,41.0,4,Factorum,1,2.0,20,2.5,8.25,Factorum,80,9,3,2021-03-27 00:00:00,2
+152,biaodi,Factorum,3,2021-03-27 12:52:23,421.0,4,Tharsis Republic,2,2.0,20,2.5,8.25,Saturn Systems,70,9,3,2021-03-27 00:00:00,2
+153,ddd,Vitor,3,2020-12-05 23:59:27,37.0,4,Inventrix,1,2.0,23,2.75,9.25,Teractor,81,10,3,2020-12-05 00:00:00,2
+154,1962142767,Point Luna,4,2021-07-08 18:47:59,1132.0,4,Incite Ender,1,4.0,14,4.0,7.0,Pobolog (breakthrough) and Curiosity II,75,7,4,2021-07-08 00:00:00,1
+155,jd,Tharsis Republic,2,2020-11-29 23:54:23,85.0,4,Inventrix (breakthrough),1,3.0,23,2.5,9.75,Thorgate (breakthrough),114,10,4,2020-11-29 00:00:00,1
+156,starry,Poseidon,2,2021-05-02 17:59:02,69.0,4,CrediCor,1,4.0,19,2.25,8.25,Tharsis_republic (breakthrough),127,10,4,2021-05-02 00:00:00,1
+157,bulez00,Helion,2,2021-06-29 21:07:30,1079.0,4,Helion,2,2.5,1,2.0,10.5,Helion and ,87,12,4,2021-06-29 00:00:00,1
+158,柴郡猫,Mining guild (breakthrough),1,2021-06-17 22:09:19,964.0,4,Mining guild (breakthrough),2,2.5,1,2.75,6.0,Mining guild (breakthrough) and Tharsis_republic (breakthrough),65,6,4,2021-06-17 00:00:00,1
+159,tour-710,Thorgate (breakthrough),1,2021-02-09 00:08:15,203.0,4,Aphrodite (breakthrough),1,1.0,0,1.75,6.5,Lakefront Resorts,79,7,4,2021-02-09 00:00:00,1
+160,无名的鸽子,Philares,4,2021-02-18 20:04:04,273.0,4,Lakefront Resorts,1,2.0,16,3.5,9.0,Terralabs Research (breakthrough),82,10,3,2021-02-21 00:00:00,2
+161,cloream,Saturn Systems,2,2020-10-20 23:52:59,47.0,4,Factorum,1,4.0,22,2.5,8.5,Saturn Systems,78,10,4,2020-10-20 00:00:00,1
+162,van,Interplanetary Cinematics,4,2020-10-30 00:19:47,80.0,4,Factorum,1,4.0,23,3.5,9.25,Point Luna,92,10,4,2020-10-30 00:00:00,1
+163,1609884203,Aristarchus,2,2021-06-11 18:23:24,811.0,4,Aristarchus,1,2.0,18,2.0,7.5,UNMI (breakthrough) and Ecoline (breakthrough),75,7,4,2021-06-11 00:00:00,1
+164,silkroad,Saturn Systems,4,2021-06-13 20:14:57,963.0,5,Aridor,2,2.5,0,2.8,8.4,Aridor and MorningStar Inc (breakthrough),130,10,5,2021-06-13 00:00:00,1
+165,wu,United Nations Mars Initiative,3,2021-02-25 22:11:09,975.0,5,United Nations Mars Initiative,2,2.5,22,1.6,10.0,Valley Trust,96,10,5,2021-02-25 00:00:00,1
+166,piaoling,Midas,4,2021-08-12 18:30:06,1334.0,5,Valley Trust (breakthrough),2,2.5,16,2.8,7.8,Astrodrill and Helion (breakthrough),78,9,5,2021-08-12 00:00:00,1
+167,franklinchan,Septem Tribus,1,2020-08-31 15:05:21,5.0,323,Manutech,25,2.4,23,2.2941176470588234,7.684210526315789,Id Front,144,9,184,2021-07-17 00:00:00,4
+168,谢国星,Lakefront Resorts,4,2021-07-04 21:04:21,1084.0,5,Inventrix,1,2.0,23,2.6,9.6,Project Workshop and ,151,11,5,2021-07-04 00:00:00,1
 169,tm-tour-630,Saturn Systems,4,2021-02-03 20:46:00,182.0,5,Poseidon,2,4.0,20,3.2,7.0,Splice (breakthrough),119,7,5,2021-02-03 00:00:00,1
-170,谢国星,Lakefront Resorts,4,2021-07-04 21:04:21,1084.0,5,Inventrix,1,2.0,23,2.6,9.6,Project Workshop and ,151,11,5,2021-07-04 00:00:00,1
-171,zbj,PhoboLog,2,2021-04-20 00:34:19,649.0,6,Inventrix,3,2.6666666666666665,0,2.1666666666666665,9.5,Inventrix,85,10,5,2021-05-08 00:00:00,2
+170,牧殇,MorningStar Inc (breakthrough),4,2021-04-30 23:30:29,297.0,5,MorningStar Inc (breakthrough),2,3.0,16,2.4,8.2,MorningStar Inc (breakthrough),112,8,5,2021-04-30 00:00:00,1
+171,不泯理念,Celestic (breakthrough),4,2021-01-01 21:37:01,112.0,5,Celestic (breakthrough),1,4.0,1,3.2,7.6,Saturn Systems,89,8,5,2021-01-01 00:00:00,1
 172,颜志炫,Recyclon,4,2021-04-30 23:28:33,650.0,6,Teractor (breakthrough),2,1.5,0,2.6666666666666665,9.0,Teractor (breakthrough),107,9,6,2021-04-30 00:00:00,1
-173,faywei,Poseidon,3,2020-10-31 02:54:54,74.0,6,Inventrix (breakthrough),1,4.0,15,3.3333333333333335,7.666666666666667,Poseidon,72,8,6,2020-10-31 00:00:00,1
-174,王子,Vitor,2,2021-03-31 17:46:15,1009.0,6,PhoboLog,2,3.0,0,1.8333333333333333,9.166666666666666,Valley Trust,149,10,5,2021-05-16 00:00:00,2
+173,zbj,PhoboLog,2,2021-04-20 00:34:19,649.0,6,Inventrix,3,2.6666666666666665,0,2.1666666666666665,9.5,Inventrix,85,10,5,2021-05-08 00:00:00,2
+174,faywei,Poseidon,3,2020-10-31 02:54:54,74.0,6,Inventrix (breakthrough),1,4.0,15,3.3333333333333335,7.666666666666667,Poseidon,72,8,6,2020-10-31 00:00:00,1
 175,思锐,Pharmacy Union,4,2020-11-10 15:38:12,708.0,6,Aphrodite (breakthrough),1,2.0,0,2.8333333333333335,7.166666666666667,Point Luna,100,9,6,2020-11-10 00:00:00,1
-176,jrj,Thorgate,2,2021-02-10 21:19:45,303.0,6,Arklight,1,4.0,17,2.5,8.5,Point Luna,100,10,6,2021-02-10 00:00:00,1
-177,joe,Pharmacy Union,1,2021-06-21 23:43:42,1030.0,7,UNMI (breakthrough),2,1.5,23,1.7142857142857142,8.0,Pharmacy Union and ,112,9,6,2021-06-22 00:00:00,2
-178,晓黑,Point Luna,4,2020-12-03 00:12:36,115.0,7,Astrodrill,2,4.0,0,3.4285714285714284,7.857142857142857,Manutech,82,8,7,2020-12-03 00:00:00,1
-179,automuen,Tharsis Republic,1,2021-01-04 18:55:50,92.0,7,Manutech,2,3.0,1,2.5714285714285716,10.0,Tharsis Republic,90,10,7,2021-01-04 00:00:00,1
-180,冲锋,Poseidon,1,2020-12-05 23:59:26,14.0,7,Poseidon,3,1.3333333333333333,23,1.5714285714285714,9.142857142857142,Pristar,100,10,1,2020-12-05 00:00:00,7
-181,quill,Pobolog (breakthrough),4,2021-04-16 17:43:36,458.0,7,Factorum (breakthrough),2,3.0,0,2.857142857142857,7.0,Tharsis_republic (breakthrough),81,8,7,2021-04-16 00:00:00,1
-182,魏良,Factorum,1,2021-06-25 17:41:21,933.0,7,Point Luna,2,2.5,23,2.142857142857143,8.142857142857142,Viron and Cheung Shing MARS,100,9,7,2021-06-25 00:00:00,1
-183,zk2910889,CrediCor,4,2021-03-17 00:22:28,396.0,7,Helion (breakthrough),3,3.6666666666666665,22,3.142857142857143,7.571428571428571,Helion (breakthrough),74,8,6,2021-03-19 00:00:00,2
-184,fklmgj,Helion,3,2021-01-04 18:55:50,63.0,7,Point Luna,2,2.5,0,2.142857142857143,9.857142857142858,PhoboLog,157,13,7,2021-01-04 00:00:00,1
-185,mosquito,Cheung Shing MARS,3,2020-11-21 21:40:59,77.0,113,Poseidon,7,3.0,13,2.433628318584071,7.876106194690266,Splice (breakthrough),111,11,86,2021-01-03 00:00:00,3
+176,zk2910889,CrediCor,4,2021-03-17 00:22:28,396.0,7,Helion (breakthrough),3,3.6666666666666665,22,3.142857142857143,7.571428571428571,Helion (breakthrough),74,8,6,2021-03-19 00:00:00,2
+177,automuen,Tharsis Republic,1,2021-01-04 18:55:50,92.0,7,Manutech,2,3.0,1,2.5714285714285716,10.0,Tharsis Republic,90,10,7,2021-01-04 00:00:00,1
+178,quill,Pobolog (breakthrough),4,2021-04-16 17:43:36,458.0,7,Factorum (breakthrough),2,3.0,0,2.857142857142857,7.0,Tharsis_republic (breakthrough),81,8,7,2021-04-16 00:00:00,1
+179,荆棘守护,Philares,3,2021-08-10 17:38:09,1311.0,7,Philares,2,3.5,14,3.0,6.857142857142857,Brotherhood of Mutants and UNMI (breakthrough),92,9,6,2021-08-14 00:00:00,2
+180,王子,Vitor,2,2021-03-31 17:46:15,1009.0,7,PhoboLog,2,3.0,0,2.142857142857143,9.0,Valley Trust,149,10,6,2021-05-16 00:00:00,2
+181,晓黑,Point Luna,4,2020-12-03 00:12:36,115.0,7,Astrodrill,2,4.0,0,3.4285714285714284,7.857142857142857,Manutech,82,8,7,2020-12-03 00:00:00,1
+182,fklmgj,Helion,3,2021-01-04 18:55:50,63.0,7,Point Luna,2,2.5,0,2.142857142857143,9.857142857142858,PhoboLog,157,13,7,2021-01-04 00:00:00,1
+183,冲锋,Poseidon,1,2020-12-05 23:59:26,14.0,7,Poseidon,3,1.3333333333333333,23,1.5714285714285714,9.142857142857142,Pristar,100,10,1,2020-12-05 00:00:00,7
+184,tsukikage,Arcadian Communities,1,2021-04-20 19:06:39,632.0,7,Thorgate (breakthrough),2,3.5,1,3.0,8.571428571428571,Arcadian Communities,81,10,6,2021-05-04 00:00:00,2
+185,zyd,Helion,1,2021-04-20 00:34:19,814.0,7,EcoLine,1,1.0,0,1.5714285714285714,9.285714285714286,Robinson Industries,90,10,6,2021-05-08 00:00:00,2
 186,冰红茶真好喝,Mining Guild,4,2021-01-04 18:55:50,90.0,7,Celestic,1,2.0,0,2.857142857142857,9.857142857142858,Celestic,98,13,7,2021-01-04 00:00:00,1
-187,zyd,Helion,1,2021-04-20 00:34:19,814.0,7,EcoLine,1,1.0,0,1.5714285714285714,9.285714285714286,Robinson Industries,90,10,6,2021-05-08 00:00:00,2
-188,tsukikage,Arcadian Communities,1,2021-04-20 19:06:39,632.0,7,Thorgate (breakthrough),2,3.5,1,3.0,8.571428571428571,Arcadian Communities,81,10,6,2021-05-04 00:00:00,2
-189,wjy吴才,Teractor (breakthrough),4,2021-05-15 22:29:10,284.0,8,Pobolog (breakthrough),2,3.0,16,2.125,9.0,Point Luna,117,9,8,2021-05-15 00:00:00,1
-190,wenxionglam,MorningStar Inc (breakthrough),4,2021-05-03 19:35:18,510.0,8,Poseidon,2,3.5,18,2.75,8.25,Poseidon,108,10,8,2021-05-03 00:00:00,1
-191,杭睿,Arklight,2,2021-01-04 18:55:50,102.0,8,Arklight,1,2.0,0,2.875,9.75,Stormcraft Incorporated,85,13,8,2021-01-04 00:00:00,1
-192,489326240,Helion,4,2021-07-03 17:50:06,985.0,8,Pobolog (breakthrough),2,2.5,23,3.375,9.875,Factorum (breakthrough) and ,95,11,8,2021-07-03 00:00:00,1
-193,apex,Pobolog (breakthrough),4,2021-05-15 01:46:27,810.0,8,Point Luna,2,1.5,0,2.25,7.875,Pharmacy Union,90,8,8,2021-05-15 00:00:00,1
-194,庄子,Valley Trust,4,2020-12-05 23:59:27,118.0,8,Teractor (breakthrough),3,3.3333333333333335,16,3.0,8.125,Teractor (breakthrough),120,8,7,2020-12-05 00:00:00,2
-195,🐴 r,Philares,4,2021-04-06 21:46:37,612.0,9,Poseidon,2,1.5,12,2.111111111111111,8.555555555555555,Manutech,158,10,8,2021-05-23 00:00:00,2
-196,唯慕,Teractor,3,2021-04-15 21:20:06,1056.0,13,Poseidon,2,2.5,21,2.5384615384615383,8.307692307692308,CrediCor,105,10,11,2021-05-10 00:00:00,2
-197,双子,Valley Trust,1,2021-05-31 02:00:35,901.0,8,Mining Guild,2,3.0,2,2.5,9.625,Manutech,138,9,7,2021-06-01 00:00:00,2
-198,老邱,WG Parternship,3,2021-03-26 23:22:00,538.0,8,Ecoline (breakthrough),2,2.5,13,2.875,8.0,Ecoline (breakthrough),108,9,7,2021-04-19 00:00:00,2
-199,鸽子,Celestic,4,2021-02-19 02:48:50,282.0,8,Celestic,1,4.0,16,2.875,7.25,UNMI (breakthrough),91,8,7,2021-02-22 00:00:00,2
-200,toutou,Thorgate (breakthrough),3,2021-04-26 01:44:11,675.0,8,Inventrix (breakthrough),1,1.0,1,2.25,7.75,Inventrix (breakthrough),106,9,5,2021-04-26 00:00:00,3
-201,张耀东,PhoboLog,1,2021-04-30 23:28:33,839.0,9,Ecoline (breakthrough),2,1.0,0,1.8888888888888888,8.222222222222221,Point Luna,148,9,9,2021-04-30 00:00:00,1
-202,gxz,Tharsis Republic,1,2021-05-23 23:20:18,867.0,9,Aridor,1,1.0,23,2.2222222222222223,9.0,Teractor (breakthrough),154,9,9,2021-05-23 00:00:00,1
-203,joker,Pobolog (breakthrough),4,2021-05-24 16:21:16,953.0,9,Poseidon,2,4.0,14,3.6666666666666665,7.333333333333333,Lakefront Resorts,77,9,8,2021-05-31 00:00:00,2
-204,阿狗锄大地,Robinson Industries (breakthrough),1,2021-05-15 13:41:54,101.0,9,Point Luna,2,3.0,12,2.5555555555555554,7.888888888888889,Brotherhood of Mutants,100,6,8,2021-05-24 00:00:00,2
+187,jrj,Thorgate,2,2021-02-10 21:19:45,303.0,7,Arklight,1,4.0,17,2.5714285714285716,8.142857142857142,Point Luna,100,10,7,2021-02-10 00:00:00,1
+188,庄子,Valley Trust,4,2020-12-05 23:59:27,118.0,8,Teractor (breakthrough),3,3.3333333333333335,16,3.0,8.125,Teractor (breakthrough),120,8,7,2020-12-05 00:00:00,2
+189,鸽子,Celestic,4,2021-02-19 02:48:50,282.0,8,Celestic,1,4.0,16,2.875,7.25,UNMI (breakthrough),91,8,7,2021-02-22 00:00:00,2
+190,apex,Pobolog (breakthrough),4,2021-05-15 01:46:27,810.0,8,Point Luna,2,1.5,0,2.25,7.875,Pharmacy Union,90,8,8,2021-05-15 00:00:00,1
+191,wenxionglam,MorningStar Inc (breakthrough),4,2021-05-03 19:35:18,510.0,8,Poseidon,2,3.5,18,2.75,8.25,Poseidon,108,10,8,2021-05-03 00:00:00,1
+192,老邱,WG Parternship,3,2021-03-26 23:22:00,538.0,8,Ecoline (breakthrough),2,2.5,13,2.875,8.0,Ecoline (breakthrough),108,9,7,2021-04-19 00:00:00,2
+193,mosquito,Cheung Shing MARS,3,2020-11-21 21:40:59,77.0,114,UNMI (breakthrough),7,1.5714285714285714,13,2.4298245614035086,7.87719298245614,Splice (breakthrough),111,11,87,2021-04-12 00:00:00,3
+194,双子,Valley Trust,1,2021-05-31 02:00:35,901.0,8,Mining Guild,2,3.0,2,2.5,9.625,Manutech,138,9,7,2021-06-01 00:00:00,2
+195,toutou,Thorgate (breakthrough),3,2021-04-26 01:44:11,675.0,8,Inventrix (breakthrough),1,1.0,1,2.25,7.75,Inventrix (breakthrough),106,9,5,2021-04-26 00:00:00,3
+196,杭睿,Arklight,2,2021-01-04 18:55:50,102.0,8,Arklight,1,2.0,0,2.875,9.75,Stormcraft Incorporated,85,13,8,2021-01-04 00:00:00,1
+197,张耀东,PhoboLog,1,2021-04-30 23:28:33,839.0,9,Ecoline (breakthrough),2,1.0,0,1.8888888888888888,8.222222222222221,Point Luna,148,9,9,2021-04-30 00:00:00,1
+198,阿狗锄大地,Robinson Industries (breakthrough),1,2021-05-15 13:41:54,101.0,9,Point Luna,2,3.0,12,2.5555555555555554,7.888888888888889,Brotherhood of Mutants,100,6,8,2021-05-24 00:00:00,2
+199,尼禄,CrediCor,1,2021-07-01 18:33:07,123.0,9,Point Luna,2,1.0,16,1.2222222222222223,7.444444444444445,Point Luna and Pobolog (breakthrough),128,9,9,2021-07-01 00:00:00,1
+200,魏良,Factorum,1,2021-06-25 17:41:21,933.0,9,Point Luna,2,2.5,23,2.4444444444444446,7.777777777777778,Viron and Cheung Shing MARS,100,9,9,2021-06-25 00:00:00,1
+201,gxz,Tharsis Republic,1,2021-05-23 23:20:18,867.0,9,Aridor,1,1.0,23,2.2222222222222223,9.0,Teractor (breakthrough),154,9,9,2021-05-23 00:00:00,1
+202,joker,Pobolog (breakthrough),4,2021-05-24 16:21:16,953.0,9,Poseidon,2,4.0,14,3.6666666666666665,7.333333333333333,Lakefront Resorts,77,9,8,2021-05-31 00:00:00,2
+203,唯慕,Teractor,3,2021-04-15 21:20:06,1056.0,14,Poseidon,2,2.5,21,2.642857142857143,8.214285714285714,CrediCor,105,10,12,2021-05-10 00:00:00,2
+204,冬夜丶,Celestic (breakthrough),4,2021-02-05 22:34:58,221.0,10,Arcadian Communities (breakthrough),1,2.0,22,3.4,8.4,Thorgate (breakthrough),116,10,9,2021-02-21 00:00:00,2
 205,🍁,United Nations Mars Initiative,3,2021-04-06 21:46:37,1109.0,2,United Nations Mars Initiative,2,3.0,21,3.0,10.5,United Nations Mars Initiative,84,11,2,2021-04-06 00:00:00,1
-206,小音,Poseidon,4,2021-05-31 02:00:35,908.0,10,Chaos,1,1.0,0,1.6,9.6,Thorgate,114,12,9,2021-06-01 00:00:00,2
-207,ghsap,MorningStar Inc (breakthrough),2,2021-06-11 02:21:03,919.0,10,Tharsis_republic (breakthrough),2,2.5,0,2.0,8.2,Point Luna and Robinson Industries (breakthrough),146,8,9,2021-07-02 00:00:00,2
-208,冬夜丶,Celestic (breakthrough),4,2021-02-05 22:34:58,221.0,10,Arcadian Communities (breakthrough),1,2.0,22,3.4,8.4,Thorgate (breakthrough),116,10,9,2021-02-21 00:00:00,2
-209,tamaki,Inventrix (breakthrough),2,2021-04-30 13:15:23,356.0,10,Terralabs Research (breakthrough),2,3.0,14,2.4,7.7,Celestic (breakthrough),142,10,8,2021-05-07 00:00:00,2
+206,🐴 r,Philares,4,2021-04-06 21:46:37,612.0,11,Poseidon,2,1.5,21,2.0,8.272727272727273,Manutech,158,10,10,2021-05-23 00:00:00,2
+207,tamaki,Inventrix (breakthrough),2,2021-04-30 13:15:23,356.0,10,Terralabs Research (breakthrough),2,3.0,14,2.4,7.7,Celestic (breakthrough),142,10,8,2021-05-07 00:00:00,2
+208,小音,Poseidon,4,2021-05-31 02:00:35,908.0,10,Chaos,1,1.0,0,1.6,9.6,Thorgate,114,12,9,2021-06-01 00:00:00,2
+209,ghsap,MorningStar Inc (breakthrough),2,2021-06-11 02:21:03,919.0,10,Tharsis_republic (breakthrough),2,2.5,0,2.0,8.2,Point Luna and Robinson Industries (breakthrough),146,8,9,2021-07-02 00:00:00,2
 210,bluelingb,Pharmacy Union,4,2021-05-02 00:24:34,130.0,11,Ecoline (breakthrough),2,3.0,0,3.4545454545454546,8.090909090909092,Ecoline (breakthrough),90,9,11,2021-05-02 00:00:00,1
-211,zzx,United Nations Mars Initiative,1,2021-02-10 21:19:45,590.0,12,Ecoline (breakthrough),2,2.5,16,2.6666666666666665,7.75,Helion,81,10,12,2021-02-10 00:00:00,1
-212,一灯,Recyclon (breakthrough),4,2021-03-01 17:34:58,275.0,12,Id Front,2,3.0,16,2.9166666666666665,8.416666666666666,Point Luna,93,9,12,2021-03-01 00:00:00,1
-213,jack,Factorum,2,2021-02-28 15:00:04,996.0,12,Celestic (breakthrough),1,4.0,14,2.1666666666666665,8.916666666666666,Robinson Industries,99,10,12,2021-02-28 00:00:00,1
-214,天使,Viron (breakthrough),2,2020-11-22 00:10:42,9.0,12,Lakefront Resorts,2,2.5,23,2.0,6.583333333333333,Point Luna,88,7,11,2021-07-22 00:00:00,2
-215,小五羊,Inventrix,3,2020-12-14 15:49:45,114.0,12,Saturn Systems,3,2.0,22,2.25,7.833333333333333,Manutech,120,8,12,2020-12-14 00:00:00,1
-216,感觉无双,Pobolog (breakthrough),4,2021-03-04 21:07:56,285.0,12,Pobolog (breakthrough),3,3.6666666666666665,21,3.5833333333333335,8.416666666666666,Saturn Systems,82,9,11,2021-04-06 00:00:00,2
-217,misaki,Pharmacy Union,4,2020-08-31 15:05:21,4.0,418,Mining guild (breakthrough),32,1.96875,23,2.0526315789473686,7.880382775119617,Point Luna,138,10,193,2021-03-21 00:00:00,5
-218,daxinge,Astrodrill,2,2021-04-20 19:06:39,646.0,12,Astrodrill,2,2.5,16,2.5,8.25,Teractor (breakthrough),102,9,11,2021-05-12 00:00:00,2
-219,haha,Point Luna,3,2021-05-05 02:12:02,412.0,12,Valley Trust (breakthrough),3,3.6666666666666665,17,3.1666666666666665,7.583333333333333,Saturn Systems,124,8,11,2021-05-23 00:00:00,2
-220,木示,Valley Trust (breakthrough),3,2021-03-10 23:19:03,567.0,12,Point Luna,2,2.5,23,3.0833333333333335,8.333333333333334,Robinson Industries (breakthrough),135,10,9,2021-06-24 00:00:00,3
-221,雪櫻,Poseidon,3,2021-05-23 23:49:04,841.0,12,Trade Navigator,2,3.0,23,2.6666666666666665,6.916666666666667,Brotherhood of Mutants,102,7,9,2021-07-01 00:00:00,3
-222,qfy,Helion,3,2021-02-10 21:19:45,260.0,12,Point Luna,2,3.0,16,2.6666666666666665,8.083333333333334,Celestic,87,10,12,2021-02-10 00:00:00,1
-223,17826818782,CrediCor,1,2021-06-14 16:35:14,941.0,13,UNMI (breakthrough),2,2.0,23,2.0,9.692307692307692,Celestic (breakthrough) and ,114,11,12,2021-07-03 00:00:00,2
-224,掌柜的来了,CrediCor,3,2021-06-24 22:20:26,987.0,13,Morning Star Inc.,2,1.0,23,1.6153846153846154,9.846153846153847,Celestic and ,115,12,12,2021-07-03 00:00:00,2
-225,2397541142,Teractor,3,2021-06-14 16:35:14,942.0,14,Mining Guild,2,2.5,23,2.9285714285714284,9.642857142857142,Mining Guild and ,104,12,13,2021-07-03 00:00:00,2
-226,827717358,Saturn Systems,3,2021-05-31 16:14:28,862.0,14,Septem Tribus,2,1.5,12,2.9285714285714284,7.142857142857143,Aristarchus,140,9,11,2021-06-17 00:00:00,3
-227,黄鸡,Poseidon,3,2020-08-31 15:05:21,33.0,30,Manutech,4,2.25,23,2.4,8.0,Valley Trust (breakthrough),124,7,8,2020-08-31 00:00:00,7
-228,九方蠡,Terralabs Research (breakthrough),4,2021-03-09 22:42:51,261.0,83,Mining guild (breakthrough),5,1.4,23,2.4096385542168677,7.662650602409639,Inventrix (breakthrough),136,9,54,2021-03-17 00:00:00,3
-229,瑞凤,Valley Trust (breakthrough),2,2020-11-28 01:02:40,224.0,16,Point Luna,4,2.75,23,3.0625,9.0,Valley Trust (breakthrough),120,10,7,2021-02-21 00:00:00,2
-230,catcher1234,Inventrix (breakthrough),3,2021-04-29 17:42:04,681.0,73,Id Front,9,2.4444444444444446,0,3.1095890410958904,6.876712328767123,Tharsis_republic (breakthrough),152,9,49,2021-07-17 00:00:00,3
-231,,,,,,,,,,,,,,,,,,
+211,wjy吴才,Teractor (breakthrough),4,2021-05-15 22:29:10,284.0,11,Pobolog (breakthrough),2,3.0,16,2.5454545454545454,8.636363636363637,Point Luna,117,9,11,2021-05-15 00:00:00,1
+212,joe,Pharmacy Union,1,2021-06-21 23:43:42,1030.0,11,Saturn Systems,2,3.0,12,1.9090909090909092,8.0,Pharmacy Union and ,112,9,9,2021-06-22 00:00:00,2
+213,感觉无双,Pobolog (breakthrough),4,2021-03-04 21:07:56,285.0,12,Pobolog (breakthrough),3,3.6666666666666665,21,3.5833333333333335,8.416666666666666,Saturn Systems,82,9,11,2021-04-06 00:00:00,2
+214,zzx,United Nations Mars Initiative,1,2021-02-10 21:19:45,590.0,12,Ecoline (breakthrough),2,2.5,16,2.6666666666666665,7.75,Helion,81,10,12,2021-02-10 00:00:00,1
+215,daxinge,Astrodrill,2,2021-04-20 19:06:39,646.0,12,Astrodrill,2,2.5,16,2.5,8.25,Teractor (breakthrough),102,9,11,2021-05-12 00:00:00,2
+216,jack,Factorum,2,2021-02-28 15:00:04,996.0,12,Celestic (breakthrough),1,4.0,14,2.1666666666666665,8.916666666666666,Robinson Industries,99,10,12,2021-02-28 00:00:00,1
+217,489326240,Helion,4,2021-07-03 17:50:06,985.0,12,Pobolog (breakthrough),2,2.5,16,3.0833333333333335,9.416666666666666,Inventrix (breakthrough) and ,102,10,12,2021-07-03 00:00:00,1
+218,天使,Viron (breakthrough),2,2020-11-22 00:10:42,9.0,12,Lakefront Resorts,2,2.5,23,2.0,6.583333333333333,Point Luna,88,7,11,2021-07-22 00:00:00,2
+219,木示,Valley Trust (breakthrough),3,2021-03-10 23:19:03,567.0,12,Point Luna,2,2.5,23,3.0833333333333335,8.333333333333334,Robinson Industries (breakthrough),135,10,9,2021-06-24 00:00:00,3
+220,一灯,Recyclon (breakthrough),4,2021-03-01 17:34:58,275.0,13,Id Front,2,3.0,16,2.8461538461538463,8.461538461538462,UNMI (breakthrough),114,9,13,2021-03-01 00:00:00,1
+221,雪櫻,Poseidon,3,2021-05-23 23:49:04,841.0,13,Brotherhood of Mutants,2,2.5,23,2.769230769230769,6.6923076923076925,Brotherhood of Mutants,102,7,10,2021-07-01 00:00:00,3
+222,qfy,Helion,3,2021-02-10 21:19:45,260.0,13,Cheung Shing MARS,2,3.0,16,2.769230769230769,7.923076923076923,Celestic,87,10,13,2021-02-10 00:00:00,1
+223,kriko,PhoboLog,4,2021-07-26 16:33:43,1192.0,14,Saturn Systems,2,2.5,14,2.9285714285714284,7.0,Vitor and ,128,7,9,2021-08-13 00:00:00,3
+224,haha,Point Luna,3,2021-05-05 02:12:02,412.0,14,Valley Trust (breakthrough),3,3.6666666666666665,17,3.0714285714285716,7.571428571428571,Teractor (breakthrough),131,9,13,2021-05-23 00:00:00,2
+225,misaki,Pharmacy Union,4,2020-08-31 15:05:21,4.0,432,Mining guild (breakthrough),32,1.96875,23,2.037037037037037,7.828703703703703,Point Luna,138,10,202,2021-03-21 00:00:00,5
+226,827717358,Saturn Systems,3,2021-05-31 16:14:28,862.0,15,Septem Tribus,2,1.5,12,2.8,7.066666666666666,Aristarchus,140,9,12,2021-06-17 00:00:00,3
+227,九方蠡,Terralabs Research (breakthrough),4,2021-03-09 22:42:51,261.0,83,Mining guild (breakthrough),5,1.4,23,2.4096385542168677,7.662650602409639,Inventrix (breakthrough),136,9,54,2021-03-17 00:00:00,3
+228,,,,,,,,,,,,,,,,,,
+229,小五羊,Inventrix,3,2020-12-14 15:49:45,114.0,16,Saturn Systems,3,2.0,21,2.5625,7.8125,Manutech,120,8,14,2021-08-17 00:00:00,2
+230,黄鸡,Poseidon,3,2020-08-31 15:05:21,33.0,32,Manutech,4,2.25,23,2.375,7.90625,Valley Trust (breakthrough),124,7,10,2020-08-31 00:00:00,7
+231,catcher1234,Inventrix (breakthrough),3,2021-04-29 17:42:04,681.0,90,Manutech,10,3.7,17,3.0444444444444443,6.833333333333333,Tharsis_republic (breakthrough),152,9,61,2021-06-11 00:00:00,3
 232,wms,Mining Guild,3,2021-04-20 00:34:19,642.0,16,Pobolog (breakthrough),2,3.0,0,2.9375,8.6875,Ecoline (breakthrough),89,9,14,2021-05-08 00:00:00,2
-233,amadeus,Point Luna,4,2021-07-11 22:05:43,1108.0,16,Point Luna,2,4.0,22,3.25,6.375,Utopia Invest and UNMI (breakthrough),77,7,10,2021-07-15 00:00:00,3
-234,吟游诗人,Recyclon (breakthrough),3,2021-03-09 21:41:21,357.0,39,Point Luna,3,4.0,13,2.58974358974359,7.948717948717949,StormCraft Incorporated (breakthrough),119,10,27,2021-04-13 00:00:00,3
-235,tanwu2000,Tharsis_republic (breakthrough),4,2021-05-05 02:12:02,614.0,18,Arklight (breakthrough),3,3.3333333333333335,17,2.8333333333333335,7.777777777777778,Trade Navigator,120,8,16,2021-05-23 00:00:00,2
-236,jequirity,EcoLine,2,2020-12-19 17:57:12,287.0,18,Tharsis Republic,3,1.6666666666666667,21,2.5,8.333333333333334,Poseidon,108,9,15,2021-02-26 00:00:00,3
-237,12345,Robinson Industries (breakthrough),4,2021-02-23 14:04:50,132.0,19,Celestic (breakthrough),3,2.3333333333333335,15,2.6315789473684212,8.368421052631579,Valley Trust (breakthrough),140,8,16,2021-03-24 00:00:00,2
-238,深海的达不溜,Saturn Systems,1,2021-05-29 03:00:41,859.0,20,Inventrix (breakthrough),3,4.0,0,2.95,8.4,Teractor (breakthrough),109,9,13,2021-05-29 00:00:00,3
-239,水鬼,Inventrix (breakthrough),3,2020-11-11 23:36:53,222.0,21,Poseidon,3,2.3333333333333335,23,2.857142857142857,8.285714285714286,Point Luna,121,10,18,2020-12-05 00:00:00,4
-240,无情的命运,Pobolog (breakthrough),1,2021-03-17 23:37:30,436.0,23,Poseidon,3,2.0,0,2.391304347826087,8.043478260869565,Valley Trust (breakthrough),121,10,21,2021-05-02 00:00:00,2
-241,图拉套,Point Luna,2,2020-10-19 21:33:34,3.0,23,Inventrix (breakthrough),4,1.75,23,1.7826086956521738,8.73913043478261,Poseidon,143,10,20,2020-12-05 00:00:00,3
-242,啦啦啦,Inventrix (breakthrough),4,2021-05-28 17:34:56,876.0,24,Thorgate (breakthrough),5,3.8,22,3.1666666666666665,7.916666666666667,StormCraft Incorporated (breakthrough),105,9,21,2021-06-15 00:00:00,2
-243,nafarian,Agricola Inc,2,2021-06-20 20:54:26,1061.0,25,Trade Navigator,2,3.0,22,3.08,6.84,Trade Navigator and Tharsis_republic (breakthrough),106,8,21,2021-07-23 00:00:00,2
-244,kino,Point Luna,4,2020-08-31 15:05:21,1.0,25,Point Luna,4,2.0,23,1.88,8.8,Inventrix (breakthrough),184,12,8,2020-08-31 00:00:00,1
-245,wee0815,Point Luna,1,2021-04-13 20:12:31,395.0,25,Philares,3,1.3333333333333333,17,2.0,7.76,Polyphemos,116,10,22,2021-05-20 00:00:00,2
-246,庄生,StormCraft Incorporated (breakthrough),2,2020-10-27 17:59:20,18.0,26,Inventrix (breakthrough),3,2.3333333333333335,23,2.5384615384615383,8.961538461538462,Point Luna,129,10,4,2020-10-27 00:00:00,1
-247,aipotu,Helion,3,2021-04-20 19:06:39,651.0,26,Ecoline (breakthrough),2,1.5,4,2.269230769230769,8.0,Pristar,145,11,19,2021-05-18 00:00:00,3
-248,桃子,Manutech,4,2020-12-05 23:59:29,767.0,27,Manutech,3,3.6666666666666665,0,2.888888888888889,8.0,Chaos,125,8,26,2021-05-05 00:00:00,2
-249,老王,Teractor (breakthrough),1,2020-08-31 15:05:21,1199.0,28,Vitor,3,1.6666666666666667,23,2.3214285714285716,8.714285714285714,Stormcraft Incorporated,124,11,22,2020-12-05 00:00:00,7
-250,拉普拉斯,Factorum,4,2021-03-28 21:28:20,514.0,29,Point Luna,3,2.0,22,3.3793103448275863,8.03448275862069,Point Luna,134,10,27,2021-07-01 00:00:00,2
-251,sayeah,Manutech,3,2021-07-11 19:08:10,1101.0,29,Lakefront Resorts,3,3.0,17,3.0344827586206895,6.655172413793103,Poseidon and ,125,8,12,2021-07-18 00:00:00,4
-252,听风聆雨,Valley Trust (breakthrough),3,2021-03-17 23:37:30,449.0,29,Poseidon,4,3.0,23,3.0,8.0,Pobolog (breakthrough),118,9,25,2021-06-18 00:00:00,2
-253,starwolf,StormCraft Incorporated (breakthrough),4,2021-05-04 23:59:04,269.0,32,Inventrix (breakthrough),4,3.5,13,3.625,7.34375,Splice (breakthrough),124,9,26,2021-06-15 00:00:00,3
-254,童话,Point Luna,3,2021-03-23 23:56:24,76.0,33,Aridor,3,2.6666666666666665,13,3.3636363636363638,8.181818181818182,Vitor,111,10,27,2021-03-26 00:00:00,2
-255,owl,Vitor,3,2020-08-31 15:05:21,16.0,34,Point Luna,4,2.25,0,2.3529411764705883,8.382352941176471,Aristarchus,132,9,31,2021-05-17 00:00:00,2
-256,00,Cheung Shing MARS,4,2021-05-10 23:41:27,836.0,35,Mining guild (breakthrough),3,2.3333333333333335,4,3.2,7.742857142857143,Mining guild (breakthrough),116,9,24,2021-05-16 00:00:00,4
-257,小黑,Pobolog (breakthrough),3,2020-10-06 23:53:49,91.0,36,Poseidon,4,3.0,23,2.611111111111111,8.472222222222221,Manutech,137,10,22,2021-02-22 00:00:00,2
-258,小z,Aridor,4,2020-08-31 15:05:21,70.0,37,Poseidon,4,2.0,21,2.081081081081081,8.108108108108109,Point Luna,174,9,32,2020-10-23 00:00:00,2
-259,cl,Valley Trust,3,2020-08-31 15:05:21,1060.0,39,Valley Trust,4,2.5,23,2.282051282051282,9.307692307692308,Terralabs Research,118,11,34,2020-08-31 00:00:00,3
-260,飞鱼,Labour Union,1,2021-05-10 15:41:43,794.0,40,Mining guild (breakthrough),4,1.75,0,2.55,7.875,Pobolog (breakthrough),113,9,19,2021-05-14 00:00:00,5
-261,aptx4869,Thorgate (breakthrough),2,2021-03-17 23:37:30,726.0,41,Poseidon,4,2.0,23,2.341463414634146,7.853658536585366,Septem Tribus,129,10,36,2021-05-27 00:00:00,2
-262,文生,Lakefront Resorts,1,2020-10-06 17:10:48,7.0,41,Valley Trust (breakthrough),4,1.75,23,1.6341463414634145,8.097560975609756,Valley Trust (breakthrough),168,11,33,2020-12-05 00:00:00,6
-263,方芳,Poseidon,4,2020-08-31 15:05:21,46.0,43,Poseidon,6,2.6666666666666665,13,2.2325581395348837,8.046511627906977,Vitor,153,11,37,2020-11-24 00:00:00,2
-264,麒麟,Inventrix (breakthrough),3,2021-04-07 22:28:39,478.0,43,Manutech,6,2.6666666666666665,22,2.697674418604651,8.069767441860465,Point Luna,120,10,32,2021-04-19 00:00:00,3
-265,风风,Pobolog (breakthrough),4,2021-01-12 23:22:03,109.0,44,Vitor,7,2.2857142857142856,21,2.0,8.0,Vitor,193,10,42,2021-04-07 00:00:00,3
-266,你好,Celestic (breakthrough),3,2021-01-07 01:24:25,290.0,45,UNMI (breakthrough),6,2.5,14,2.5555555555555554,7.8,Saturn Systems,128,9,30,2021-01-11 00:00:00,4
-267,jooe,Pharmacy Union,2,2021-04-19 22:57:42,647.0,45,Point Luna,6,3.0,19,2.4444444444444446,8.133333333333333,Polyphemos (breakthrough),118,10,33,2021-05-14 00:00:00,2
-268,囧囧打人,Aridor,1,2021-02-20 16:14:40,295.0,161,UNMI (breakthrough),10,1.7,13,1.9937888198757765,7.22360248447205,Arklight (breakthrough),153,9,115,2021-05-14 00:00:00,3
-269,yukikaze,Chaos,4,2021-04-24 12:33:53,641.0,73,Manutech,6,1.8333333333333333,0,2.191780821917808,7.684931506849315,Vitor,148,10,51,2021-05-06 00:00:00,4
-270,米饭,Point Luna,1,2020-08-31 15:05:21,26.0,48,Point Luna,9,2.4444444444444446,23,2.7708333333333335,8.375,Valley Trust (breakthrough),136,10,11,2020-09-10 00:00:00,2
-271,xixo,Point Luna,1,2021-03-26 13:41:06,483.0,50,Pobolog (breakthrough),6,1.6666666666666667,13,1.88,8.02,Manutech,124,10,43,2021-04-21 00:00:00,2
-272,永远,Helion (breakthrough),4,2021-03-17 23:37:30,58.0,53,MorningStar Inc (breakthrough),6,3.0,23,2.6792452830188678,7.943396226415095,Inventrix (breakthrough),127,10,38,2021-03-23 00:00:00,3
-273,橙子,Inventrix (breakthrough),3,2020-08-31 15:05:21,19.0,54,Teractor (breakthrough),8,2.75,23,3.1666666666666665,8.648148148148149,Philares,112,10,8,2020-09-10 00:00:00,1
-274,something,Thorgate (breakthrough),1,2020-08-31 15:05:21,10.0,74,Septem Tribus,7,3.142857142857143,23,3.027027027027027,8.378378378378379,Playwrights,132,10,21,2020-08-31 00:00:00,7
-275,小麦,Pharmacy Union,2,2020-11-06 18:00:38,702.0,193,Point Luna,11,2.6363636363636362,13,2.518134715025907,7.5025906735751295,Manutech,148,7,127,2021-05-31 00:00:00,4
-276,huasong,Viron (breakthrough),3,2020-11-08 20:44:42,99.0,89,Inventrix (breakthrough),8,2.625,0,2.741573033707865,7.685393258426966,Septem Tribus,131,10,69,2020-12-12 00:00:00,4
-277,二羊,Teractor (breakthrough),3,2020-08-31 15:05:21,79.0,68,Celestic (breakthrough),5,2.0,23,2.264705882352941,8.220588235294118,Vitor,126,10,13,2020-09-09 00:00:00,2
-278,乐多,Inventrix (breakthrough),2,2020-10-05 23:24:11,81.0,74,Point Luna,5,1.8,0,2.4324324324324325,8.0,Teractor (breakthrough),114,9,49,2020-10-06 00:00:00,3
-279,匆匆,Factorum (breakthrough),4,2020-11-07 13:45:03,131.0,78,Point Luna,8,1.75,23,2.5128205128205128,8.179487179487179,Terralabs Research (breakthrough),220,13,46,2020-11-08 00:00:00,3
-280,一直,Valley Trust (breakthrough),2,2020-08-31 15:05:21,20.0,79,StormCraft Incorporated (breakthrough),9,2.3333333333333335,23,2.6835443037974684,8.291139240506329,Aphrodite (breakthrough),128,10,35,2020-08-31 00:00:00,6
-281,点点,Philares,2,2021-03-23 23:56:24,485.0,82,Point Luna,8,2.75,22,2.658536585365854,8.036585365853659,Pobolog (breakthrough),128,9,64,2021-03-26 00:00:00,3
-282,ryan,Point Luna,2,2020-08-31 15:05:21,55.0,124,Point Luna,16,1.9375,23,2.411290322580645,8.25,Point Luna,155,10,70,2021-05-13 00:00:00,3
-283,泰伯,Factorum (breakthrough),4,2021-01-08 00:34:34,281.0,119,Point Luna,10,2.7,23,2.5714285714285716,8.025210084033613,UNMI (breakthrough),163,10,60,2021-01-08 00:00:00,4
-284,dwb,Factorum,4,2021-04-20 19:06:39,653.0,90,Manutech,5,2.2,19,2.533333333333333,7.588888888888889,Aristarchus,144,10,39,2021-05-08 00:00:00,5
-285,ddxy,Point Luna,3,2020-08-31 15:05:21,135.0,170,Point Luna,14,2.642857142857143,23,2.3294117647058825,7.5058823529411764,Chaos,137,8,102,2021-03-18 00:00:00,5
-286,西瓜,Mining guild (breakthrough),4,2020-08-31 15:05:21,781.0,98,Manutech,14,2.0714285714285716,23,2.010204081632653,8.071428571428571,Manutech,154,9,45,2021-05-11 00:00:00,3
-287,ender,Poseidon,4,2020-08-31 15:05:21,2.0,157,Manutech,11,1.6363636363636365,23,1.7707006369426752,7.471337579617835,Point Luna,151,9,92,2021-04-13 00:00:00,2
-288,奶牛,Celestic (breakthrough),4,2020-11-11 23:36:53,83.0,168,Manutech,10,2.6,23,2.5654761904761907,7.5773809523809526,Celestic (breakthrough),123,8,105,2021-04-04 00:00:00,6
-289,阿尔,UNMI (breakthrough),3,2021-02-25 17:35:16,294.0,159,Point Luna,14,2.5714285714285716,18,2.452830188679245,7.408805031446541,Terralabs Research (breakthrough),147,8,90,2021-03-23 00:00:00,4
-290,无语,Teractor (breakthrough),2,2020-08-31 15:05:21,21.0,176,Point Luna,21,2.238095238095238,23,2.5795454545454546,8.607954545454545,Poseidon,154,9,42,2021-06-12 00:00:00,3
-291,钝钝,Saturn Systems,4,2020-08-31 15:05:21,59.0,307,Point Luna,21,2.0952380952380953,23,2.029315960912052,7.635179153094462,Brotherhood of Mutants,177,6,183,2021-04-25 00:00:00,6
-292,乙木,Manutech,3,2020-08-31 15:05:21,17.0,389,Point Luna,32,2.4375,23,2.2519280205655527,8.077120822622108,Chaos,225,10,188,2021-04-11 00:00:00,5
+233,掌柜的来了,CrediCor,3,2021-06-24 22:20:26,987.0,17,Labour Union,2,1.0,23,1.6470588235294117,9.470588235294118,Celestic and ,115,12,16,2021-07-03 00:00:00,2
+234,amadeus,Point Luna,4,2021-07-11 22:05:43,1108.0,16,Point Luna,2,4.0,22,3.25,6.375,Utopia Invest and UNMI (breakthrough),77,7,10,2021-07-15 00:00:00,3
+235,吟游诗人,Recyclon (breakthrough),3,2021-03-09 21:41:21,357.0,39,Point Luna,3,4.0,13,2.58974358974359,7.948717948717949,StormCraft Incorporated (breakthrough),119,10,27,2021-04-13 00:00:00,3
+236,17826818782,CrediCor,1,2021-06-14 16:35:14,941.0,18,Junk Ventures,2,2.0,23,1.8888888888888888,9.38888888888889,Celestic (breakthrough) and ,114,11,17,2021-07-03 00:00:00,2
+237,jequirity,EcoLine,2,2020-12-19 17:57:12,287.0,18,Tharsis Republic,3,1.6666666666666667,21,2.5,8.333333333333334,Poseidon,108,9,15,2021-02-26 00:00:00,3
+238,12345,Robinson Industries (breakthrough),4,2021-02-23 14:04:50,132.0,19,Celestic (breakthrough),3,2.3333333333333335,15,2.6315789473684212,8.368421052631579,Valley Trust (breakthrough),140,8,16,2021-03-24 00:00:00,2
+239,2397541142,Teractor,3,2021-06-14 16:35:14,942.0,19,Mining Guild,2,2.5,23,3.1052631578947367,9.368421052631579,Mining Guild and ,104,12,18,2021-07-03 00:00:00,2
+240,深海的达不溜,Saturn Systems,1,2021-05-29 03:00:41,859.0,20,Inventrix (breakthrough),3,4.0,0,2.95,8.4,Teractor (breakthrough),109,9,13,2021-05-29 00:00:00,3
+241,tanwu2000,Tharsis_republic (breakthrough),4,2021-05-05 02:12:02,614.0,20,Arklight (breakthrough),3,3.3333333333333335,17,2.75,7.75,Interplanetary Cinematics (breakthrough),123,9,18,2021-05-23 00:00:00,2
+242,瑞凤,Valley Trust (breakthrough),2,2020-11-28 01:02:40,224.0,21,Manutech,4,3.25,23,3.1904761904761907,8.571428571428571,Valley Trust (breakthrough),120,10,11,2021-02-21 00:00:00,2
+243,水鬼,Inventrix (breakthrough),3,2020-11-11 23:36:53,222.0,22,Saturn Systems,4,2.75,23,2.772727272727273,8.227272727272727,Point Luna,121,10,19,2020-12-05 00:00:00,4
+244,无情的命运,Pobolog (breakthrough),1,2021-03-17 23:37:30,436.0,23,Poseidon,3,2.0,0,2.391304347826087,8.043478260869565,Valley Trust (breakthrough),121,10,21,2021-05-02 00:00:00,2
+245,kino,Point Luna,4,2020-08-31 15:05:21,1.0,25,Point Luna,4,2.0,23,1.88,8.8,Inventrix (breakthrough),184,12,8,2020-08-31 00:00:00,1
+246,图拉套,Point Luna,2,2020-10-19 21:33:34,3.0,26,Inventrix (breakthrough),5,2.0,23,1.8076923076923077,8.5,Poseidon,143,10,22,2020-12-05 00:00:00,3
+247,wee0815,Point Luna,1,2021-04-13 20:12:31,395.0,26,Philares,3,1.3333333333333333,17,1.9615384615384615,7.6923076923076925,Polyphemos,116,10,23,2021-05-29 00:00:00,2
+248,aipotu,Helion,3,2021-04-20 19:06:39,651.0,26,Ecoline (breakthrough),2,1.5,4,2.269230769230769,8.0,Pristar,145,11,19,2021-05-18 00:00:00,3
+249,桃子,Manutech,4,2020-12-05 23:59:29,767.0,27,Manutech,3,3.6666666666666665,0,2.888888888888889,8.0,Chaos,125,8,26,2021-05-05 00:00:00,2
+250,庄生,StormCraft Incorporated (breakthrough),2,2020-10-27 17:59:20,18.0,27,Inventrix (breakthrough),3,2.3333333333333335,23,2.5555555555555554,8.962962962962964,Point Luna,129,10,5,2020-10-27 00:00:00,1
+251,老王,Teractor (breakthrough),1,2020-08-31 15:05:21,1199.0,28,Vitor,3,1.6666666666666667,23,2.3214285714285716,8.714285714285714,Stormcraft Incorporated,124,11,22,2020-12-05 00:00:00,7
+252,nafarian,Agricola Inc,2,2021-06-20 20:54:26,1061.0,28,Trade Navigator,2,3.0,22,3.0,6.892857142857143,Id Front and Tharsis_republic (breakthrough),109,8,24,2021-06-29 00:00:00,2
+253,sayeah,Manutech,3,2021-07-11 19:08:10,1101.0,29,Lakefront Resorts,3,3.0,17,3.0344827586206895,6.655172413793103,Poseidon and ,125,8,12,2021-07-18 00:00:00,4
+254,听风聆雨,Valley Trust (breakthrough),3,2021-03-17 23:37:30,449.0,29,Poseidon,4,3.0,23,3.0,8.0,Pobolog (breakthrough),118,9,25,2021-06-18 00:00:00,2
+255,啦啦啦,Inventrix (breakthrough),4,2021-05-28 17:34:56,876.0,30,Thorgate (breakthrough),5,3.8,22,3.0,7.9,Vitor,110,9,26,2021-08-18 00:00:00,2
+256,starwolf,StormCraft Incorporated (breakthrough),4,2021-05-04 23:59:04,269.0,32,Inventrix (breakthrough),4,3.5,13,3.625,7.34375,Splice (breakthrough),124,9,26,2021-06-15 00:00:00,3
+257,童话,Point Luna,3,2021-03-23 23:56:24,76.0,33,Aridor,3,2.6666666666666665,13,3.3636363636363638,8.181818181818182,Vitor,111,10,27,2021-03-26 00:00:00,2
+258,拉普拉斯,Factorum,4,2021-03-28 21:28:20,514.0,33,Point Luna,3,2.0,22,3.4242424242424243,7.848484848484849,Point Luna,134,10,30,2021-08-16 00:00:00,2
+259,owl,Vitor,3,2020-08-31 15:05:21,16.0,35,Point Luna,5,2.2,0,2.342857142857143,8.4,Aristarchus,132,9,32,2021-05-17 00:00:00,2
+260,00,Cheung Shing MARS,4,2021-05-10 23:41:27,836.0,35,Mining guild (breakthrough),3,2.3333333333333335,4,3.2,7.742857142857143,Mining guild (breakthrough),116,9,24,2021-05-16 00:00:00,4
+261,小z,Aridor,4,2020-08-31 15:05:21,70.0,37,Poseidon,4,2.0,21,2.081081081081081,8.108108108108109,Point Luna,174,9,32,2020-10-23 00:00:00,2
+262,小黑,Pobolog (breakthrough),3,2020-10-06 23:53:49,91.0,38,Lakefront Resorts,4,2.0,23,2.6052631578947367,8.368421052631579,Manutech,137,10,24,2020-10-09 00:00:00,2
+263,cl,Valley Trust,3,2020-08-31 15:05:21,1060.0,39,Valley Trust,4,2.5,23,2.282051282051282,9.307692307692308,Terralabs Research,118,11,34,2020-08-31 00:00:00,3
+264,飞鱼,Labour Union,1,2021-05-10 15:41:43,794.0,40,Mining guild (breakthrough),4,1.75,0,2.55,7.875,Pobolog (breakthrough),113,9,19,2021-05-14 00:00:00,5
+265,文生,Lakefront Resorts,1,2020-10-06 17:10:48,7.0,41,Valley Trust (breakthrough),4,1.75,23,1.6341463414634145,8.097560975609756,Valley Trust (breakthrough),168,11,33,2020-12-05 00:00:00,6
+266,aptx4869,Thorgate (breakthrough),2,2021-03-17 23:37:30,726.0,41,Poseidon,4,2.0,23,2.341463414634146,7.853658536585366,Septem Tribus,129,10,36,2021-05-27 00:00:00,2
+267,麒麟,Inventrix (breakthrough),3,2021-04-07 22:28:39,478.0,43,Manutech,6,2.6666666666666665,22,2.697674418604651,8.069767441860465,Point Luna,120,10,32,2021-04-19 00:00:00,3
+268,风风,Pobolog (breakthrough),4,2021-01-12 23:22:03,109.0,44,Vitor,7,2.2857142857142856,21,2.0,8.0,Vitor,193,10,42,2021-04-07 00:00:00,3
+269,方芳,Poseidon,4,2020-08-31 15:05:21,46.0,45,Poseidon,6,2.6666666666666665,13,2.2222222222222223,8.066666666666666,Vitor,153,11,39,2020-11-16 00:00:00,2
+270,囧囧打人,Aridor,1,2021-02-20 16:14:40,295.0,172,UNMI (breakthrough),10,1.7,13,2.0,7.1686046511627906,Arklight (breakthrough),153,9,124,2021-04-25 00:00:00,3
+271,jooe,Pharmacy Union,2,2021-04-19 22:57:42,647.0,45,Point Luna,6,3.0,19,2.4444444444444446,8.133333333333333,Polyphemos (breakthrough),118,10,33,2021-05-14 00:00:00,2
+272,你好,Celestic (breakthrough),3,2021-01-07 01:24:25,290.0,45,UNMI (breakthrough),6,2.5,14,2.5555555555555554,7.8,Saturn Systems,128,9,30,2021-01-11 00:00:00,4
+273,米饭,Point Luna,1,2020-08-31 15:05:21,26.0,48,Point Luna,9,2.4444444444444446,23,2.7708333333333335,8.375,Valley Trust (breakthrough),136,10,11,2020-09-10 00:00:00,2
+274,yukikaze,Chaos,4,2021-04-24 12:33:53,641.0,78,Point Luna,8,2.0,0,2.1538461538461537,7.628205128205129,Vitor,148,10,56,2021-05-06 00:00:00,4
+275,xixo,Point Luna,1,2021-03-26 13:41:06,483.0,50,Pobolog (breakthrough),6,1.6666666666666667,13,1.88,8.02,Manutech,124,10,43,2021-04-21 00:00:00,2
+276,永远,Helion (breakthrough),4,2021-03-17 23:37:30,58.0,53,MorningStar Inc (breakthrough),6,3.0,23,2.6792452830188678,7.943396226415095,Inventrix (breakthrough),127,10,38,2021-03-23 00:00:00,3
+277,橙子,Inventrix (breakthrough),3,2020-08-31 15:05:21,19.0,54,Teractor (breakthrough),8,2.75,23,3.1666666666666665,8.648148148148149,Philares,112,10,8,2020-09-10 00:00:00,1
+278,something,Thorgate (breakthrough),1,2020-08-31 15:05:21,10.0,79,Septem Tribus,7,3.142857142857143,23,3.0632911392405062,8.253164556962025,Playwrights,132,10,24,2020-08-31 00:00:00,7
+279,二羊,Teractor (breakthrough),3,2020-08-31 15:05:21,79.0,68,Celestic (breakthrough),5,2.0,23,2.264705882352941,8.220588235294118,Vitor,126,10,13,2020-09-09 00:00:00,2
+280,小麦,Pharmacy Union,2,2020-11-06 18:00:38,702.0,200,Point Luna,12,2.75,13,2.51,7.46,Trade Navigator,163,8,133,2021-05-04 00:00:00,4
+281,huasong,Viron (breakthrough),3,2020-11-08 20:44:42,99.0,96,Teractor (breakthrough),8,2.75,0,2.7604166666666665,7.625,Septem Tribus,131,10,75,2020-12-12 00:00:00,4
+282,匆匆,Factorum (breakthrough),4,2020-11-07 13:45:03,131.0,78,Point Luna,8,1.75,23,2.5128205128205128,8.179487179487179,Terralabs Research (breakthrough),220,13,46,2020-11-08 00:00:00,3
+283,乐多,Inventrix (breakthrough),2,2020-10-05 23:24:11,81.0,78,Celestic (breakthrough),6,2.8333333333333335,17,2.4358974358974357,7.884615384615385,Teractor (breakthrough),114,9,51,2021-02-23 00:00:00,3
+284,一直,Valley Trust (breakthrough),2,2020-08-31 15:05:21,20.0,79,StormCraft Incorporated (breakthrough),9,2.3333333333333335,23,2.6835443037974684,8.291139240506329,Aphrodite (breakthrough),128,10,35,2020-08-31 00:00:00,6
+285,ryan,Point Luna,2,2020-08-31 15:05:21,55.0,124,Point Luna,16,1.9375,23,2.411290322580645,8.25,Point Luna,155,10,70,2021-05-13 00:00:00,3
+286,泰伯,Factorum (breakthrough),4,2021-01-08 00:34:34,281.0,119,Point Luna,10,2.7,23,2.5714285714285716,8.025210084033613,UNMI (breakthrough),163,10,60,2021-01-08 00:00:00,4
+287,点点,Philares,2,2021-03-23 23:56:24,485.0,88,Point Luna,8,2.75,22,2.6704545454545454,8.022727272727273,Pobolog (breakthrough),128,9,69,2021-03-26 00:00:00,3
+288,dwb,Factorum,4,2021-04-20 19:06:39,653.0,90,Manutech,5,2.2,19,2.533333333333333,7.588888888888889,Aristarchus,144,10,39,2021-05-08 00:00:00,5
+289,西瓜,Mining guild (breakthrough),4,2020-08-31 15:05:21,781.0,107,Manutech,15,2.066666666666667,23,2.02803738317757,8.009345794392523,Manutech,154,9,51,2021-05-11 00:00:00,3
+290,ddxy,Point Luna,3,2020-08-31 15:05:21,135.0,184,Point Luna,14,2.642857142857143,23,2.3043478260869565,7.4021739130434785,Chaos,137,8,112,2021-03-18 00:00:00,5
+291,ender,Poseidon,4,2020-08-31 15:05:21,2.0,159,Manutech,11,1.6363636363636365,23,1.7672955974842768,7.446540880503145,Point Luna,151,9,94,2020-10-23 00:00:00,2
+292,奶牛,Celestic (breakthrough),4,2020-11-11 23:36:53,83.0,177,Manutech,10,2.6,21,2.553672316384181,7.52542372881356,Point Luna,123,7,111,2021-04-04 00:00:00,6
+293,阿尔,UNMI (breakthrough),3,2021-02-25 17:35:16,294.0,174,Point Luna,15,2.466666666666667,14,2.4310344827586206,7.344827586206897,Terralabs Research (breakthrough),147,8,99,2021-04-24 00:00:00,4
+294,无语,Teractor (breakthrough),2,2020-08-31 15:05:21,21.0,180,Point Luna,21,2.238095238095238,23,2.566666666666667,8.583333333333334,Poseidon,154,9,46,2021-04-27 00:00:00,3
+295,钝钝,Saturn Systems,4,2020-08-31 15:05:21,59.0,323,Point Luna,22,2.1818181818181817,23,2.021671826625387,7.575851393188855,Trade Navigator,208,8,193,2021-04-25 00:00:00,6
+296,乙木,Manutech,3,2020-08-31 15:05:21,17.0,400,Point Luna,32,2.4375,23,2.2625,8.035,Chaos,225,10,196,2021-04-11 00:00:00,5
