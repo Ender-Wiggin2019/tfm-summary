@@ -35,8 +35,9 @@ st.write('<style>div.row-widget.stRadio > div{flex-direction:row;vertical-align:
 # st.write('<style>div.st-bf{flex-direction:column;} div.st-ag{font-weight:bold;padding-left:2px;}</style>', unsafe_allow_html=True)
 delete_list = {'界限突破': 'breakthrough', '阿瑞斯扩': 'aresExtension', '群友扩': 'erosCardsOption', '双公司': 'doubleCorp', '探路者扩': 'pathfindersExpansion'}
 # game_options = st.multiselect("game options", delete_list.values())
-for i in delete_list.values():
-    exec("%s = st.radio('%s', ('全选', '开启', '禁用'))"%(i,list(delete_list.keys())[list(delete_list.values()).index(i)]))
+with st.expander("选择游戏设置"):
+    for i in delete_list.values():
+        exec("%s = st.radio('%s', ('全选', '开启', '禁用'))"%(i,list(delete_list.keys())[list(delete_list.values()).index(i)]))
 
 for option in delete_list.values():
     if vars()[option] == '全选':

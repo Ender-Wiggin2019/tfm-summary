@@ -1,7 +1,4 @@
-# Terraforming Mars Annual Data Summary
-
-# 殖民火星年度报告
-
+# Terraforming Mars Report
 ## Work Flow
 
 1. Read from original dataset
