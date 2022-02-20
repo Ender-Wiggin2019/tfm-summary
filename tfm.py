@@ -5,28 +5,14 @@ import matplotlib.pyplot as plt
 import streamlit as st
 ori = pd.read_csv('preprocess.csv')
 ori['createtime'] = pd.to_datetime(ori['createtime'])
-def getPlayerNumResult(df, player_num = 4):
-    df = df.loc[df['players'] == player_num].reset_index(drop=True)
-    for i in range(1, player_num+1):
-        player_idx = 'player'+str(i)
-        # print(player_idx)
-        player_df = pd.json_normalize(df[player_idx]).reset_index(drop=True)
-        if i == 1:
-            res = pd.concat([df,player_df.reindex(df.index)],axis=1)
-            print((res.loc[pd.isna(res['player']) == False]).shape[0])
-        else:
-            mid = pd.concat([df,player_df.reindex(df.index)],axis=1)
-            res = pd.concat([res, mid],axis=0, ignore_index=True)
-            print((mid.loc[pd.isna(mid['player']) == False]).shape[0])
-        # df = pd.concat([df, pd.json_normalize(df[player_idx])],axis=1)
 
-    res.drop(['player'+str(i) for i in range(1, 7)], axis=1, inplace=True)
-    return res
 playerNum = st.radio("选择玩家人数", ['2P', '4P'])
 
 if playerNum == '2P':
+    playerNum = 2
     player_ori = ori[ori['players'] == 2]
 elif playerNum == '4P':
+    playerNum = 4
     player_ori = ori[ori['players'] == 4]
 
 
@@ -69,3 +55,43 @@ else:
     row1_2.metric(label="平均时代", value=player_gen_avg, delta=str(round((100*(player_gen_avg-st.session_state.last_gen_avg)/st.session_state.last_gen_avg),2))+'%')
     st.session_state.last_gen_avg = player_gen_avg
 # st.dataframe(player_group)
+
+def getPlayerNumResult(df, player_num = 4):
+    def expandDoubleCorp(df):
+        pd.options.mode.chained_assignment = None
+        df1 = df[df['doubleCorp'] == True]
+        df2 = df[df['doubleCorp'] == True]
+        df2['corporation'] = df2['corporation2']
+        res = pd.concat([df1, df2],axis=0, ignore_index=True)
+        res['count'] = 0.5
+        return res
+    df = df.loc[df['players'] == player_num].reset_index(drop=True)
+    for i in range(1, player_num+1):
+        player_idx = 'player'+str(i)
+        player_df_pre = df[player_idx].apply(lambda x:eval(x))
+        # print(player_idx)
+        player_df = pd.json_normalize(player_df_pre).reset_index(drop=True)
+        if i == 1:
+            res = pd.concat([df,player_df.reindex(df.index)],axis=1)
+            print((res.loc[pd.isna(res['player']) == False]).shape[0])
+        else:
+            mid = pd.concat([df,player_df.reindex(df.index)],axis=1)
+            res = pd.concat([res, mid],axis=0, ignore_index=True)
+            print((mid.loc[pd.isna(mid['player']) == False]).shape[0])
+        # df = pd.concat([df, pd.json_normalize(df[player_idx])],axis=1)
+    res.drop(['player'+str(i) for i in range(1, 7)], axis=1, inplace=True)
+    res['count'] = 1
+    res_single = res[~(res['doubleCorp'] == True)]
+    res_double = expandDoubleCorp(res)
+    res_final = pd.concat([res_single, res_double],axis=0, ignore_index=True)
+    return res_final
+
+corp_df = getPlayerNumResult(player_ori, playerNum)
+corp_df_group = corp_df.groupby('corporation').agg(
+    position = ('position', 'mean'),
+    playerScore = ('playerScore', 'mean'),
+    generations = ('generations', 'mean'),
+    total = ('count', 'sum')
+).sort_values('position').reset_index()
+
+st.dataframe(corp_df_group)
