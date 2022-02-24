@@ -2,7 +2,7 @@ import streamlit as st
 import hydralit_components as hc
 import datetime
 import pandas as pd
-
+from PIL import Image
 # specify the primary menu definition
 st.set_page_config(layout='wide',initial_sidebar_state='collapsed',)
 
@@ -137,3 +137,16 @@ corp_df_group = corp_df.groupby('corporation').agg(
 ).sort_values('position').reset_index()
 
 st.dataframe(corp_df_group)
+
+# 图像测试
+corp = (pd.read_csv('./corp_list.csv')['corporation']).to_list()
+select_corp = st.selectbox('choose corporation', corp)
+
+img = Image.open('./assets/' + select_corp + '.png')
+basewidth = 60
+wpercent = (basewidth/float(img.size[0]))
+hsize = int((float(img.size[1])*float(wpercent)))
+img = img.resize((basewidth,hsize), Image.ANTIALIAS)
+# image = image.resize((56,69))
+print(img.size)
+st.image(img, caption=select_corp)
