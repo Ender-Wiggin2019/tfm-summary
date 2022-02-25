@@ -142,11 +142,12 @@ st.dataframe(corp_df_group)
 corp = (pd.read_csv('./corp_list.csv')['corporation']).to_list()
 select_corp = st.selectbox('choose corporation', corp)
 
-img = Image.open('./assets/' + select_corp + '.png')
-basewidth = 60
-wpercent = (basewidth/float(img.size[0]))
-hsize = int((float(img.size[1])*float(wpercent)))
-img = img.resize((basewidth,hsize), Image.ANTIALIAS)
-# image = image.resize((56,69))
-print(img.size)
-st.image(img, caption=select_corp)
+for select_corp in corp:
+    img = Image.open('./assets/' + select_corp + '.png')
+    # basewidth = 60
+    # wpercent = (basewidth/float(img.size[0]))
+    # hsize = int((float(img.size[1])*float(wpercent)))
+    # img = img.resize((basewidth,hsize), Image.ANTIALIAS)
+    # # image = image.resize((56,69))
+    print(img.size)
+    st.image(img)
