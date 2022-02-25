@@ -1,50 +1,58 @@
 import streamlit as st
-import hydralit_components as hc
+# import hydralit_components as hc
 import datetime
 import pandas as pd
 from PIL import Image
 # specify the primary menu definition
-st.set_page_config(layout='wide',initial_sidebar_state='collapsed',)
+# st.set_page_config(layout='wide',initial_sidebar_state='collapsed',)
 
-# specify the menu definition we'll stick in the sidebar
-side_menu_data = [
-    {'icon': "far fa-copy", 'label':"Left End",'ttip':"I'm the Left End tooltip!"}, #can specify an icon from the bootstrap icon library
-    {'icon': "far fa-copy", 'label':"Copy"},
-    {'label':"Chart"}, # the minimum we can specify for a menu item
-    {'id':'special return value here','icon': "far fa-address-book", 'label':"Book"}, #can provide a special id to return when clicked
-    {'icon': "far fa-calendar-alt", 'label':"Calendar"}, #or can let the label be the return value when clicked
-    {'icon':"🐙",'label':"Component",'ttip':"I'm the Component tooltip!"}, # can als use an emoji as the icon
-    {'icon': "fas fa-tachometer-alt", 'label':"Dashboard"},
-    {'label':"Da55shboard"}, # or no icon
-    {'icon':'🤵','label':"Right End"},
-]
+# # specify the menu definition we'll stick in the sidebar
+# side_menu_data = [
+#     {'icon': "far fa-copy", 'label':"Left End",'ttip':"I'm the Left End tooltip!"}, #can specify an icon from the bootstrap icon library
+#     {'icon': "far fa-copy", 'label':"Copy"},
+#     {'label':"Chart"}, # the minimum we can specify for a menu item
+#     {'id':'special return value here','icon': "far fa-address-book", 'label':"Book"}, #can provide a special id to return when clicked
+#     {'icon': "far fa-calendar-alt", 'label':"Calendar"}, #or can let the label be the return value when clicked
+#     {'icon':"🐙",'label':"Component",'ttip':"I'm the Component tooltip!"}, # can als use an emoji as the icon
+#     {'icon': "fas fa-tachometer-alt", 'label':"Dashboard"},
+#     {'label':"Da55shboard"}, # or no icon
+#     {'icon':'🤵','label':"Right End"},
+# ]
 
-# specify the primary menu definition
-menu_data = [
-    {'icon': "far fa-copy", 'label':"Left End"},
-    {'id':'Copy','icon':"🐙",'label':"Copy"},
-    {'icon': "far fa-chart-bar", 'label':"Chart"},#no tooltip message
-    {'icon': "far fa-address-book", 'label':"Book"},
-    {'id':' Crazy return value 💀','icon': "💀", 'label':"Calendar"},
-    {'icon': "far fa-clone", 'label':"Component"},
-    {'icon': "fas fa-tachometer-alt", 'label':"Dashboard",'ttip':"I'm the Dashboard tooltip!"}, #can add a tooltip message
-    {'icon': "far fa-copy", 'label':"Right End"},
-]
+# # specify the primary menu definition
+# menu_data = [
+#     {'icon': "far fa-copy", 'label':"Left End"},
+#     {'id':'Copy','icon':"🐙",'label':"Copy"},
+#     {'icon': "far fa-chart-bar", 'label':"Chart"},#no tooltip message
+#     {'icon': "far fa-address-book", 'label':"Book"},
+#     {'id':' Crazy return value 💀','icon': "💀", 'label':"Calendar"},
+#     {'icon': "far fa-clone", 'label':"Component"},
+#     {'icon': "fas fa-tachometer-alt", 'label':"Dashboard",'ttip':"I'm the Dashboard tooltip!"}, #can add a tooltip message
+#     {'icon': "far fa-copy", 'label':"Right End"},
+# ]
 
-# we can override any part of the primary colors of the menu
-#over_theme = {'txc_inactive': '#FFFFFF','menu_background':'red','txc_active':'yellow','option_active':'blue'}
-over_theme = {'txc_inactive': '#FFFFFF'}
-menu_id = hc.nav_bar(menu_definition=menu_data,home_name='Home',override_theme=over_theme)
+# # we can override any part of the primary colors of the menu
+# #over_theme = {'txc_inactive': '#FFFFFF','menu_background':'red','txc_active':'yellow','option_active':'blue'}
+# over_theme = {'txc_inactive': '#FFFFFF'}
+# menu_id = hc.nav_bar(menu_definition=menu_data,home_name='Home',override_theme=over_theme)
 
-with st.sidebar:
-    side_menu_id = hc.nav_bar(menu_definition=side_menu_data,key='sidetbar',login_name='Login',override_theme=over_theme,first_select=6)
+# with st.sidebar:
+#     side_menu_id = hc.nav_bar(menu_definition=side_menu_data,key='sidetbar',login_name='Login',override_theme=over_theme,first_select=6)
 
-#get the id of the menu item clicked
-st.info(f"{menu_id=}")
-st.info(f"{side_menu_id=}")
+# #get the id of the menu item clicked
+# st.info(f"{menu_id=}")
+# st.info(f"{side_menu_id=}")
 
-
-
+def _max_width_(prcnt_width:int = 75):
+    max_width_str = f"max-width: {prcnt_width}%;"
+    st.markdown(f""" 
+                <style> 
+                .reportview-container .main .block-container{{{max_width_str}}}
+                </style>    
+                """, 
+                unsafe_allow_html=True,
+    )
+_max_width_()
 ori = pd.read_csv('preprocess.csv')
 ori['createtime'] = pd.to_datetime(ori['createtime'])
 
@@ -139,14 +147,27 @@ corp_df_group = corp_df.groupby('corporation').agg(
 st.dataframe(corp_df_group)
 
 # 图像测试
+
 corp = (pd.read_csv('./corp_list.csv')['corporation']).to_list()
 select_corp = st.selectbox('choose corporation', corp)
+for i, v in corp_df_group.head(5).iterrows():
+    c1,c2,c3,c4,c5,c6 = st.columns(6)
+    corporation = v['corporation']
+    try: img = Image.open('./assets/' + corporation + '.png')
+    except: img = Image.open('./assets/' + 'Ambient' + '.png')
+    image = img.resize((56,69))
+    c1.image(image)
+    c2.markdown('**%s**'%(corporation))
+    c3.markdown('**%s**'%(v.position))
+    breakdown_df = corp_df[corp_df['corporation']==corporation]
+    breakdown_df_group = breakdown_df.groupby('position').agg(
+        total = ('count', 'sum')
+    ).sort_values('position')
+    c4.bar_chart(breakdown_df_group)
 
-img = Image.open('./assets/' + select_corp + '.png')
-basewidth = 60
-wpercent = (basewidth/float(img.size[0]))
-hsize = int((float(img.size[1])*float(wpercent)))
-img = img.resize((basewidth,hsize), Image.ANTIALIAS)
-# image = image.resize((56,69))
-print(img.size)
-st.image(img, caption=select_corp)
+# basewidth = 60
+# wpercent = (basewidth/float(img.size[0]))
+# hsize = int((float(img.size[1])*float(wpercent)))
+# img = img.resize((basewidth,hsize), Image.ANTIALIAS)
+# print(img.size)
+# image.save('./test/' + select_corp + '.png')
