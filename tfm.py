@@ -259,7 +259,7 @@ for i, v in corp_df_group.iterrows():
     # fig = breakdown_df_group.plot(kind='bar', figsize=(4, 3), dpi=50)
     # fig, ax = plt.subplots(figsize=(2, 2))
     # ax.plot(breakdown_df_group['position'], breakdown_df_group['total'])
-    fig = plt.figure(figsize = (2, 0.7))
+    fig = plt.figure(figsize = (2, 0.9))
     plt.bar(breakdown_df_group['position'], breakdown_df_group['total'], width=0.5, color='salmon')
     # plt.yticks(np.arange(1, 4, 1))
     c5.pyplot(fig)
