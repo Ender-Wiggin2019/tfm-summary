@@ -140,14 +140,16 @@ st.dataframe(corp_df_group)
 
 # 图像测试
 corp = (pd.read_csv('./corp_list.csv')['corporation']).to_list()
-select_corp = st.selectbox('choose corporation', corp)
-
+# select_corp = st.selectbox('choose corporation', corp)
+c1,c2,c3,c4,c5,c6 = st.columns(6)
 for select_corp in corp:
     img = Image.open('./assets/' + select_corp + '.png')
     # basewidth = 60
     # wpercent = (basewidth/float(img.size[0]))
     # hsize = int((float(img.size[1])*float(wpercent)))
     # img = img.resize((basewidth,hsize), Image.ANTIALIAS)
-    # # image = image.resize((56,69))
+    image = img.resize((56,69))
     print(img.size)
-    st.image(img)
+    c1.image(image)
+    select_df = corp_df_group[corp_df_group['corporation'] == select_corp]
+    c2.dataframe(select_df)
