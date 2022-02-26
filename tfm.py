@@ -1,11 +1,61 @@
 import streamlit as st
-# import hydralit_components as hc
+import numpy as np
+import hydralit_components as hc
 import datetime
 import pandas as pd
 from PIL import Image
-# specify the primary menu definition
-# st.set_page_config(layout='wide',initial_sidebar_state='collapsed',)
+import matplotlib.pyplot as plt
+import base64
+st.set_page_config(page_title= '殖民火星数据',page_icon='random', initial_sidebar_state='collapsed',)
 
+# @st.cache(allow_output_mutation=True)
+# def get_base64_of_bin_file(bin_file):
+#     with open(bin_file, 'rb') as f:
+#         data = f.read()
+#     return base64.b64encode(data).decode()
+
+# def set_png_as_page_bg(png_file):
+#     bin_str = get_base64_of_bin_file(png_file)
+#     page_bg_img = '''
+#     <style>
+#     body {
+#     background-image: url("data:image/png;base64,%s");
+#     background-size: cover;
+#     }
+#     </style>
+#     ''' % bin_str
+    
+#     st.markdown(page_bg_img, unsafe_allow_html=True)
+#     return
+
+# set_png_as_page_bg('./assets/background.png')
+page_bg_img = '''
+<style>
+body {
+background-image: url("https://images.app.goo.gl/vzFv1SKxTNdW83gm8");
+background-size: cover;
+}
+</style>
+'''
+
+st.markdown(page_bg_img, unsafe_allow_html=True)
+
+def local_css(file_name):
+    with open(file_name) as f:
+        st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+
+def remote_css(url):
+    st.markdown(f'<link href="{url}" rel="stylesheet">', unsafe_allow_html=True)
+
+def icon(icon_name):
+    st.markdown(f'<i class="material-icons">{icon_name}</i>', unsafe_allow_html=True)
+
+local_css("style.css")
+remote_css('https://fonts.googleapis.com/icon?family=Material+Icons')
+
+icon("search")
+corp_key = st.text_input("")
+button_clicked = st.button("OK")
 # # specify the menu definition we'll stick in the sidebar
 # side_menu_data = [
 #     {'icon': "far fa-copy", 'label':"Left End",'ttip':"I'm the Left End tooltip!"}, #can specify an icon from the bootstrap icon library
@@ -43,16 +93,16 @@ from PIL import Image
 # st.info(f"{menu_id=}")
 # st.info(f"{side_menu_id=}")
 
-def _max_width_(prcnt_width:int = 75):
-    max_width_str = f"max-width: {prcnt_width}%;"
-    st.markdown(f""" 
-                <style> 
-                .reportview-container .main .block-container{{{max_width_str}}}
-                </style>    
-                """, 
-                unsafe_allow_html=True,
-    )
-_max_width_()
+# def _max_width_(prcnt_width:int = 75):
+#     max_width_str = f"max-width: {prcnt_width}%;"
+#     st.markdown(f""" 
+#                 <style> 
+#                 .reportview-container .main .block-container{{{max_width_str}}}
+#                 </style>    
+#                 """, 
+#                 unsafe_allow_html=True,
+#     )
+# _max_width_()
 ori = pd.read_csv('preprocess.csv')
 ori['createtime'] = pd.to_datetime(ori['createtime'])
 
@@ -69,7 +119,7 @@ elif playerNum == '4P':
 # st.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
 st.write('<style>div.row-widget.stRadio > div{flex-direction:row;vertical-align: baseline;} </style>', unsafe_allow_html=True)
 # st.write('<style>div.st-bf{flex-direction:column;} div.st-ag{font-weight:bold;padding-left:2px;}</style>', unsafe_allow_html=True)
-delete_list = {'界限突破': 'breakthrough', '阿瑞斯扩': 'aresExtension', '群友扩': 'erosCardsOption', '双公司': 'doubleCorp', '探路者扩': 'pathfindersExpansion'}
+delete_list = {'界限突破': 'breakthrough', '阿瑞斯扩': 'aresExtension', '群友扩': 'erosCardsOption', '双公司': 'doubleCorp', '探路者扩': 'pathfindersExpansion', '月球扩': 'moonExpansion'}
 # game_options = st.multiselect("game options", delete_list.values())
 with st.sidebar.expander("选择游戏设置"):
     for i in delete_list.values():
@@ -142,28 +192,77 @@ corp_df_group = corp_df.groupby('corporation').agg(
     playerScore = ('playerScore', 'mean'),
     generations = ('generations', 'mean'),
     total = ('count', 'sum')
-).sort_values('position').reset_index()
+).dropna().sort_values('position').reset_index()
 
-st.dataframe(corp_df_group)
+# st.dataframe(corp_df_group)
+theme_bad = {'bgcolor': '#FFF0F0','title_color': 'red','content_color': 'red','icon_color': 'red', 'icon': 'fa fa-times-circle'}
+theme_neutral = {'bgcolor': '#f9f9f9','title_color': 'orange','content_color': 'orange','icon_color': 'orange', 'icon': 'fa fa-question-circle'}
+theme_good = {'bgcolor': '#EFF8F7','title_color': 'green','content_color': 'green','icon_color': 'green', 'icon': 'fa fa-check-circle'}
 
-# 图像测试
+# with cc[0]:
+#  # can just use 'good', 'bad', 'neutral' sentiment to auto color the card
+#  hc.info_card(title='Some heading GOOD', content='All good!', sentiment='good',bar_value=77)
+
+# with cc[1]:
+#  hc.info_card(title='Some BAD BAD', content='This is really bad',bar_value=12,theme_override=theme_bad)
+
+# with cc[2]:
+#  hc.info_card(title='Some NEURAL', content='Oh yeah, sure.', sentiment='neutral',bar_value=55)
+
+# with cc[3]:
+#  #customise the the theming for a neutral content
+#  hc.info_card(title='Some NEURAL',content='Maybe...',key='sec',bar_value=5,theme_override=theme_neutral)
+# # 图像测试
 
 corp = (pd.read_csv('./corp_list.csv')['corporation']).to_list()
-select_corp = st.selectbox('choose corporation', corp)
-for i, v in corp_df_group.head(5).iterrows():
-    c1,c2,c3,c4,c5,c6 = st.columns(6)
+if corp_key == '': corp_df_group = corp_df_group
+else: corp_df_group = corp_df_group[corp_df_group['corporation'].str.contains('(?i)'+corp_key)]
+# select_corp = st.selectbox('choose corporation', corp)
+last_label = 0
+for i, v in corp_df_group.iterrows():
+    if last_label == 0 and v.position <= 1.5:
+        st.markdown('**第0梯队**')
+    elif last_label <= 1.5 and v.position > 1.5:
+        st.markdown('**第1梯队**')
+    elif last_label <= 2 and v.position > 2:
+        st.markdown('**第2梯队**')
+    elif last_label <= 2.5 and v.position > 2.5:
+        st.markdown('**第3梯队**')
+    elif last_label <= 3 and v.position > 3:
+        st.markdown('**第4梯队**')
+
+    last_label = v.position
+    c1,c2,c3,c4,c5 = st.columns([1,5,1,1,2])
     corporation = v['corporation']
     try: img = Image.open('./assets/' + corporation + '.png')
-    except: img = Image.open('./assets/' + 'Ambient' + '.png')
-    image = img.resize((56,69))
+    except: img = Image.open('./assets/' + 'nofound' + '.png')
+    image = img.resize((50,62))
     c1.image(image)
-    c2.markdown('**%s**'%(corporation))
-    c3.markdown('**%s**'%(v.position))
+    # c2.markdown('**%s**'%(corporation))
+    # c2.markdown('**%s**'%(corporation))
+    c2.info('%s'%(corporation))
+    if v.position <= 2:
+        c3.success('**%.2f**'%(round(v.position,2)))
+    elif v.position <= 3:
+        c3.warning('**%.2f**'%(round(v.position,2)))
+    if v.position > 3:
+        c3.error('**%.2f**'%(round(v.position,2)))
+    #     with c3:
+    #         hc.info_card(title=str(v.position), content='', sentiment='good',bar_value=v.position/4)
+    # c4.markdown('**%.1f**'%(v.total))
+    c4.info('%.d'%(v.total))
     breakdown_df = corp_df[corp_df['corporation']==corporation]
     breakdown_df_group = breakdown_df.groupby('position').agg(
         total = ('count', 'sum')
-    ).sort_values('position')
-    c4.bar_chart(breakdown_df_group)
+    ).sort_values('position').reset_index()
+    # c4.bar_chart(breakdown_df_group)
+    # fig = breakdown_df_group.plot(kind='bar', figsize=(4, 3), dpi=50)
+    # fig, ax = plt.subplots(figsize=(2, 2))
+    # ax.plot(breakdown_df_group['position'], breakdown_df_group['total'])
+    fig = plt.figure(figsize = (2, 0.7))
+    plt.bar(breakdown_df_group['position'], breakdown_df_group['total'], width=0.5, color='salmon')
+    # plt.yticks(np.arange(1, 4, 1))
+    c5.pyplot(fig)
 
 # basewidth = 60
 # wpercent = (basewidth/float(img.size[0]))
@@ -172,3 +271,15 @@ for i, v in corp_df_group.head(5).iterrows():
 # print(img.size)
 # image.save('./test/' + select_corp + '.png')
 
+# c1,c2,c3,c4,c5,c6 = st.columns(6)
+# for select_corp in corp:
+#     img = Image.open('./assets/' + select_corp + '.png')
+#     # basewidth = 60
+#     # wpercent = (basewidth/float(img.size[0]))
+#     # hsize = int((float(img.size[1])*float(wpercent)))
+#     # img = img.resize((basewidth,hsize), Image.ANTIALIAS)
+#     image = img.resize((56,69))
+#     print(img.size)
+#     c1.image(image)
+#     select_df = corp_df_group[corp_df_group['corporation'] == select_corp]
+#     c2.dataframe(select_df)
