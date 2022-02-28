@@ -40,22 +40,6 @@ st.set_page_config(page_title= '殖民火星数据',page_icon='random', initial_
 
 # st.markdown(page_bg_img, unsafe_allow_html=True)
 
-def local_css(file_name):
-    with open(file_name) as f:
-        st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
-
-def remote_css(url):
-    st.markdown(f'<link href="{url}" rel="stylesheet">', unsafe_allow_html=True)
-
-def icon(icon_name):
-    st.markdown(f'<i class="material-icons">{icon_name}</i>', unsafe_allow_html=True)
-
-local_css("style.css")
-remote_css('https://fonts.googleapis.com/icon?family=Material+Icons')
-
-icon("search")
-corp_key = st.text_input("")
-button_clicked = st.button("OK")
 # # specify the menu definition we'll stick in the sidebar
 # side_menu_data = [
 #     {'icon': "far fa-copy", 'label':"Left End",'ttip':"I'm the Left End tooltip!"}, #can specify an icon from the bootstrap icon library
@@ -116,7 +100,22 @@ elif playerNum == '4P':
     playerNum = 4
     player_ori = ori[ori['players'] == 4]
 if page == '公司数据':
+    def local_css(file_name):
+        with open(file_name) as f:
+            st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
+    def remote_css(url):
+        st.markdown(f'<link href="{url}" rel="stylesheet">', unsafe_allow_html=True)
+
+    def icon(icon_name):
+        st.markdown(f'<i class="material-icons">{icon_name}</i>', unsafe_allow_html=True)
+
+    local_css("style.css")
+    remote_css('https://fonts.googleapis.com/icon?family=Material+Icons')
+
+    icon("search")
+    corp_key = st.text_input("")
+    button_clicked = st.button("OK")
     # st.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
     st.write('<style>div.row-widget.stRadio > div{flex-direction:row;vertical-align: baseline;} </style>', unsafe_allow_html=True)
     # st.write('<style>div.st-bf{flex-direction:column;} div.st-ag{font-weight:bold;padding-left:2px;}</style>', unsafe_allow_html=True)
@@ -235,7 +234,7 @@ if page == '公司数据':
         last_label = v.position
         c1,c2,c3,c4,c5 = st.columns([1,5,1,1,2])
         corporation = v['corporation']
-        try: img = Image.open('./test/' + corporation + '.png')
+        try: image = Image.open('./test/' + corporation + '.png')
         except:
             img = Image.open('./assets/' + 'nofound' + '.png')
             image = img.resize((50,62))
@@ -269,15 +268,15 @@ if page == '公司数据':
 elif page == '用户数据':
     name = st.text_input('请输入用户名')
     user_data = pd.read_csv('./用户数据.csv')
-    verify = user_data[(user_data['is_id']==1) & (user_data['user_name']=='(?i)'+name)]
+    verify = user_data[(user_data['is_id']==1) & (user_data['user_name']==name)]
     if 'permission' not in st.session_state:
         st.session_state.permission = False
-    if verify.shape[0] != 1:
-        st.error['用户名无法匹配']
+    if name != '' and verify.shape[0] != 1:
+        st.error('用户名无法匹配')
         st.session_state.permission = False
-    else:
+    elif name != '' and verify.shape[0] == 1:
         st.success('登陆成功！')
         st.session_state.permission = True
     if st.session_state.permission == True:
-        name_df = user_data[user_data['user_name']=='(?i)'+name]['name'].to_list()
+        name_df = user_data[user_data['user_name']==name]['name'].to_list()
         names = st.multiselect('用户名清单', name_df, default=name_df)
