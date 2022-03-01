@@ -268,7 +268,7 @@ if page == '公司数据':
 elif page == '用户数据':
     name = st.text_input('请输入用户名')
     user_data = pd.read_csv('./用户数据.csv')
-    verify = user_data[(user_data['is_id']==1) & (user_data['user_name']==name)]
+    verify = user_data[(user_data['is_id']==1) & (user_data['user_name'].str.lower()==name.lower())]
     if 'permission' not in st.session_state:
         st.session_state.permission = False
     if name != '' and verify.shape[0] != 1:
@@ -278,5 +278,5 @@ elif page == '用户数据':
         st.success('登陆成功！')
         st.session_state.permission = True
     if st.session_state.permission == True:
-        name_df = user_data[user_data['user_name']==name]['name'].to_list()
+        name_df = user_data[user_data['user_name'].str.lower()==name.lower()]['name'].to_list()
         names = st.multiselect('用户名清单', name_df, default=name_df)
