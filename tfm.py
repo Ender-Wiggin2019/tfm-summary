@@ -6,7 +6,7 @@ import pandas as pd
 from PIL import Image
 import matplotlib.pyplot as plt
 import base64
-st.set_page_config(page_title= '殖民火星数据',page_icon='random', initial_sidebar_state='collapsed',)
+st.set_page_config(page_title= '殖民火星数据',page_icon='🔥', initial_sidebar_state='auto',)
 
 # @st.cache(allow_output_mutation=True)
 # def get_base64_of_bin_file(bin_file):
@@ -90,7 +90,7 @@ st.set_page_config(page_title= '殖民火星数据',page_icon='random', initial_
 ori = pd.read_csv('preprocess.csv')
 ori['createtime'] = pd.to_datetime(ori['createtime'])
 
-page = st.sidebar.selectbox("选择类别", ['公司数据', '用户数据'], index=1)
+page = st.sidebar.selectbox("选择类别", ['公司数据', '用户数据', '卡牌数据'], index=1)
 playerNum = st.sidebar.selectbox("选择玩家人数", ['2P', '4P'], index=1)
 
 if playerNum == '2P':
@@ -155,8 +155,8 @@ if page == '公司数据':
         row1_2.metric(label="平均时代", value=player_gen_avg, delta=str(round((100*(player_gen_avg-st.session_state.last_gen_avg)/st.session_state.last_gen_avg),2))+'%')
         st.session_state.last_gen_avg = player_gen_avg
     # st.dataframe(player_group)
-
-    def getPlayerNumResult(df, player_num = 4):
+    @st.cache
+    def getPlayerNumCorpResult(df, player_num = 4):
         def expandDoubleCorp(df):
             pd.options.mode.chained_assignment = None
             df1 = df[df['doubleCorp'] == True]
@@ -186,7 +186,7 @@ if page == '公司数据':
         res_final = pd.concat([res_single, res_double],axis=0, ignore_index=True)
         return res_final
 
-    corp_df = getPlayerNumResult(player_ori, playerNum)
+    corp_df = getPlayerNumCorpResult(player_ori, playerNum)
     corp_df_group = corp_df.groupby('corporation').agg(
         position = ('position', 'mean'),
         playerScore = ('playerScore', 'mean'),
@@ -279,4 +279,62 @@ elif page == '用户数据':
         st.session_state.permission = True
     if st.session_state.permission == True:
         name_df = user_data[user_data['user_name'].str.lower()==name.lower()]['name'].to_list()
-        names = st.multiselect('用户名清单', name_df, default=name_df)
+        names = st.multiselect('', name_df, default=name_df)
+
+        @st.cache
+        def getPlayersCard(name_list):
+            df = pd.read_csv('./playersCardRank.csv')
+            res = df.loc[df['player'].isin(name_list)]
+            res_group = res \
+            .groupby(['name']) \
+            .agg(
+                position = ('sum_position', 'sum'),
+                playerScore = ('sum_playerScore', 'sum'),
+                generations = ('sum_generations', 'sum'),
+                total = ('total', 'sum')
+            ) \
+            .dropna()
+            res_group['position'] = res_group['position'] / res_group['total']
+            res_group['playerScore'] = res_group['playerScore'] / res_group['total']
+            res_group['generations'] = res_group['generations'] / res_group['total']
+            res_group = res_group.sort_values(['position', 'total'], ascending=[True, False]).reset_index()
+            return res_group.round(2)
+        playersCardRank = getPlayersCard(names)
+        with st.expander('打出卡牌'):
+            st.dataframe(playersCardRank.style.format({'position': '{:.2}', 'playerScore': '{:.4}', 'generations': '{:.2}'}))
+        # @st.cache
+        # def getPlayerNumPlayerResult(df, name_list, player_num = 4):
+        #     """
+        #     主键: game_id, player
+        #     """
+        #     # df = df.loc[(df['players'] == player_num) & (df['player'].isin(name_list))].reset_index(drop=True)
+        #     df = df.loc[(df['players'] == player_num)].reset_index(drop=True)
+        #     for i in range(1, player_num+1):
+        #         player_idx = 'player'+str(i)
+        #         # player_df_pre = df[player_idx].apply(lambda x:eval(x))
+        #         # print(player_idx)
+        #         # player_df = pd.json_normalize(player_df_pre).reset_index(drop=True)
+        #         player_df = pd.json_normalize(df[player_idx]).reset_index(drop=True)
+        #         if i == 1:
+        #             res = pd.concat([df,player_df.reindex(df.index)],axis=1)
+        #             print((res.loc[pd.isna(res['player']) == False]).shape[0])
+        #         else:
+        #             mid = pd.concat([df,player_df.reindex(df.index)],axis=1)
+        #             res = pd.concat([res, mid],axis=0, ignore_index=True)
+        #             # print((mid.loc[pd.isna(mid['player']) == False]).shape[0])
+        #         # df = pd.concat([df, pd.json_normalize(df[player_idx])],axis=1)
+        #     res.drop(['player'+str(i) for i in range(1, 7)], axis=1, inplace=True)
+        #     res['count'] = 1
+        #     return res
+
+        # player_df = getPlayerNumPlayerResult(player_ori, playerNum)
+        # player_df_group = player_df.groupby('count').agg(
+        #     position = ('position', 'mean'),
+        #     playerScore = ('playerScore', 'mean'),
+        #     generations = ('generations', 'mean'),
+        #     total = ('count', 'sum')
+        # ).dropna().sort_values('position').reset_index()
+        # st.dataframe(player_df_group.style.format({'position': '{:.2}', 'playerScore': '{:.4}', 'generations': '{:.2}'}))
+
+    # for name in names:
+

@@ -130,7 +130,7 @@
                     "name": "Terraforming Ganymede"
                 },
                 {
-                    "name": "Solar Power"
+                    "name": true
                 }
             ],
             "draftedCards": [],
