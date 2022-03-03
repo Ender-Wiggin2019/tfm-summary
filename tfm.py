@@ -303,38 +303,38 @@ elif page == '用户数据':
         with st.expander('打出卡牌'):
             st.dataframe(playersCardRank.style.format({'position': '{:.2}', 'playerScore': '{:.4}', 'generations': '{:.2}'}))
         # @st.cache
-        # def getPlayerNumPlayerResult(df, name_list, player_num = 4):
-        #     """
-        #     主键: game_id, player
-        #     """
-        #     # df = df.loc[(df['players'] == player_num) & (df['player'].isin(name_list))].reset_index(drop=True)
-        #     df = df.loc[(df['players'] == player_num)].reset_index(drop=True)
-        #     for i in range(1, player_num+1):
-        #         player_idx = 'player'+str(i)
-        #         # player_df_pre = df[player_idx].apply(lambda x:eval(x))
-        #         # print(player_idx)
-        #         # player_df = pd.json_normalize(player_df_pre).reset_index(drop=True)
-        #         player_df = pd.json_normalize(df[player_idx]).reset_index(drop=True)
-        #         if i == 1:
-        #             res = pd.concat([df,player_df.reindex(df.index)],axis=1)
-        #             print((res.loc[pd.isna(res['player']) == False]).shape[0])
-        #         else:
-        #             mid = pd.concat([df,player_df.reindex(df.index)],axis=1)
-        #             res = pd.concat([res, mid],axis=0, ignore_index=True)
-        #             # print((mid.loc[pd.isna(mid['player']) == False]).shape[0])
-        #         # df = pd.concat([df, pd.json_normalize(df[player_idx])],axis=1)
-        #     res.drop(['player'+str(i) for i in range(1, 7)], axis=1, inplace=True)
-        #     res['count'] = 1
-        #     return res
+        def getPlayerNumPlayerResult(df, name_list, player_num = 4):
+            """
+            主键: game_id, player
+            """
+            # df = df.loc[(df['players'] == player_num) & (df['player'].isin(name_list))].reset_index(drop=True)
+            df = df.loc[(df['players'] == player_num)].reset_index(drop=True)
+            for i in range(1, player_num+1):
+                player_idx = 'player'+str(i)
+                # print(df[player_idx].head())
+                # player_df_pre = df[player_idx].apply(lambda x:eval(x))
+                # print(player_idx)
+                # player_df = pd.json_normalize(player_df_pre).reset_index(drop=True)
+                player_df = pd.json_normalize(df[player_idx].apply(lambda x:eval(x))).reset_index(drop=True)
+                if i == 1:
+                    res = pd.concat([df,player_df.reindex(df.index)],axis=1)
+                else:
+                    mid = pd.concat([df,player_df.reindex(df.index)],axis=1)
+                    res = pd.concat([res, mid],axis=0, ignore_index=True)
+                    # print((mid.loc[pd.isna(mid['player']) == False]).shape[0])
+                # df = pd.concat([df, pd.json_normalize(df[player_idx])],axis=1)
+            res.drop(['player'+str(i) for i in range(1, 7)], axis=1, inplace=True)
+            res['count'] = 1
+            return res
 
-        # player_df = getPlayerNumPlayerResult(player_ori, playerNum)
-        # player_df_group = player_df.groupby('count').agg(
-        #     position = ('position', 'mean'),
-        #     playerScore = ('playerScore', 'mean'),
-        #     generations = ('generations', 'mean'),
-        #     total = ('count', 'sum')
-        # ).dropna().sort_values('position').reset_index()
-        # st.dataframe(player_df_group.style.format({'position': '{:.2}', 'playerScore': '{:.4}', 'generations': '{:.2}'}))
+        player_df = getPlayerNumPlayerResult(player_ori, playerNum)
+        player_df_group = player_df.groupby('count').agg(
+            position = ('position', 'mean'),
+            playerScore = ('playerScore', 'mean'),
+            generations = ('generations', 'mean'),
+            total = ('count', 'sum')
+        ).dropna().sort_values('position').reset_index()
+        st.dataframe(player_df_group.style.format({'position': '{:.2}', 'playerScore': '{:.4}', 'generations': '{:.2}'}))
 
     # for name in names:
 
