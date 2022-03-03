@@ -302,7 +302,7 @@ elif page == '用户数据':
         playersCardRank = getPlayersCard(names)
         with st.expander('打出卡牌'):
             st.dataframe(playersCardRank.style.format({'position': '{:.2}', 'playerScore': '{:.4}', 'generations': '{:.2}'}))
-        # @st.cache
+        @st.cache
         def getPlayerNumPlayerResult(df, name_list, player_num = 4):
             """
             主键: game_id, player
@@ -325,16 +325,19 @@ elif page == '用户数据':
                 # df = pd.concat([df, pd.json_normalize(df[player_idx])],axis=1)
             res.drop(['player'+str(i) for i in range(1, 7)], axis=1, inplace=True)
             res['count'] = 1
+            res = res[res['player'].isin(name_list)].reset_index(drop=True)
             return res
 
-        player_df = getPlayerNumPlayerResult(player_ori, playerNum)
+        player_df = getPlayerNumPlayerResult(player_ori, names, playerNum)
         player_df_group = player_df.groupby('count').agg(
-            position = ('position', 'mean'),
-            playerScore = ('playerScore', 'mean'),
-            generations = ('generations', 'mean'),
-            total = ('count', 'sum')
-        ).dropna().sort_values('position').reset_index()
-        st.dataframe(player_df_group.style.format({'position': '{:.2}', 'playerScore': '{:.4}', 'generations': '{:.2}'}))
+            平均顺位 = ('position', 'mean'),
+            平均分数 = ('playerScore', 'mean'),
+            平均时代 = ('generations', 'mean'),
+            总数 = ('count', 'sum')
+        ).dropna().sort_values('平均顺位').reset_index(drop=True)
+        st.table((player_df_group.assign(用户名=name) \
+                .set_index('用户名')) \
+                .style.format({'平均顺位': '{:.2}', '平均分数': '{:.4}', '平均时代': '{:.2}'}))
 
     # for name in names:
 
