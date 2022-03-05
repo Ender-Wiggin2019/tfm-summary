@@ -193,7 +193,6 @@ if page == '公司数据':
         generations = ('generations', 'mean'),
         total = ('count', 'sum')
     ).dropna().sort_values('position').reset_index()
-
     # st.dataframe(corp_df_group)
     theme_bad = {'bgcolor': '#FFF0F0','title_color': 'red','content_color': 'red','icon_color': 'red', 'icon': 'fa fa-times-circle'}
     theme_neutral = {'bgcolor': '#f9f9f9','title_color': 'orange','content_color': 'orange','icon_color': 'orange', 'icon': 'fa fa-question-circle'}
@@ -219,16 +218,18 @@ if page == '公司数据':
     else: corp_df_group = corp_df_group[corp_df_group['corporation'].str.contains('(?i)'+corp_key)]
     # select_corp = st.selectbox('choose corporation', corp)
     last_label = 0
+    if playerNum == 2: tier_setter = [1.2, 1.4, 1.6, 1.8]
+    else: tier_setter = [1.5, 2, 2.5, 3] 
     for i, v in corp_df_group.iterrows():
-        if last_label == 0 and v.position <= 1.5:
+        if last_label == 0 and v.position <= tier_setter[0]:
             st.markdown('**第0梯队**')
-        elif last_label <= 1.5 and v.position > 1.5:
+        elif last_label <= tier_setter[0] and v.position > tier_setter[0]:
             st.markdown('**第1梯队**')
-        elif last_label <= 2 and v.position > 2:
+        elif last_label <= tier_setter[1] and v.position > tier_setter[1]:
             st.markdown('**第2梯队**')
-        elif last_label <= 2.5 and v.position > 2.5:
+        elif last_label <= tier_setter[2] and v.position > tier_setter[3]:
             st.markdown('**第3梯队**')
-        elif last_label <= 3 and v.position > 3:
+        elif last_label <= tier_setter[3] and v.position > tier_setter[3]:
             st.markdown('**第4梯队**')
 
         last_label = v.position
@@ -299,9 +300,6 @@ elif page == '用户数据':
             res_group['generations'] = res_group['generations'] / res_group['total']
             res_group = res_group.sort_values(['position', 'total'], ascending=[True, False]).reset_index()
             return res_group.round(2)
-        playersCardRank = getPlayersCard(names)
-        with st.expander('打出卡牌'):
-            st.dataframe(playersCardRank.style.format({'position': '{:.2}', 'playerScore': '{:.4}', 'generations': '{:.2}'}))
         @st.cache
         def getPlayerNumPlayerResult(df, name_list, player_num = 4):
             """
@@ -326,6 +324,7 @@ elif page == '用户数据':
             res.drop(['player'+str(i) for i in range(1, 7)], axis=1, inplace=True)
             res['count'] = 1
             res = res[res['player'].isin(name_list)].reset_index(drop=True)
+            print(res.columns)
             return res
 
         player_df = getPlayerNumPlayerResult(player_ori, names, playerNum)
@@ -335,9 +334,54 @@ elif page == '用户数据':
             平均时代 = ('generations', 'mean'),
             总数 = ('count', 'sum')
         ).dropna().sort_values('平均顺位').reset_index(drop=True)
+        st.markdown('### 对局统计')
         st.table((player_df_group.assign(用户名=name) \
                 .set_index('用户名')) \
-                .style.format({'平均顺位': '{:.2}', '平均分数': '{:.4}', '平均时代': '{:.2}'}))
+                .style.format({'平均顺位': '{:.2}', '平均分数': '{:.4}', '平均时代': '{:.3}'}))
 
-    # for name in names:
+        playersCardRank = getPlayersCard(names)
+        with st.expander('打出卡牌'):
+            st.dataframe(playersCardRank.style.format({'position': '{:.2}', 'playerScore': '{:.4}', 'generations': '{:.2}'}))
+
+        # 根据玩家的game_id join, 取位次高于该玩家的用户，按名称聚合
+        @st.cache
+        def getPlayersPlayWith(df, name_list, player_num = 4):
+            """
+            主键: game_id, player
+            """
+            # df = df.loc[(df['players'] == player_num) & (df['player'].isin(name_list))].reset_index(drop=True)
+            df = df.loc[(df['players'] == player_num)].reset_index(drop=True)
+            for i in range(1, player_num+1):
+                player_idx = 'player'+str(i)
+                # print(df[player_idx].head())
+                # player_df_pre = df[player_idx].apply(lambda x:eval(x))
+                # print(player_idx)
+                # player_df = pd.json_normalize(player_df_pre).reset_index(drop=True)
+                player_df = pd.json_normalize(df[player_idx].apply(lambda x:eval(x))).reset_index(drop=True)
+                if i == 1:
+                    res = pd.concat([df,player_df.reindex(df.index)],axis=1)
+                else:
+                    mid = pd.concat([df,player_df.reindex(df.index)],axis=1)
+                    res = pd.concat([res, mid],axis=0, ignore_index=True)
+                    # print((mid.loc[pd.isna(mid['player']) == False]).shape[0])
+                # df = pd.concat([df, pd.json_normalize(df[player_idx])],axis=1)
+            res.drop(['player'+str(i) for i in range(1, 7)], axis=1, inplace=True)
+            res['count'] = 1
+            
+            res_player = res[res['player'].isin(name_list)].reset_index(drop=True)
+            res_other = res[~(res['player'].isin(name_list))].reset_index(drop=True)
+            res_final = res_other.merge(res_player, on='game_id', how='inner', suffixes=['', '_drop'], indicator=True).query('position.notna()', engine="python")
+            res_final.loc[res_final['position'] > res_final['position_drop'],'win'] = 1
+            res_final.loc[res_final['position'] <= res_final['position_drop'],'win'] = 0
+            res_final_group = res_final.groupby('player').agg(
+            总共遇到次数 = ('win', 'count'),
+            被你击败 = ('win', 'sum')
+            ).dropna().sort_values('总共遇到次数', ascending=False)
+            res_final_group['被你击败'] = res_final_group['被你击败'].astype(int)
+            return res_final_group
+        player_with_you = getPlayersPlayWith(player_ori, names, playerNum)
+        # st.dataframe(player_with_you.style.format({'被你击败': '{:.2}'}))
+        with st.expander('和你游戏的玩家'):
+            st.table(player_with_you)
+    # TODO 时间序列，全局和按天数聚合的结果
 
