@@ -5,6 +5,7 @@ import datetime
 import pandas as pd
 from PIL import Image
 import matplotlib.pyplot as plt
+import altair as alt
 import base64
 st.set_page_config(page_title= '殖民火星数据',page_icon='🔥', initial_sidebar_state='auto',)
 
@@ -300,7 +301,7 @@ elif page == '用户数据':
             res_group['generations'] = res_group['generations'] / res_group['total']
             res_group = res_group.sort_values(['position', 'total'], ascending=[True, False]).reset_index()
             return res_group.round(2)
-        @st.cache
+        # @st.cache
         def getPlayerNumPlayerResult(df, name_list, player_num = 4):
             """
             主键: game_id, player
@@ -334,7 +335,14 @@ elif page == '用户数据':
             平均时代 = ('generations', 'mean'),
             总数 = ('count', 'sum')
         ).dropna().sort_values('平均顺位').reset_index(drop=True)
+
+        # TODO 时间序列，全局和按天数聚合的结果
+        player_df['小时'] = (pd.to_datetime(player_df['createtime'])).dt.hour
+        player_time = player_df.groupby(player_df.小时).agg(
+        局数 = ('count', 'sum')
+        ).dropna().sort_index()
         st.markdown('### 对局统计')
+
         st.table((player_df_group.assign(用户名=name) \
                 .set_index('用户名')) \
                 .style.format({'平均顺位': '{:.2}', '平均分数': '{:.4}', '平均时代': '{:.3}'}))
@@ -382,6 +390,13 @@ elif page == '用户数据':
         player_with_you = getPlayersPlayWith(player_ori, names, playerNum)
         # st.dataframe(player_with_you.style.format({'被你击败': '{:.2}'}))
         with st.expander('和你游戏的玩家'):
-            st.table(player_with_you)
-    # TODO 时间序列，全局和按天数聚合的结果
+            st.table(player_with_you.head(15))
+        with st.expander('活跃时间'):
+            # player_time_plot = alt.Chart(player_time, title='玩家活跃时间').mark_line().encode(
+            # x='小时', y='局数', color='blue')
 
+            # st.altair_chart(player_time_plot, use_container_width=True)
+            st.bar_chart(player_time)
+        
+elif page == '卡牌数据':
+    st.title('还没做捏，鸽一鸽~')
