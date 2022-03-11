@@ -1,5 +1,6 @@
 import streamlit as st
 import numpy as np
+import hashlib
 # import hydralit_components as hc
 import datetime
 import pandas as pd
@@ -269,21 +270,32 @@ if page == '公司数据':
 
 elif page == '用户数据':
     name = st.text_input('请输入用户名')
+    pwd = st.text_input('请输入密码')
     user_data = pd.read_csv('./用户数据.csv')
+    user_pwd = pd.read_csv('./users_db.csv')
     verify = user_data[(user_data['is_id']==1) & (user_data['user_name'].str.lower()==name.lower())]
     if 'permission' not in st.session_state:
         st.session_state.permission = False
+    if 'admin' not in st.session_state:
+        st.session_state.admin = False
     if name != '' and verify.shape[0] != 1:
         st.error('用户名无法匹配')
         st.session_state.permission = False
+    elif name == 'admin' and pwd == 'ender':  st.session_state.admin = True
     elif name != '' and verify.shape[0] == 1:
-        st.success('登陆成功！')
-        st.session_state.permission = True
+        md5_pwd = hashlib.md5(pwd.encode())
+        if user_pwd.loc[user_pwd['name'].str.lower() == name.lower(),'password'].values == md5_pwd.hexdigest():
+            st.success('登陆成功！')
+            st.session_state.permission = True
+        elif pwd != '':
+            st.error('密码错误')
+            st.session_state.permission = False
+    if st.session_state.admin == True: st.session_state.permission = True
     if st.session_state.permission == True:
         name_df = user_data[user_data['user_name'].str.lower()==name.lower()]['name'].to_list()
         names = st.multiselect('', name_df, default=name_df)
 
-        @st.cache
+        # @st.cache
         def getPlayersCard(name_list):
             df = pd.read_csv('./playersCardRank.csv')
             res = df.loc[df['player'].isin(name_list)]
@@ -299,8 +311,8 @@ elif page == '用户数据':
             res_group['position'] = res_group['position'] / res_group['total']
             res_group['playerScore'] = res_group['playerScore'] / res_group['total']
             res_group['generations'] = res_group['generations'] / res_group['total']
-            res_group = res_group.sort_values(['position', 'total'], ascending=[True, False]).reset_index()
-            return res_group.round(2)
+            res_group = res_group.sort_values(['total', 'position'], ascending=[False, True]).reset_index()
+            return res_group.head(20).round(2)
         # @st.cache
         def getPlayerNumPlayerResult(df, name_list, player_num = 4):
             """
@@ -345,11 +357,11 @@ elif page == '用户数据':
 
         st.table((player_df_group.assign(用户名=name) \
                 .set_index('用户名')) \
-                .style.format({'平均顺位': '{:.2}', '平均分数': '{:.4}', '平均时代': '{:.3}'}))
+                .style.format({'平均顺位': '{:.2f}', '平均分数': '{:.3f}', '平均时代': '{:.3f}'}))
 
         playersCardRank = getPlayersCard(names)
-        with st.expander('打出卡牌'):
-            st.dataframe(playersCardRank.style.format({'position': '{:.2}', 'playerScore': '{:.4}', 'generations': '{:.2}'}))
+        with st.expander('你最喜欢的卡牌'):
+            st.dataframe(playersCardRank.style.format({'position': '{:.2f}', 'playerScore': '{:.4f}', 'generations': '{:.2f}'}))
 
         # 根据玩家的game_id join, 取位次高于该玩家的用户，按名称聚合
         @st.cache
@@ -399,4 +411,8 @@ elif page == '用户数据':
             st.bar_chart(player_time)
         
 elif page == '卡牌数据':
-    st.title('还没做捏，鸽一鸽~')
+    st.title('目前只支持4p, 还没调整样式捏, 鸽一鸽~')
+    allCardsRank = pd.read_csv('./allCardsRank.csv')
+    allCardsRank.columns = ['卡牌名称', '打出位次', '平均得分', '平均时代', '打出次数']
+    st.dataframe(allCardsRank.style.format({'打出位次': '{:.2f}', '平均得分': '{:.4f}', '平均时代': '{:.2f}', '打出次数': '{:.0f}'}))
+    
