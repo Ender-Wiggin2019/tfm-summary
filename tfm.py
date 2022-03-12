@@ -300,7 +300,7 @@ elif page == '用户数据':
             df = pd.read_csv('./playersCardRank.csv')
             res = df.loc[df['player'].isin(name_list)]
             res_group = res \
-            .groupby(['name']) \
+            .groupby(['cn', 'name']) \
             .agg(
                 position = ('sum_position', 'sum'),
                 playerScore = ('sum_playerScore', 'sum'),
@@ -312,7 +312,9 @@ elif page == '用户数据':
             res_group['playerScore'] = res_group['playerScore'] / res_group['total']
             res_group['generations'] = res_group['generations'] / res_group['total']
             res_group = res_group.sort_values(['total', 'position'], ascending=[False, True]).reset_index()
-            return res_group.head(20).round(2)
+            res_group.columns = ['卡牌中文', '卡牌英文', '位次', '得分', '时代', '打出次数']
+
+            return res_group.drop('卡牌英文', axis=1).head(20).round(2)
         # @st.cache
         def getPlayerNumPlayerResult(df, name_list, player_num = 4):
             """
@@ -337,6 +339,7 @@ elif page == '用户数据':
             res.drop(['player'+str(i) for i in range(1, 7)], axis=1, inplace=True)
             res['count'] = 1
             res = res[res['player'].isin(name_list)].reset_index(drop=True)
+            
             print(res.columns)
             return res
 
@@ -361,7 +364,8 @@ elif page == '用户数据':
 
         playersCardRank = getPlayersCard(names)
         with st.expander('你最喜欢的卡牌'):
-            st.dataframe(playersCardRank.style.format({'position': '{:.2f}', 'playerScore': '{:.4f}', 'generations': '{:.2f}'}))
+            
+            st.table(playersCardRank.style.format({'位次': '{:.2f}', '得分': '{:.4f}', '时代': '{:.2f}'}))
 
         # 根据玩家的game_id join, 取位次高于该玩家的用户，按名称聚合
         @st.cache
@@ -411,9 +415,9 @@ elif page == '用户数据':
             st.bar_chart(player_time)
         
 elif page == '卡牌数据':
-    st.title('目前只支持4p, 还没调整样式捏, 鸽一鸽~')
+    st.title('4P卡牌数据')
     allCardsRank = pd.read_csv('./allCardsRank.csv')
-    allCardsRank.columns = ['卡牌名称', '打出位次', '平均得分', '平均时代', '打出次数']
-    st.dataframe(allCardsRank.style.format({'打出位次': '{:.2f}', '平均得分': '{:.4f}', '平均时代': '{:.2f}', '打出次数': '{:.0f}'}))
+    allCardsRank.columns = ['卡牌中文', '卡牌英文', '位次', '得分', '时代', '打出次数']
+    st.dataframe(allCardsRank.style.format({'打出位次': '{:.2f}', '得分': '{:.4f}', '时代': '{:.2f}', '打出次数': '{:.0f}'}))
     
-    st.text('TODO: 排版调整 & 中文名称匹配')
+    st.text('注：卡牌的数据统计根据打出该卡牌的玩家最终位次和得分计算。')
