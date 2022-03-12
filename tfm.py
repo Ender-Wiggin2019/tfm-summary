@@ -10,6 +10,13 @@ import altair as alt
 import base64
 st.set_page_config(page_title= '殖民火星数据',page_icon='🔥', initial_sidebar_state='auto',)
 
+f = open('./count.txt')
+count = f.read()
+f.close()
+f = open('./count.txt', 'w')
+add = str(int(count)+1)
+f.write(add)
+f.close()
 # @st.cache(allow_output_mutation=True)
 # def get_base64_of_bin_file(bin_file):
 #     with open(bin_file, 'rb') as f:
@@ -92,7 +99,7 @@ st.set_page_config(page_title= '殖民火星数据',page_icon='🔥', initial_si
 ori = pd.read_csv('preprocess.csv')
 ori['createtime'] = pd.to_datetime(ori['createtime'])
 
-page = st.sidebar.selectbox("选择类别", ['公司数据', '用户数据', '卡牌数据'], index=1)
+page = st.sidebar.selectbox("选择类别", ['公司数据', '用户数据', '卡牌数据', '网站介绍'], index=1)
 playerNum = st.sidebar.selectbox("选择玩家人数", ['2P', '4P'], index=1)
 
 if playerNum == '2P':
@@ -290,10 +297,11 @@ elif page == '用户数据':
         elif pwd != '':
             st.error('密码错误')
             st.session_state.permission = False
+    st.text('小提示：手机玩家在网页左上角可以展开选项设置')
     if st.session_state.admin == True: st.session_state.permission = True
     if st.session_state.permission == True:
         name_df = user_data[user_data['user_name'].str.lower()==name.lower()]['name'].to_list()
-        names = st.multiselect('', name_df, default=name_df)
+        names = st.multiselect('常用游戏名称：', name_df, default=name_df)
 
         # @st.cache
         def getPlayersCard(name_list):
@@ -418,6 +426,30 @@ elif page == '卡牌数据':
     st.title('4P卡牌数据')
     allCardsRank = pd.read_csv('./allCardsRank.csv')
     allCardsRank.columns = ['卡牌中文', '卡牌英文', '位次', '得分', '时代', '打出次数']
-    st.dataframe(allCardsRank.style.format({'打出位次': '{:.2f}', '得分': '{:.4f}', '时代': '{:.2f}', '打出次数': '{:.0f}'}))
+    st.dataframe(allCardsRank.style.format({'位次': '{:.2f}', '得分': '{:.1f}', '时代': '{:.1f}', '打出次数': '{:.0f}'}))
     
     st.text('注：卡牌的数据统计根据打出该卡牌的玩家最终位次和得分计算。')
+
+elif page == '网站介绍':
+    st.markdown("""
+    ## 数据来源
+    本网站数据来自[殖民火星国服](http://jaing.me/)的后台数据库，有超过14000局游戏的记录，本数据站主要针对2P和4P进行统计。
+    
+    ## FAQ
+    
+    * **Q: 登陆账号是哪个账号?**
+    
+        A: 火星游戏网站的注册账号。
+    
+    * **Q: 我的常用游戏名和登陆账号不符怎么办?**
+    
+        A: 联系*QQ: 209926937*, 将个人常用id发给我即可。
+    
+    * **Q: 我想看更多的数据, 或者有优化界面的建议, 如何提出呢?**
+    
+        A: 联系上方的QQ号就行了捏。
+        
+    ## 当前点击量
+    目前已被访问%s次。
+    """%(add)
+    )
