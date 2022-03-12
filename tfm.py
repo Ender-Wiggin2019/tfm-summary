@@ -418,6 +418,6 @@ elif page == '卡牌数据':
     st.title('4P卡牌数据')
     allCardsRank = pd.read_csv('./allCardsRank.csv')
     allCardsRank.columns = ['卡牌中文', '卡牌英文', '位次', '得分', '时代', '打出次数']
-    st.dataframe(allCardsRank.style.format({'打出位次': '{:.2f}', '得分': '{:.4f}', '时代': '{:.2f}', '打出次数': '{:.0f}'}))
+    st.dataframe(allCardsRank.style.format({'位次': '{:.2f}', '得分': '{:.2f}', '时代': '{:.2f}', '打出次数': '{:.0f}'}))
     
     st.text('注：卡牌的数据统计根据打出该卡牌的玩家最终位次和得分计算。')
