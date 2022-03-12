@@ -416,3 +416,4 @@ elif page == '卡牌数据':
     allCardsRank.columns = ['卡牌名称', '打出位次', '平均得分', '平均时代', '打出次数']
     st.dataframe(allCardsRank.style.format({'打出位次': '{:.2f}', '平均得分': '{:.4f}', '平均时代': '{:.2f}', '打出次数': '{:.0f}'}))
     
+    st.text('TODO: 排版调整 & 中文名称匹配')
