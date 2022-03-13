@@ -17,6 +17,16 @@ f = open('./count.txt', 'w')
 add = str(int(count)+1)
 f.write(add)
 f.close()
+
+def local_css(file_name):
+    with open(file_name) as f:
+        st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+
+def remote_css(url):
+    st.markdown(f'<link href="{url}" rel="stylesheet">', unsafe_allow_html=True)
+
+def icon(icon_name):
+    st.markdown(f'<i class="material-icons">{icon_name}</i>', unsafe_allow_html=True)
 # @st.cache(allow_output_mutation=True)
 # def get_base64_of_bin_file(bin_file):
 #     with open(bin_file, 'rb') as f:
@@ -109,15 +119,6 @@ elif playerNum == '4P':
     playerNum = 4
     player_ori = ori[ori['players'] == 4]
 if page == '公司数据':
-    def local_css(file_name):
-        with open(file_name) as f:
-            st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
-
-    def remote_css(url):
-        st.markdown(f'<link href="{url}" rel="stylesheet">', unsafe_allow_html=True)
-
-    def icon(icon_name):
-        st.markdown(f'<i class="material-icons">{icon_name}</i>', unsafe_allow_html=True)
 
     local_css("style.css")
     remote_css('https://fonts.googleapis.com/icon?family=Material+Icons')
@@ -423,9 +424,16 @@ elif page == '用户数据':
             st.bar_chart(player_time)
         
 elif page == '卡牌数据':
-    st.title('4P卡牌数据')
+    local_css("style.css")
+    remote_css('https://fonts.googleapis.com/icon?family=Material+Icons')
+
+    icon("search")
+    card_key = st.text_input("")
+    card_clicked = st.button("OK")
     allCardsRank = pd.read_csv('./allCardsRank.csv')
     allCardsRank.columns = ['卡牌中文', '卡牌英文', '位次', '得分', '时代', '打出次数']
+    if card_key == '': allCardsRank = allCardsRank
+    else: allCardsRank = allCardsRank[(allCardsRank['卡牌英文'].str.contains('(?i)'+card_key)) | (allCardsRank['卡牌中文'].str.contains('(?i)'+card_key))]
     st.dataframe(allCardsRank.style.format({'位次': '{:.2f}', '得分': '{:.1f}', '时代': '{:.1f}', '打出次数': '{:.0f}'}))
     
     st.text('注：卡牌的数据统计根据打出该卡牌的玩家最终位次和得分计算。')
