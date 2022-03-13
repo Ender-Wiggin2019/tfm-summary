@@ -1,4 +1,4 @@
 config.py
 *.db
 *.txt
-CardDetail.csv
+# CardDetail.csv
