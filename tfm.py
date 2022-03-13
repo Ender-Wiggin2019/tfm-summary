@@ -424,12 +424,21 @@ elif page == '用户数据':
                 st.table(player_with_you.head(15))
             except: st.warning('该选项组合没有数据')
         with st.expander('活跃时间'):
-            # player_time_plot = alt.Chart(player_time, title='玩家活跃时间').mark_line().encode(
-            # x='小时', y='局数', color='blue')
-
-            # st.altair_chart(player_time_plot, use_container_width=True)
             st.bar_chart(player_time)
-        
+
+        challenge = pd.read_csv('./成就.csv')
+        all_challenge = (pd.unique(challenge['title'])).shape[0]
+        challenge = challenge.loc[challenge['player'].isin(names)].sort_values('index')
+        challenge.drop_duplicates(subset=['title'], keep='first', inplace=True)
+        challenge = challenge.loc[:,['title', 'reason', 'createtime']].set_index('title')
+        challenge.columns = ['成就', '达成时间']
+        your_challenge = challenge.shape[0]
+        with st.expander('火星成就 (%d/%d)'%(your_challenge, all_challenge)):
+            if challenge.shape[0] == 0:
+                challenge = challenge.append({'成就': '达成成就数量 (%d/%d)'%(your_challenge, all_challenge), '达成时间': '直到此刻'}, ignore_index=True)
+                challenge.rename(index={0:'火星打工人'},inplace=True)
+            st.table(challenge)
+            
 elif page == '卡牌数据':
     local_css("style.css")
     remote_css('https://fonts.googleapis.com/icon?family=Material+Icons')
