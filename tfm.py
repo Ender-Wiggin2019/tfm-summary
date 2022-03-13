@@ -193,6 +193,7 @@ if page == '公司数据':
         res_single = res[~(res['doubleCorp'] == True)]
         res_double = expandDoubleCorp(res)
         res_final = pd.concat([res_single, res_double],axis=0, ignore_index=True)
+        res_final = res_final.merge()
         return res_final
 
     corp_df = getPlayerNumCorpResult(player_ori, playerNum)
