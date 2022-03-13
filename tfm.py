@@ -27,6 +27,11 @@ def remote_css(url):
 
 def icon(icon_name):
     st.markdown(f'<i class="material-icons">{icon_name}</i>', unsafe_allow_html=True)
+
+@st.cache
+def get_corp_trans():
+    return pd.read_csv('./corp_list.csv')
+corp_trans = get_corp_trans()
 # @st.cache(allow_output_mutation=True)
 # def get_base64_of_bin_file(bin_file):
 #     with open(bin_file, 'rb') as f:
@@ -118,6 +123,62 @@ if playerNum == '2P':
 elif playerNum == '4P':
     playerNum = 4
     player_ori = ori[ori['players'] == 4]
+
+delete_list = {'界限突破': 'breakthrough', '阿瑞斯扩': 'aresExtension', '群友扩': 'erosCardsOption', '双公司': 'doubleCorp', '探路者扩': 'pathfindersExpansion', '月球扩': 'moonExpansion'}
+with st.sidebar.expander("选择游戏设置"):
+    for i in delete_list.values():
+        exec("%s = st.radio('%s', ('全选', '开启', '禁用'))"%(i,list(delete_list.keys())[list(delete_list.values()).index(i)]))
+
+for option in delete_list.values():
+    if vars()[option] == '全选':
+        continue
+    elif vars()[option] == '开启':
+        player_ori = player_ori[player_ori[option] == True]
+    elif vars()[option] == '禁用':
+        player_ori = player_ori[(player_ori[option] == False) | (pd.isna(player_ori[option]) == True)]
+
+
+# df8.plot(x="createtime", y="generations")
+# st.dataframe(player_group)
+@st.cache
+def getPlayerNumCorpResult(df, player_num = 4):
+    def expandDoubleCorp(df):
+        pd.options.mode.chained_assignment = None
+        df1 = df[df['doubleCorp'] == True]
+        df2 = df[df['doubleCorp'] == True]
+        df2['corporation'] = df2['corporation2']
+        res = pd.concat([df1, df2],axis=0, ignore_index=True)
+        res['count'] = 0.5
+        return res
+    df = df.loc[df['players'] == player_num].reset_index(drop=True)
+    for i in range(1, player_num+1):
+        player_idx = 'player'+str(i)
+        player_df_pre = df[player_idx].apply(lambda x:eval(x))
+        # print(player_idx)
+        player_df = pd.json_normalize(player_df_pre).reset_index(drop=True)
+        if i == 1:
+            res = pd.concat([df,player_df.reindex(df.index)],axis=1)
+            print((res.loc[pd.isna(res['player']) == False]).shape[0])
+        else:
+            mid = pd.concat([df,player_df.reindex(df.index)],axis=1)
+            res = pd.concat([res, mid],axis=0, ignore_index=True)
+            # print((mid.loc[pd.isna(mid['player']) == False]).shape[0])
+        # df = pd.concat([df, pd.json_normalize(df[player_idx])],axis=1)
+    res.drop(['player'+str(i) for i in range(1, 7)], axis=1, inplace=True)
+    res['count'] = 1
+    res_single = res[~(res['doubleCorp'] == True)]
+    res_double = expandDoubleCorp(res)
+    res_final = pd.concat([res_single, res_double],axis=0, ignore_index=True)
+    res_final = res_final.merge(corp_trans, how='left', on='corporation', suffixes=['','_drop'])
+    return res_final
+corp_df = getPlayerNumCorpResult(player_ori, playerNum)
+corp_df_group = corp_df.groupby(['cn', 'corporation']).agg(
+    position = ('position', 'mean'),
+    playerScore = ('playerScore', 'mean'),
+    generations = ('generations', 'mean'),
+    total = ('count', 'sum')
+).dropna().sort_values('position').reset_index()
+
 if page == '公司数据':
 
     local_css("style.css")
@@ -129,26 +190,11 @@ if page == '公司数据':
     # st.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
     st.write('<style>div.row-widget.stRadio > div{flex-direction:row;vertical-align: baseline;} </style>', unsafe_allow_html=True)
     # st.write('<style>div.st-bf{flex-direction:column;} div.st-ag{font-weight:bold;padding-left:2px;}</style>', unsafe_allow_html=True)
-    delete_list = {'界限突破': 'breakthrough', '阿瑞斯扩': 'aresExtension', '群友扩': 'erosCardsOption', '双公司': 'doubleCorp', '探路者扩': 'pathfindersExpansion', '月球扩': 'moonExpansion'}
-    # game_options = st.multiselect("game options", delete_list.values())
-    with st.sidebar.expander("选择游戏设置"):
-        for i in delete_list.values():
-            exec("%s = st.radio('%s', ('全选', '开启', '禁用'))"%(i,list(delete_list.keys())[list(delete_list.values()).index(i)]))
-
-    for option in delete_list.values():
-        if vars()[option] == '全选':
-            continue
-        elif vars()[option] == '开启':
-            player_ori = player_ori[player_ori[option] == True]
-        elif vars()[option] == '禁用':
-            player_ori = player_ori[(player_ori[option] == False) | (pd.isna(player_ori[option]) == True)]
     player_group = player_ori.groupby([pd.Grouper(key='createtime', freq='2W-SUN')])['generations'] \
         .mean() \
         .sort_index()
         # .reset_index() \
     player_gen_avg = round(player_ori['generations'].mean(),1)
-
-    # df8.plot(x="createtime", y="generations")
     row1_1, row1_2 = st.columns((5,1))
     row1_1.line_chart(player_group)
     if 'last_gen_num' not in st.session_state:
@@ -164,118 +210,65 @@ if page == '公司数据':
     else:
         row1_2.metric(label="平均时代", value=player_gen_avg, delta=str(round((100*(player_gen_avg-st.session_state.last_gen_avg)/st.session_state.last_gen_avg),2))+'%')
         st.session_state.last_gen_avg = player_gen_avg
-    # st.dataframe(player_group)
-    @st.cache
-    def getPlayerNumCorpResult(df, player_num = 4):
-        def expandDoubleCorp(df):
-            pd.options.mode.chained_assignment = None
-            df1 = df[df['doubleCorp'] == True]
-            df2 = df[df['doubleCorp'] == True]
-            df2['corporation'] = df2['corporation2']
-            res = pd.concat([df1, df2],axis=0, ignore_index=True)
-            res['count'] = 0.5
-            return res
-        df = df.loc[df['players'] == player_num].reset_index(drop=True)
-        for i in range(1, player_num+1):
-            player_idx = 'player'+str(i)
-            player_df_pre = df[player_idx].apply(lambda x:eval(x))
-            # print(player_idx)
-            player_df = pd.json_normalize(player_df_pre).reset_index(drop=True)
-            if i == 1:
-                res = pd.concat([df,player_df.reindex(df.index)],axis=1)
-                print((res.loc[pd.isna(res['player']) == False]).shape[0])
-            else:
-                mid = pd.concat([df,player_df.reindex(df.index)],axis=1)
-                res = pd.concat([res, mid],axis=0, ignore_index=True)
-                # print((mid.loc[pd.isna(mid['player']) == False]).shape[0])
-            # df = pd.concat([df, pd.json_normalize(df[player_idx])],axis=1)
-        res.drop(['player'+str(i) for i in range(1, 7)], axis=1, inplace=True)
-        res['count'] = 1
-        res_single = res[~(res['doubleCorp'] == True)]
-        res_double = expandDoubleCorp(res)
-        res_final = pd.concat([res_single, res_double],axis=0, ignore_index=True)
-        res_final = res_final.merge()
-        return res_final
+    # game_options = st.multiselect("game options", delete_list.values())
 
-    corp_df = getPlayerNumCorpResult(player_ori, playerNum)
-    corp_df_group = corp_df.groupby('corporation').agg(
-        position = ('position', 'mean'),
-        playerScore = ('playerScore', 'mean'),
-        generations = ('generations', 'mean'),
-        total = ('count', 'sum')
-    ).dropna().sort_values('position').reset_index()
-    # st.dataframe(corp_df_group)
-    theme_bad = {'bgcolor': '#FFF0F0','title_color': 'red','content_color': 'red','icon_color': 'red', 'icon': 'fa fa-times-circle'}
-    theme_neutral = {'bgcolor': '#f9f9f9','title_color': 'orange','content_color': 'orange','icon_color': 'orange', 'icon': 'fa fa-question-circle'}
-    theme_good = {'bgcolor': '#EFF8F7','title_color': 'green','content_color': 'green','icon_color': 'green', 'icon': 'fa fa-check-circle'}
-
-    # with cc[0]:
-    #  # can just use 'good', 'bad', 'neutral' sentiment to auto color the card
-    #  hc.info_card(title='Some heading GOOD', content='All good!', sentiment='good',bar_value=77)
-
-    # with cc[1]:
-    #  hc.info_card(title='Some BAD BAD', content='This is really bad',bar_value=12,theme_override=theme_bad)
-
-    # with cc[2]:
-    #  hc.info_card(title='Some NEURAL', content='Oh yeah, sure.', sentiment='neutral',bar_value=55)
-
-    # with cc[3]:
-    #  #customise the the theming for a neutral content
-    #  hc.info_card(title='Some NEURAL',content='Maybe...',key='sec',bar_value=5,theme_override=theme_neutral)
-    # # 图像测试
-
-    corp = (pd.read_csv('./corp_list.csv')['corporation']).to_list()
+    corp = (corp_trans['corporation']).to_list()
     if corp_key == '': corp_df_group = corp_df_group
-    else: corp_df_group = corp_df_group[corp_df_group['corporation'].str.contains('(?i)'+corp_key)]
-    # select_corp = st.selectbox('choose corporation', corp)
-    last_label = 0
-    if playerNum == 2: tier_setter = [1.2, 1.4, 1.6, 1.8]
-    else: tier_setter = [1.5, 2, 2.5, 3] 
-    for i, v in corp_df_group.iterrows():
-        if last_label == 0 and v.position <= tier_setter[0]:
-            st.markdown('**第0梯队**')
-        elif last_label <= tier_setter[0] and v.position > tier_setter[0]:
-            st.markdown('**第1梯队**')
-        elif last_label <= tier_setter[1] and v.position > tier_setter[1]:
-            st.markdown('**第2梯队**')
-        elif last_label <= tier_setter[2] and v.position > tier_setter[3]:
-            st.markdown('**第3梯队**')
-        elif last_label <= tier_setter[3] and v.position > tier_setter[3]:
-            st.markdown('**第4梯队**')
+    else: corp_df_group = corp_df_group[(corp_df_group['corporation'].str.contains('(?i)'+corp_key)) | (corp_df_group['cn'].str.contains('(?i)'+corp_key))]
+    corp_df_group.columns = ['公司中文', '公司英文', '位次', '得分', '时代', '打出次数']
+    img_mode = st.checkbox('开启图片模式(手机上请不要选择)', value = False)
+    if img_mode == False:
+        st.dataframe(corp_df_group.style.format({'位次': '{:.1f}', '得分': '{:.1f}', '时代': '{:.1f}', '打出次数': '{:.0f}'}))
+    else:
+        # select_corp = st.selectbox('choose corporation', corp)
+        last_label = 0
+        if playerNum == 2: tier_setter = [1.2, 1.4, 1.6, 1.8]
+        else: tier_setter = [1.5, 2, 2.5, 3] 
+        for i, v in corp_df_group.iterrows():
+            if last_label == 0 and v.位次 <= tier_setter[0]:
+                st.markdown('**第0梯队**')
+            elif last_label <= tier_setter[0] and v.位次 > tier_setter[0]:
+                st.markdown('**第1梯队**')
+            elif last_label <= tier_setter[1] and v.位次 > tier_setter[1]:
+                st.markdown('**第2梯队**')
+            elif last_label <= tier_setter[2] and v.位次 > tier_setter[3]:
+                st.markdown('**第3梯队**')
+            elif last_label <= tier_setter[3] and v.位次 > tier_setter[3]:
+                st.markdown('**第4梯队**')
 
-        last_label = v.position
-        c1,c2,c3,c4,c5 = st.columns([1,5,1,1,2])
-        corporation = v['corporation']
-        try: image = Image.open('./test/' + corporation + '.png')
-        except:
-            img = Image.open('./assets/' + 'nofound' + '.png')
-            image = img.resize((50,62))
-        c1.image(image)
-        # c2.markdown('**%s**'%(corporation))
-        # c2.markdown('**%s**'%(corporation))
-        c2.info('%s'%(corporation))
-        if v.position <= 2:
-            c3.success('**%.2f**'%(round(v.position,2)))
-        elif v.position <= 3:
-            c3.warning('**%.2f**'%(round(v.position,2)))
-        if v.position > 3:
-            c3.error('**%.2f**'%(round(v.position,2)))
-        #     with c3:
-        #         hc.info_card(title=str(v.position), content='', sentiment='good',bar_value=v.position/4)
-        # c4.markdown('**%.1f**'%(v.total))
-        c4.info('%.d'%(v.total))
-        breakdown_df = corp_df[corp_df['corporation']==corporation]
-        breakdown_df_group = breakdown_df.groupby('position').agg(
-            total = ('count', 'sum')
-        ).sort_values('position').reset_index()
-        # c4.bar_chart(breakdown_df_group)
-        # fig = breakdown_df_group.plot(kind='bar', figsize=(4, 3), dpi=50)
-        # fig, ax = plt.subplots(figsize=(2, 2))
-        # ax.plot(breakdown_df_group['position'], breakdown_df_group['total'])
-        fig = plt.figure(figsize = (2, 0.9))
-        plt.bar(breakdown_df_group['position'], breakdown_df_group['total'], width=0.5, color='salmon')
-        # plt.yticks(np.arange(1, 4, 1))
-        c5.pyplot(fig)
+            last_label = v.位次
+            c1,c2,c3,c4,c5 = st.columns([1,5,1,1,2])
+            corporation = v['公司英文']
+            try: image = Image.open('./test/' + corporation + '.png')
+            except:
+                img = Image.open('./assets/' + 'nofound' + '.png')
+                image = img.resize((50,62))
+            c1.image(image)
+            # c2.markdown('**%s**'%(corporation))
+            # c2.markdown('**%s**'%(corporation))
+            c2.info('%s'%(corporation))
+            if v.位次 <= 2:
+                c3.success('**%.2f**'%(round(v.位次,2)))
+            elif v.位次 <= 3:
+                c3.warning('**%.2f**'%(round(v.位次,2)))
+            if v.位次 > 3:
+                c3.error('**%.2f**'%(round(v.位次,2)))
+            #     with c3:
+            #         hc.info_card(title=str(v.位次), content='', sentiment='good',bar_value=v.位次/4)
+            # c4.markdown('**%.1f**'%(v.total))
+            c4.info('%.d'%(v.打出次数))
+            breakdown_df = corp_df[corp_df['corporation']==corporation]
+            breakdown_df_group = breakdown_df.groupby('position').agg(
+                total = ('count', 'sum')
+            ).sort_values('position').reset_index()
+            # c4.bar_chart(breakdown_df_group)
+            # fig = breakdown_df_group.plot(kind='bar', figsize=(4, 3), dpi=50)
+            # fig, ax = plt.subplots(figsize=(2, 2))
+            # ax.plot(breakdown_df_group['position'], breakdown_df_group['total'])
+            fig = plt.figure(figsize = (2, 0.9))
+            plt.bar(breakdown_df_group['position'], breakdown_df_group['total'], width=0.5, color='salmon')
+            # plt.yticks(np.arange(1, 4, 1))
+            c5.pyplot(fig)
 
 elif page == '用户数据':
     name = st.text_input('请输入用户名')
@@ -413,10 +406,23 @@ elif page == '用户数据':
             ).dropna().sort_values('总共遇到次数', ascending=False)
             res_final_group['被你击败'] = res_final_group['被你击败'].astype(int)
             return res_final_group
-        player_with_you = getPlayersPlayWith(player_ori, names, playerNum)
-        # st.dataframe(player_with_you.style.format({'被你击败': '{:.2}'}))
+
+        with st.expander('你最喜欢的公司'):
+            try:
+                fav_corps = corp_df.loc[corp_df['player'].isin(names)]
+                fav_corps_group = fav_corps.groupby(['cn']).agg(
+                    平均顺位 = ('position', 'mean'),
+                    平均分数 = ('playerScore', 'mean'),
+                    平均时代 = ('generations', 'mean'),
+                    总数 = ('count', 'count')
+                ).dropna().sort_values('总数', ascending=False).head(15)
+                st.table(fav_corps_group.style.format({'平均顺位': '{:.1f}', '平均分数': '{:.2f}', '平均时代': '{:.1f}', '总数': '{:.0f}'}))
+            except: st.warning('该选项组合没有数据')
         with st.expander('和你游戏的玩家'):
-            st.table(player_with_you.head(15))
+            try:
+                player_with_you = getPlayersPlayWith(player_ori, names, playerNum)
+                st.table(player_with_you.head(15))
+            except: st.warning('该选项组合没有数据')
         with st.expander('活跃时间'):
             # player_time_plot = alt.Chart(player_time, title='玩家活跃时间').mark_line().encode(
             # x='小时', y='局数', color='blue')
