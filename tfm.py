@@ -114,7 +114,7 @@ corp_trans = get_corp_trans()
 ori = pd.read_csv('preprocess.csv')
 ori['createtime'] = pd.to_datetime(ori['createtime'])
 
-page = st.sidebar.selectbox("选择类别", ['公司数据', '用户数据', '卡牌数据', '网站介绍'], index=1)
+page = st.sidebar.selectbox("选择类别", ['公司数据', '用户数据', '卡牌数据', '成就榜', '网站介绍'], index=1)
 playerNum = st.sidebar.selectbox("选择玩家人数", ['2P', '4P'], index=1)
 
 if playerNum == '2P':
@@ -216,6 +216,7 @@ if page == '公司数据':
     if corp_key == '': corp_df_group = corp_df_group
     else: corp_df_group = corp_df_group[(corp_df_group['corporation'].str.contains('(?i)'+corp_key)) | (corp_df_group['cn'].str.contains('(?i)'+corp_key))]
     corp_df_group.columns = ['公司中文', '公司英文', '位次', '得分', '时代', '打出次数']
+    corp_df_group = corp_df_group.set_index('公司中文')
     img_mode = st.checkbox('开启图片模式(手机上请不要选择)', value = False)
     if img_mode == False:
         st.dataframe(corp_df_group.style.format({'位次': '{:.1f}', '得分': '{:.1f}', '时代': '{:.1f}', '打出次数': '{:.0f}'}))
@@ -368,7 +369,7 @@ elif page == '用户数据':
         playersCardRank = getPlayersCard(names)
         with st.expander('你最喜欢的卡牌'):
             
-            st.table(playersCardRank.style.format({'位次': '{:.2f}', '得分': '{:.4f}', '时代': '{:.2f}'}))
+            st.table(playersCardRank.style.format({'位次': '{:.2f}', '得分': '{:.2f}', '时代': '{:.2f}'}))
 
         # 根据玩家的game_id join, 取位次高于该玩家的用户，按名称聚合
         @st.cache
@@ -447,12 +448,17 @@ elif page == '卡牌数据':
     card_key = st.text_input("")
     card_clicked = st.button("OK")
     allCardsRank = pd.read_csv('./allCardsRank.csv')
+    if playerNum == 2:
+        allCardsRank = allCardsRank.loc[allCardsRank['players'] == 2].drop('players', axis=1)
+    elif playerNum == 4:
+        allCardsRank = allCardsRank.loc[allCardsRank['players'] == 4].drop('players', axis=1)
     allCardsRank.columns = ['卡牌中文', '卡牌英文', '位次', '得分', '时代', '打出次数']
     if card_key == '': allCardsRank = allCardsRank
     else: allCardsRank = allCardsRank[(allCardsRank['卡牌英文'].str.contains('(?i)'+card_key)) | (allCardsRank['卡牌中文'].str.contains('(?i)'+card_key))]
     st.dataframe(allCardsRank.style.format({'位次': '{:.2f}', '得分': '{:.1f}', '时代': '{:.1f}', '打出次数': '{:.0f}'}))
     
-    st.text('注：卡牌的数据统计根据打出该卡牌的玩家最终位次和得分计算。')
+    st.markdown('注：卡牌的数据统计根据打出该卡牌的玩家最终位次和得分计算')
+    st.markdown('目前卡牌数据只支持选择2p/4p，不支持游戏扩展筛选。')
 
 elif page == '网站介绍':
     st.markdown("""
@@ -477,3 +483,15 @@ elif page == '网站介绍':
     目前已被访问%s次。
     """%(add)
     )
+elif page == '成就榜':
+    all_challenge = pd.read_csv('./成就.csv').query('index == 0')
+    total_num = pd.read_csv('./成就.csv').groupby('title').agg(max).reset_index()
+    all_players = pd.read_csv('./用户数据.csv').shape[0]
+    all_challenge.drop_duplicates('title', keep='first', inplace=True)
+    all_challenge = all_challenge.merge(total_num, on='title', how='left', suffixes=['', '_drop'])
+    all_challenge['rate'] = all_challenge['index_drop'] / all_players
+    all_challenge = all_challenge.loc[:,['title', 'reason', 'rate', 'player']].set_index('title').sort_values('rate')
+    all_challenge.columns = ['成就', '稀有度', '最佳获得者']
+    st.table(all_challenge.style.format({'稀有度': '{:,.2%}'}))
+    
+    pass
