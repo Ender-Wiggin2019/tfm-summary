@@ -1,2 +1,0 @@
-.read tmp.sql
-.quit

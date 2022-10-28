@@ -1,4 +1,16 @@
 config.py
 *.db
 *.txt
+*.sql
+*.csv
+*.xlsx
+*.json
 CardDetail.csv
+rename.ipynb
+/other
+/assets
+/venv
+/test
+.streamlit
+sqlite.ipynb
+tfm_data_summary.ipynb
